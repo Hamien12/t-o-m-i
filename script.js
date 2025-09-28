@@ -1,18 +1,15 @@
 // script.js
 
 // === 1. Toggle menu ===
+// === Toggle menu ===
+// === Toggle menu ===
 const menuToggle = document.querySelector(".menu-toggle");
-let navOpen = false;
+const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
-  if (!navOpen) {
-    alert("Menu sẽ hiển thị ở đây (bạn có thể thêm nav real).");
-    navOpen = true;
-  } else {
-    alert("Đóng menu");
-    navOpen = false;
-  }
+  navLinks.classList.toggle("open");
 });
+
 
 // === 2. Simple Calendar ===
 const calendarEl = document.getElementById("calendar");

@@ -278,3 +278,74 @@ a {
   background: #b4d39b;
   color: #fff;
 }
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #2f4d28;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.6rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: .4rem .8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro, .calendar, .services, .site-footer {
+  animation: fadeInUp 0.8s ease forwards;
+}
