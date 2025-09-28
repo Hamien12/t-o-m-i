@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cửa hàng hoa</title>
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome cho icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    
+  />
+</head>
+
+
+
+<body class="about-page">  
+  
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="HaMiên Logo">
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>FLOWERS OF SUMMER</h2>
+      <h1>Hạ Miên</h1>
+      <p>"Where summer dreams come into bloom"</p>
+    </div>
+  </section>
+
+  <!-- About Intro -->
+  <section class="about-intro section-alt">
+    <div class="container two-col">
+      <div class="text">
+        <h2>Về chúng tôi</h2>
+        <p><strong>I Help My Clients Build Healthy Habits, Feel Better, And Find What Works For Them.</strong></p>
+        <p>Tôi là DMP, một cô bé bán hoa có 10 năm kinh nghiệm. Hệ hệ hệ.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Detail -->
+  <section class="about-detail section">
+    <div class="container two-col">
+      <div class="image">
+        <img src="images/avatar.png" alt="About Image">
+      </div>
+      <div class="text">
+        <h3>Supporting you in achieving and maintaining a healthy, balanced life.</h3>
+        <p>I believe that one size does NOT fit all. Tôi dùng holistic approach để hỗ trợ bạn xây dựng thói quen bền vững và cảm thấy khỏe mạnh hơn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Stats -->
+  <section class="about-stats section-alt">
+    <div class="container three-col">
+      <div class="stat">
+        <h2>92%</h2>
+        <p>Happiness Rate</p>
+      </div>
+      <div class="stat">
+        <h2>88%</h2>
+        <p>Success in Habit Formation</p>
+      </div>
+      <div class="stat">
+        <h2>82%</h2>
+        <p>Improved Nutrition Knowledge</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Me -->
+  <section class="why-work section">
+    <div class="container two-col">
+      <div class="text">
+        <h2>Why work with me</h2>
+        <p>Choosing me means choosing a partner dedicated to your success. Tôi luôn cập nhật các nghiên cứu và xu hướng mới nhất để mang đến tư vấn tốt nhất.</p>
+        <a href="contact.html" class="btn">Book An Appointment</a>
+      </div>
+      <div class="image">
+        <img src="images/meeting.jpg" alt="Work With Me">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-columns">
+      
+      <div class="footer-col">
+        <h3>HaMiên</h3>
+        <p>Nhận thông tin mới nhất</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <p>Personalized nutrition plans</p>
+        <p>Health and wellness coaching</p>
+        <p>Expand your spiritual knowledge</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Address</h3>
+        <p>422 Vĩnh Hưng</p>
+        <p><b>Call Us:</b> 0987654321</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <p class="copyright">Copyright © 2025 HaMiên</p>
+  </div>
+</footer>
+
+  <!-- JS cho menu mobile -->
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
