@@ -391,44 +391,60 @@ a {
 
 .appointment-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 cột: trái - phải */
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 40% 60%; /* trái nhỏ hơn, phải to hơn */
+  gap: 3rem;
+  align-items: center; /* căn giữa theo chiều dọc */
 }
+
 
 .calendar {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
 .appointment-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 1rem 0;
 }
 
 .appointment-info .label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
+  color: #3b4d2f; /* màu xanh rêu */
+  margin-bottom: 0.75rem;
 }
 
 .appointment-info h2 {
+  font-size: 2.2rem;
+  line-height: 1.3;
   margin-bottom: 1rem;
-  color: var(--accent);
-  font-size: 1.8rem;
+  color: #2c3d1f;
 }
 
 .appointment-info p {
+  font-size: 1.05rem;
+  color: #4a5a38;
   margin-bottom: 1rem;
-  color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Responsive */
+.appointment-info .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4a5a38;
+  border-radius: 30px;
+  color: #4a5a38;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.appointment-info .btn:hover {
+  background: #4a5a38;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .appointment-grid {
     grid-template-columns: 1fr; /* xuống 1 cột */
@@ -436,5 +452,9 @@ a {
 
   .appointment-info {
     text-align: center;
+  }
+
+  .appointment-info h2 {
+    font-size: 1.8rem;
   }
 }
