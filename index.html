@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wellness Coaching - HaMien</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cửa hàng hoa</title>
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome cho icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papmI91lPn8Zy50DJBSSTXQHxPPH/F+N6HlkRQAt2bQVWwtIg9Y9ycYzaPt+VxDRKCVh0b07XHtcw8fFfL9QQA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
+
 <body>
   <!-- Header -->
   <header class="site-header">
@@ -54,28 +67,51 @@
   </section>
 
   <!-- Services -->
-  <section class="services container">
-    <h2>Coaching Services</h2>
-    <p class="subtitle">Create the life you want to live</p>
+  <section id="services" class="services">
+  <div class="container">
+    <h2>Dịch vụ của chúng tôi</h2>
+    <p class="subtitle">Những gì chúng tôi mang đến cho khách hàng</p>
     <div class="service-grid">
+      
+      <!-- Card 1 -->
       <div class="card">
-        <img src="service1.jpg" alt="Nutrition plan">
+        <div class="card-icon">
+          <i class="fas fa-seedling"></i>
+        </div>
         <div class="card-body">
-          <h4>Personalized nutrition plans</h4>
-          <p>Create customized meal plans tailored to your health goals. <br><strong>Start from: $500</strong></p>
-          <a href="#appointment" class="btn-outline">Book An Appointment</a>
+          <h4>Hoa tươi mỗi ngày</h4>
+          <p>Chúng tôi cung cấp những bó hoa tươi mới, được chọn lọc kỹ càng.</p>
+          <a href="#" class="btn-outline">Xem chi tiết</a>
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="card">
-        <img src="service2.jpg" alt="Weight management">
+        <div class="card-icon">
+          <i class="fas fa-gift"></i>
+        </div>
         <div class="card-body">
-          <h4>Weight management counseling</h4>
-          <p>Behavioral coaching and fitness advice for sustainable results. <br><strong>Start from: $1000</strong></p>
-          <a href="#appointment" class="btn-outline">Book An Appointment</a>
+          <h4>Gói quà sang trọng</h4>
+          <p>Tặng quà ý nghĩa với dịch vụ gói quà tinh tế, sang trọng.</p>
+          <a href="#" class="btn-outline">Xem chi tiết</a>
         </div>
       </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-truck"></i>
+        </div>
+        <div class="card-body">
+          <h4>Giao hàng nhanh</h4>
+          <p>Dịch vụ giao hoa tận nơi trong thời gian ngắn nhất.</p>
+          <a href="#" class="btn-outline">Xem chi tiết</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="site-footer">
