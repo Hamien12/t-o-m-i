@@ -386,50 +386,55 @@ a {
 
 /* Appointment Section */
 .appointment-section {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .appointment-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 cột */
+  grid-template-columns: 1fr 1fr; /* 2 cột: trái - phải */
   gap: 2rem;
   align-items: start;
 }
 
-.appointment-form {
+.calendar {
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 
-.appointment-form h2 {
+.appointment-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appointment-info .label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.appointment-info h2 {
   margin-bottom: 1rem;
   color: var(--accent);
+  font-size: 1.8rem;
 }
 
-.form-group {
+.appointment-info p {
   margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: .3rem;
   color: var(--muted);
+  line-height: 1.6;
 }
 
-.form-group input {
-  width: 100%;
-  padding: .6rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-/* Responsive: xuống 1 cột trên mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .appointment-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* xuống 1 cột */
+  }
+
+  .appointment-info {
+    text-align: center;
   }
 }
