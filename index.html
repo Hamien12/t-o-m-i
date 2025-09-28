@@ -1,55 +1,112 @@
-<!doctype html>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wellness Coaching - HaMien</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo"><img src="logo.png" alt="HaMien Logo"></a>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Wellness coaching with Lumora</h1>
+      <p>Make peace, bloom into the future</p>
+      <a href="#appointment" class="btn">Book An Appointment</a>
+    </div>
+  </section>
 
-<section id="contact" class="container contact">
-<h2>Liên hệ</h2>
-<form id="contact-form" class="contact-form">
-<div class="row">
-<input type="text" id="name" placeholder="Tên của bạn" required />
-<input type="email" id="email" placeholder="Email" required />
-</div>
-<textarea id="message" rows="5" placeholder="Tin nhắn" required></textarea>
-<div class="row actions">
-<button type="submit" class="btn">Gửi</button>
-<small class="note">(Demo: form sẽ hiển thị thông báo — không gửi email thật)</small>
-</div>
-</form>
-</section>
-</main>
+  <!-- Intro -->
+  <section class="intro container" id="appointment">
+    <h2>Book An Appointment</h2>
+    <p>
+      Achieve balance and well-being with personalized coaching tailored to your needs. 
+      Lumora guides you through sustainable lifestyle changes to help you reach your health and wellness goals.
+    </p>
+    <p>Start your journey to a healthier life today.</p>
+  </section>
 
+  <!-- Calendar -->
+  <section class="calendar container">
+    <h3>Date & Time Selection</h3>
+    <div id="calendar"></div>
+  </section>
 
-<footer class="site-footer">
-<div class="container">
-<p>© <span id="year"></span> Bloom — Trang demo học tập</p>
-</div>
-</footer>
+  <!-- Services -->
+  <section class="services container">
+    <h2>Coaching Services</h2>
+    <p class="subtitle">Create the life you want to live</p>
+    <div class="service-grid">
+      <div class="card">
+        <img src="service1.jpg" alt="Nutrition plan">
+        <div class="card-body">
+          <h4>Personalized nutrition plans</h4>
+          <p>Create customized meal plans tailored to your health goals. <br><strong>Start from: $500</strong></p>
+          <a href="#appointment" class="btn-outline">Book An Appointment</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="service2.jpg" alt="Weight management">
+        <div class="card-body">
+          <h4>Weight management counseling</h4>
+          <p>Behavioral coaching and fitness advice for sustainable results. <br><strong>Start from: $1000</strong></p>
+          <a href="#appointment" class="btn-outline">Book An Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-info">
+        <h3>HaMien</h3>
+        <p>Nhận thông tin mới nhất</p>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li>Personalized nutrition plans</li>
+            <li>Health & wellness coaching</li>
+            <li>Expand your spiritual knowledge</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>422 Vĩnh Hưng</p>
+          <p>Call Us: <a href="tel:0987654321">0987654321</a></p>
+          <div class="socials">
+            <a href="#">Fb</a>
+            <a href="#">Ig</a>
+            <a href="#">Tw</a>
+            <a href="#">Yt</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 HaMien</p>
+  </footer>
 
-<!-- Cart modal -->
-<div id="cart-modal" class="cart-modal" aria-hidden="true">
-<div class="cart-panel">
-<button id="close-cart" class="close">×</button>
-<h3>Giỏ hàng</h3>
-<div id="cart-items"></div>
-<div class="cart-footer">
-<strong>Tổng:</strong> <span id="cart-total">0₫</span>
-<button id="checkout" class="btn">Thanh toán (Demo)</button>
-</div>
-</div>
-</div>
-
-
-<script src="script.js"></script>
-
-<link rel="stylesheet" href="styles.css" />
-
-
-
-<!--
-CHAT WIDGET PLACEHOLDER:
-Khi bạn tạo tài khoản Tidio/Crisp hoặc dịch vụ tương tự, họ sẽ cung cấp 1 script.
-Dán đoạn script đó ở đây (trước đóng </body>) hoặc theo hướng dẫn của nhà cung cấp.
--->
+  <script src="script.js"></script>
 </body>
 </html>
