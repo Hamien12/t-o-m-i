@@ -383,3 +383,53 @@ a {
   margin-bottom: 1rem;
   font-size: .95rem;
 }
+
+/* Appointment Section */
+.appointment-section {
+  padding: 2rem 0;
+}
+
+.appointment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 cột */
+  gap: 2rem;
+  align-items: start;
+}
+
+.appointment-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.appointment-form h2 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  color: var(--muted);
+}
+
+.form-group input {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Responsive: xuống 1 cột trên mobile */
+@media (max-width: 768px) {
+  .appointment-grid {
+    grid-template-columns: 1fr;
+  }
+}
