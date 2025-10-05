@@ -1,0 +1,101 @@
+.services-page {
+  --accent: #4a7c59;
+  --accent-hover: #3b6146;
+  --text-color: #2b3a2f;
+  --text-muted: #444;
+  --bg-light: #faf8f1;
+  --bg-hero: #f3f6ef;
+  --radius: 12px;
+}
+
+/* Hero */
+.services-page .services-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200px 10%;
+  background: var(--bg-hero);
+  gap: 40px;
+}
+.services-page .services-hero .hero-text { flex: 1; }
+.services-page .services-hero .small-title {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.services-page .services-hero h1 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.services-page .services-hero .hero-img {
+  flex: 1;
+  text-align: right;
+}
+.services-page .services-hero .hero-img img {
+  max-width: 90%;
+  border-radius: var(--radius);
+}
+
+/* Services list */
+.services-page .services-list {
+  padding: 80px 10%;
+}
+
+.services-page .service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 100px;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+}
+.services-page .service.reverse { flex-direction: row-reverse; }
+
+.services-page .service-text { flex: 1; }
+.services-page .service-text h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.services-page .service-text .price {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.services-page .service-text hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.services-page .service-text h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.services-page .service-text p {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.services-page .service-img { flex: 1; }
+.services-page .service-img img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Button */
+.services-page .btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.services-page .btn:hover {
+  background: var(--accent-hover);
+}

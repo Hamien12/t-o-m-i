@@ -1,0 +1,117 @@
+/* ========================= */
+/* About Page Styles         */
+/* ========================= */
+/* Container chung */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* WHY US section */
+
+.why-us {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.why-us .two-col {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section {
+  padding: 60px 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* khoảng cách giữa ảnh và chữ */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-image img {
+  max-width: 350px;
+  border-radius: 12px; /* bo góc cho đẹp */
+}
+
+.about-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+}
+
+
+/* OUR STORY */
+.our-story {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.our-story h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.our-story h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.story-grid .text {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.story-grid .image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-us .two-col {
+    flex-direction: column;
+    text-align: center;
+  }
+  .story-grid {
+    grid-template-columns: 1fr; /* xuống 1 cột */
+  }
+  .story-grid .text, .story-grid .image {
+    text-align: center;
+  }
+}

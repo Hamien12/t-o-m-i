@@ -464,132 +464,98 @@ a {
 /* ========================= */
 /* About Page Styles         */
 /* ========================= */
-.about-page .section,
-.about-page .section-alt {
-  padding: 120px 0; /* giảm padding mặc định */
+/* Container chung */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.about-page .section-alt {
-  background-color: #E8F1FD; /* nền sáng xen kẽ */
-}
-
-.about-page .two-col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px; /* thêm khoảng cách giữa text và ảnh */
-}
-
-.about-page .two-col .text, 
-.about-page .two-col .image {
-  flex: 1 1 45%;
-}
-
-.about-detail h3 {
-  max-width: 100%;
-  width: 100%;
-  line-height: 1.6;
-}
-
-.about-page .two-col .image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.about-page .three-col {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* WHY US section */
+.why-us {
+  padding: 100px 0;
   text-align: center;
-  gap: 20px;
 }
 
-.about-page .three-col .stat {
-  flex: 1 1 30%;
-  padding: 40px;
-}
-
-.about-page .three-col .stat h2 {
-  font-size: 2.2rem;
-  color: #5b7c3e;
-  margin-bottom: 30px;
-}
-
-/* Typography */
-.about-page .about-intro h2,
-.about-page .why-work h2 {
+.why-us h2 {
   font-size: 2rem;
-  color: #2f3b2f;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 
-.about-page .about-detail h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+.why-us .two-col {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-page .about-intro p, 
-.about-page .about-detail p,
-.about-page .why-work p {
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #444;
+.why-us .two-col .image {
+  flex: 1;
 }
-
-/* Button */
-.about-page .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #5b7c3e;
-  color: #fff;
-  text-decoration: none;
+.why-us .two-col .image img {
+  width: 100%;
+  max-width: 350px;
   border-radius: 8px;
-  font-weight: 600;
-  margin-top: 20px;
-  transition: background 0.3s ease;
+  display: block;
+  margin: auto;
 }
 
-.about-page .btn:hover {
-  background: #46632f;
+.why-us .two-col .text {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* --- Responsive cho mobile --- */
+/* OUR STORY */
+.our-story {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.our-story h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.our-story h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.story-grid .text {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.story-grid .image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .about-page .section,
-  .about-page .section-alt {
-    padding: 60px 20px;
-  }
-
-  .about-page .two-col {
+  .why-us .two-col {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-
-  .about-page .two-col .text, 
-  .about-page .two-col .image {
-    flex: 1 1 100%;
+  .story-grid {
+    grid-template-columns: 1fr; /* xuống 1 cột */
   }
-
-  .about-page .three-col .stat {
-    flex: 1 1 100%;
-    padding: 20px;
-  }
-
-  .about-page .three-col .stat h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .about-page .about-intro h2,
-  .about-page .why-work h2 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-  }
-
-  .about-page .about-detail h3 {
-    font-size: 1.2rem;
+  .story-grid .text, .story-grid .image {
+    text-align: center;
   }
 }
 
@@ -672,7 +638,7 @@ a {
   padding: 80px;
   background: var(--bg-light);
   border-radius: var(--radius);
-  margin-bottom: 40px;
+ 
 }
 
 .services-page .service.reverse {
