@@ -12,7 +12,38 @@
 
   <!-- CSS riêng -->
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/chatbot.css">
 </head>
+
+<!-- Chatbot Widget -->
+<div id="chatbot-widget">
+  <div id="chatbot-button">💬</div>
+  <div id="chatbot-box" class="hidden">
+    <div class="chat-header">
+      <span>Hạ Miên Chatbot</span>
+      <button id="chat-close">×</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">
+        Xin chào, chúng mình là Hạ Miên, cảm ơn bạn đã liên hệ. Bạn muốn tư vấn về dịch vụ nào ạ?
+      </div>
+      <div class="chat-suggestions">
+        <button class="suggest-btn">Đặt hoa theo mẫu</button>
+        <button class="suggest-btn">Tư vấn</button>
+        <button class="suggest-btn">Thiết kế theo yêu cầu</button>
+        <button class="suggest-btn">Đặt hoa giao ngay</button>
+        <button class="suggest-btn">Deal hot theo mùa</button>
+        <button class="suggest-btn">Hỏi về đơn hàng</button>
+        <button class="suggest-btn">Tổ chức sự kiện</button>
+        <button class="suggest-btn">CSKH sau mua</button>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input-field" placeholder="Nhập tin nhắn...">
+      <button id="chat-send">Gửi</button>
+    </div>
+  </div>
+</div>
 
 
 
@@ -170,6 +201,10 @@
       navLinks.classList.toggle("open");
     });
   </script>
+
+  <!-- Chatbot Scripts -->
+  <script src="script/chatbot-config.js"></script>
+  <script src="script/chatbot.js"></script>
 
 </body>
 </html>
