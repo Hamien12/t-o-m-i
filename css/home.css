@@ -253,6 +253,22 @@
   color: var(--muted);
 }
 
+/* Home Services (featured layout) */
+.home-services { padding: 40px 0; }
+.home-services h2 { text-align: center; margin-bottom: 18px; }
+.hs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; align-items: center; }
+.hs-item { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+.hs-card { background: #2f6f61; color: #fff; border-radius: 14px; height: 200px; display: grid; place-items: center; text-align: center; padding: 14px; box-shadow: 0 10px 18px rgba(0,0,0,.08); }
+.hs-card.alt { background: #2d7366; }
+.hs-card span { max-width: 220px; font-weight: 700; letter-spacing: .2px; }
+.hs-divider { height: 2px; background: #9fb2ac; width: 70%; justify-self: center; }
+.hs-cta { width: 58px; height: 36px; border-radius: 20px; background: #2f6f61; color: #fff; border: none; cursor: pointer; transition: transform .2s ease; }
+.hs-cta:hover { transform: translateX(2px); }
+@media (max-width: 900px) {
+  .hs-grid { grid-template-columns: 1fr; }
+  .hs-item { grid-template-columns: 1fr auto; }
+}
+
 /* ==========================
    Footer
 ========================== */

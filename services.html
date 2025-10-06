@@ -70,74 +70,172 @@
     </div>
   </header>
 
-<!-- Nội dung riêng Services -->
-  <div class="services-page">
+<!-- Nội dung riêng Services: layout theo ảnh tham chiếu -->
+  <div class="services-body">
+    <!-- Banner tràn viền -->
+    <div class="services-banner">
+      <img src="image/services/“Where summer dreams come into bloom“.png" alt="banner">
+    </div>
+    <div class="svc-viewport">
+      <div class="svc-canvas">
 
-    <!-- Hero Section -->
-    <section class="services-hero">
-      <div class="hero-text">
-        <p class="small-title">SERVICES</p>
-        <h1>Empowering your balanced,<br>fulfilling life.</h1>
-      </div>
-      
-    </section>
-
-    <!-- Service 1 -->
-    <section class="service">
-      <div class="service-text">
-        <h2>Personalized nutrition plans</h2>
-        <p class="price">Start from: <strong>$1,000</strong></p>
-        <hr>
-        <h4>Customized Meal Plans</h4>
-        <p>Personalized to your unique dietary needs and preferences.</p>
-        <h4>Nutritional Guidance</h4>
-        <p>Expert advice on making healthy food choices.</p>
-        <h4>Adaptable Strategies</h4>
-        <p>Flexible plans that evolve with your progress.</p>
-        <button class="btn">Book An Appointment</button>
-      </div>
-      <div class="service-img">
-        <img src="image/services.png" alt="Nutrition plan">
+    <!-- Danh mục sản phẩm -->
+    <section class="svc-section">
+      <h3 class="svc-title">DANH MỤC SẢN PHẨM</h3>
+      <div class="category-carousel">
+        <button class="arrow left" aria-label="prev" data-target="#cat-track">&#8249;</button>
+        <div class="track" id="cat-track">
+          <button class="cat-card with-img" data-category="bouquet" data-img="image/about/IMG_5067.jpg"><span>BÓ HOA</span></button>
+          <button class="cat-card with-img" data-category="basket" data-img="image/services.png"><span>GIỎ HOA</span></button>
+          <button class="cat-card with-img" data-category="box" data-img="image/contact.png"><span>HỘP HOA</span></button>
+          <button class="cat-card with-img" data-category="wedding" data-img="image/services.png"><span>HOA CƯỚI</span></button>
+          <button class="cat-card with-img" data-category="condolence" data-img="image/about/IMG_5067.jpg"><span>HOA CHIA BUỒN</span></button>
+        </div>
+        <button class="arrow right" aria-label="next" data-target="#cat-track">&#8250;</button>
       </div>
     </section>
 
-    <!-- Service 2 -->
-    <section class="service reverse">
-      <div class="service-text">
-        <h2>Weight management counseling</h2>
-        <p class="price">Start from: <strong>$1,500</strong></p>
-        <hr>
-        <h4>Personalized Weight Goals</h4>
-        <p>Customized plans to achieve realistic weight targets.</p>
-        <h4>Behavioral Support</h4>
-        <p>Strategies to build healthier eating habits.</p>
-        <h4>Sustainable Practices</h4>
-        <p>Long-term weight management techniques.</p>
-        <button class="btn">Book An Appointment</button>
-      </div>
-      <div class="service-img">
-        <img src="image/services.png" alt="Weight management">
+    <!-- Deal hot (theo layout carousel) -->
+    <section class="svc-section">
+      <h3 class="svc-title">DEAL HOT THÁNG 10</h3>
+      <div class="deal-grid" id="deal-grid">
+        <div class="pill-card with-img" data-img="image/about/IMG_5067.jpg"><span>DEAL 1</span></div>
+        <div class="pill-card with-img" data-img="image/services.png"><span>DEAL 2</span></div>
+        <div class="pill-card with-img" data-img="image/contact.png"><span>DEAL 3</span></div>
+        <div class="pill-card with-img" data-img="image/services.png"><span>DEAL 4</span></div>
       </div>
     </section>
 
-    <!-- Service 3 -->
-    <section class="service">
-      <div class="service-text">
-        <h2>Health and wellness coaching</h2>
-        <p class="price">Start from: <strong>$1,200</strong></p>
-        <hr>
-        <h4>Holistic Health Assessment</h4>
-        <p>Evaluation of your overall well-being to create a tailored plan.</p>
-        <h4>Lifestyle Integration</h4>
-        <p>Practical tips for incorporating healthy habits.</p>
-        <h4>Ongoing Motivation And Support</h4>
-        <p>Regular check-ins to track progress and adjust plans.</p>
-        <button class="btn">Book An Appointment</button>
-      </div>
-      <div class="service-img">
-        <img src="image/services.png" alt="Wellness coaching">
+    <!-- Hoa nổi bật (theo layout carousel) -->
+    <section class="svc-section">
+      <h3 class="svc-title">HOA NỔI BẬT</h3>
+      <div class="deal-grid" id="featured-grid">
+        <div class="pill-card with-img" data-img="image/about/IMG_5067.jpg"><span>HOA HỒNG ĐỎ</span></div>
+        <div class="pill-card with-img" data-img="image/services.png"><span>HOA HỒNG</span></div>
+        <div class="pill-card with-img" data-img="image/contact.png"><span>HOA THƯỢC DƯỢC</span></div>
+        <div class="pill-card with-img" data-img="image/services.png"><span>HOA PHƯỢNG</span></div>
       </div>
     </section>
+
+    <!-- Catalog: Bộ lọc + Grid sản phẩm -->
+    <section class="shop">
+      <div class="shop-header">
+        <h3>Sản phẩm</h3>
+        <div class="tools">
+          <button class="filter-toggle" aria-expanded="false">Bộ lọc</button>
+          <div class="search-box">
+            <input type="text" id="shop-search" placeholder="Tìm hoa...">
+          </div>
+          <label class="sort">
+            <span>Sắp xếp</span>
+            <select id="shop-sort">
+              <option value="popular">Phổ biến</option>
+              <option value="price-asc">Giá thấp → cao</option>
+              <option value="price-desc">Giá cao → thấp</option>
+              <option value="new">Mới nhất</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters" id="filters">
+          <div class="filter-group">
+            <h4>Danh mục</h4>
+            <label><input type="checkbox" name="cat" value="bouquet"> Bó hoa</label>
+            <label><input type="checkbox" name="cat" value="basket"> Giỏ hoa</label>
+            <label><input type="checkbox" name="cat" value="box"> Hộp hoa</label>
+          </div>
+          <div class="filter-group">
+            <h4>Khoảng giá</h4>
+            <div class="price-inputs">
+              <input type="number" id="min-price" placeholder="Từ" min="0">
+              <span>-</span>
+              <input type="number" id="max-price" placeholder="Đến" min="0">
+            </div>
+            <button class="btn-apply" id="apply-price">Áp dụng</button>
+          </div>
+          <div class="filter-group">
+            <h4>Màu sắc</h4>
+            <div class="chips" id="color-chips">
+              <button data-color="red" class="chip">Đỏ</button>
+              <button data-color="pink" class="chip">Hồng</button>
+              <button data-color="white" class="chip">Trắng</button>
+              <button data-color="yellow" class="chip">Vàng</button>
+              <button data-color="purple" class="chip">Tím</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="products" id="products">
+          <!-- Thẻ sản phẩm mẫu -->
+          <div class="product" data-price="420" data-cat="bouquet" data-color="pink" data-img="image/about/IMG_5067.jpg">
+            <div class="badge">-10%</div>
+            <div class="thumb"></div>
+            <h5>Bó Hồng Pastel</h5>
+            <div class="meta"><span class="price">420.000đ</span><span class="rating">★ 4.8</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="690" data-cat="basket" data-color="red" data-img="image/services.png">
+            <div class="thumb"></div>
+            <h5>Giỏ Hồng Đỏ</h5>
+            <div class="meta"><span class="price">690.000đ</span><span class="rating">★ 4.6</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="520" data-cat="box" data-color="white" data-img="image/contact.png">
+            <div class="thumb"></div>
+            <h5>Hộp Hoa Trắng</h5>
+            <div class="meta"><span class="price">520.000đ</span><span class="rating">★ 4.9</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="350" data-cat="bouquet" data-color="yellow" data-img="image/services.png">
+            <div class="thumb"></div>
+            <h5>Bó Hoa Vàng</h5>
+            <div class="meta"><span class="price">350.000đ</span><span class="rating">★ 4.5</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="880" data-cat="basket" data-color="purple" data-img="image/about/IMG_5067.jpg">
+            <div class="thumb"></div>
+            <h5>Giỏ Tím Sang</h5>
+            <div class="meta"><span class="price">880.000đ</span><span class="rating">★ 4.7</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="460" data-cat="box" data-color="pink" data-img="image/services.png">
+            <div class="thumb"></div>
+            <h5>Hộp Hồng Dễ Thương</h5>
+            <div class="meta"><span class="price">460.000đ</span><span class="rating">★ 4.4</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="540" data-cat="bouquet" data-color="purple" data-img="image/contact.png">
+            <div class="thumb"></div>
+            <h5>Bó Lavender</h5>
+            <div class="meta"><span class="price">540.000đ</span><span class="rating">★ 4.6</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="760" data-cat="basket" data-color="white" data-img="image/services.png">
+            <div class="thumb"></div>
+            <h5>Giỏ Lan Trắng</h5>
+            <div class="meta"><span class="price">760.000đ</span><span class="rating">★ 4.8</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+          <div class="product" data-price="410" data-cat="box" data-color="yellow" data-img="image/about/IMG_5067.jpg">
+            <div class="thumb"></div>
+            <h5>Hộp Hướng Dương</h5>
+            <div class="meta"><span class="price">410.000đ</span><span class="rating">★ 4.3</span></div>
+            <button class="add">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination" id="pagination">
+        <button class="page prev" disabled>Trước</button>
+        <div class="pages"></div>
+        <button class="page next">Sau</button>
+      </div>
+    </section>
+
+      </div>
+    </div>
   </div>
 
  <!-- Footer -->
