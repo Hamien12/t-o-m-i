@@ -15,12 +15,41 @@
   text-align: center;
 }
 
-.why-us h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 40px;
+.about-body { padding-bottom: 60px; --page-width: clamp(360px, 94vw, 1360px); }
+.svc-viewport { display: grid; place-items: start center; padding: 0; }
+.svc-canvas { width: 100%; max-width: var(--page-width); transform: none; }
+.about-banner { width: 100%; background: #0000; border-bottom: 0; }
+.about-banner img { display: block; width: 100%; height: auto; object-fit: contain; }
+
+.about-section {
+  width: 100%;
+  background-color: #f9f9f9; /* hoặc màu nền tuỳ bạn */
+  padding: 80px 0;
+  text-align: center; /* Căn giữa nội dung bên trong */
 }
 
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a4d8c;
+  text-align: center; /* Đảm bảo chữ ở giữa */
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block; /* để tạo hiệu ứng trang trí */
+}
+
+/* Nếu muốn thêm đường gạch chân trang trí cho cân đối */
+.about-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #1b75d0;
+  border-radius: 2px;
+}
 .why-us .two-col {
   display: flex;
   gap: 40px;
