@@ -61,8 +61,9 @@
       <nav class="navbar">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -108,175 +109,113 @@
 
  
 
-    <!-- Catalog: Bộ lọc + Grid sản phẩm -->
-    <section class="shop">
-      <div class="shop-header">
-        <h3>Sản phẩm</h3>
-        <div class="tools">
-          <button class="filter-toggle" aria-expanded="false">Bộ lọc</button>
-          <div class="search-box">
-            <input type="text" id="shop-search" placeholder="Tìm hoa...">
-          </div>
-          <label class="sort">
-            <span>Sắp xếp</span>
-            <select id="shop-sort">
-              <option value="popular">Phổ biến</option>
-              <option value="price-asc">Giá thấp → cao</option>
-              <option value="price-desc">Giá cao → thấp</option>
-              <option value="new">Mới nhất</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <div class="shop-layout">
-        <aside class="filters" id="filters">
-          <div class="filter-group">
-            <h4>Danh mục</h4>
-            <label><input type="checkbox" name="cat" value="bouquet"> Bó hoa</label>
-            <label><input type="checkbox" name="cat" value="basket"> Giỏ hoa</label>
-            <label><input type="checkbox" name="cat" value="box"> Hộp hoa</label>
-          </div>
-          <div class="filter-group">
-            <h4>Khoảng giá</h4>
-            <div class="price-inputs">
-              <input type="number" id="min-price" placeholder="Từ" min="0">
-              <span>-</span>
-              <input type="number" id="max-price" placeholder="Đến" min="0">
-            </div>
-            <button class="btn-apply" id="apply-price">Áp dụng</button>
-          </div>
-          <div class="filter-group">
-            <h4>Màu sắc</h4>
-            <div class="chips" id="color-chips">
-              <button data-color="red" class="chip">Đỏ</button>
-              <button data-color="pink" class="chip">Hồng</button>
-              <button data-color="white" class="chip">Trắng</button>
-              <button data-color="yellow" class="chip">Vàng</button>
-              <button data-color="purple" class="chip">Tím</button>
-            </div>
-          </div>
-        </aside>
-
-        <div class="products" id="products">
-          <!-- Thẻ sản phẩm mẫu -->
-          <div class="product" data-price="420" data-cat="bouquet" data-color="pink" data-img="image/about/IMG_5067.jpg">
-            <div class="badge">-10%</div>
-            <div class="thumb"></div>
-            <h5>Bó Hồng Pastel</h5>
-            <div class="meta"><span class="price">420.000đ</span><span class="rating">★ 4.8</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="690" data-cat="basket" data-color="red" data-img="image/services.png">
-            <div class="thumb"></div>
-            <h5>Giỏ Hồng Đỏ</h5>
-            <div class="meta"><span class="price">690.000đ</span><span class="rating">★ 4.6</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="520" data-cat="box" data-color="white" data-img="image/contact.png">
-            <div class="thumb"></div>
-            <h5>Hộp Hoa Trắng</h5>
-            <div class="meta"><span class="price">520.000đ</span><span class="rating">★ 4.9</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="350" data-cat="bouquet" data-color="yellow" data-img="image/services.png">
-            <div class="thumb"></div>
-            <h5>Bó Hoa Vàng</h5>
-            <div class="meta"><span class="price">350.000đ</span><span class="rating">★ 4.5</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="880" data-cat="basket" data-color="purple" data-img="image/about/IMG_5067.jpg">
-            <div class="thumb"></div>
-            <h5>Giỏ Tím Sang</h5>
-            <div class="meta"><span class="price">880.000đ</span><span class="rating">★ 4.7</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="460" data-cat="box" data-color="pink" data-img="image/services.png">
-            <div class="thumb"></div>
-            <h5>Hộp Hồng Dễ Thương</h5>
-            <div class="meta"><span class="price">460.000đ</span><span class="rating">★ 4.4</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="540" data-cat="bouquet" data-color="purple" data-img="image/contact.png">
-            <div class="thumb"></div>
-            <h5>Bó Lavender</h5>
-            <div class="meta"><span class="price">540.000đ</span><span class="rating">★ 4.6</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="760" data-cat="basket" data-color="white" data-img="image/services.png">
-            <div class="thumb"></div>
-            <h5>Giỏ Lan Trắng</h5>
-            <div class="meta"><span class="price">760.000đ</span><span class="rating">★ 4.8</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-          <div class="product" data-price="410" data-cat="box" data-color="yellow" data-img="image/about/IMG_5067.jpg">
-            <div class="thumb"></div>
-            <h5>Hộp Hướng Dương</h5>
-            <div class="meta"><span class="price">410.000đ</span><span class="rating">★ 4.3</span></div>
-            <button class="add">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="pagination" id="pagination">
-        <button class="page prev" disabled>Trước</button>
-        <div class="pages"></div>
-        <button class="page next">Sau</button>
-      </div>
-    </section>
 
       </div>
     </div>
   </div>
+
+ 
 
  <!-- Footer -->
+
   <footer class="site-footer">
+
   <div class="footer-inner">
+
     <div class="footer-columns">
+
       
+
       <div class="footer-col">
+
         <h3>HaMiên</h3>
+
         <p>Nhận thông tin mới nhất</p>
+
       </div>
 
+
+
       <div class="footer-col">
+
         <h3>Company</h3>
+
         <ul>
+
           <li><a href="index.html">Home</a></li>
+
           <li><a href="about.html">About</a></li>
+
           <li><a href="services.html">Services</a></li>
+
           <li><a href="contact.html">Contact</a></li>
+
         </ul>
+
       </div>
 
+
+
       <div class="footer-col">
+
         <h3>Services</h3>
+
         <p>Personalized nutrition plans</p>
+
         <p>Health and wellness coaching</p>
+
         <p>Expand your spiritual knowledge</p>
+
       </div>
 
+
+
       <div class="footer-col">
+
         <h3>Address</h3>
+
         <p>422 Vĩnh Hưng</p>
+
         <p><b>Call Us:</b> 0987654321</p>
+
         <div class="socials">
+
           <a href="#"><i class="fab fa-facebook"></i></a>
+
           <a href="#"><i class="fab fa-twitter"></i></a>
+
           <a href="#"><i class="fab fa-instagram"></i></a>
+
           <a href="#"><i class="fab fa-youtube"></i></a>
+
         </div>
+
       </div>
+
+
 
     </div>
+
     <p class="copyright">Copyright © 2025 HaMiên</p>
+
   </div>
+
 </footer>
 
+
+
  <script src="script/script.js"></script>
+
  
+
  <!-- Chatbot Scripts -->
+
  <script src="script/chatbot-config.js"></script>
+
  <script src="script/chatbot.js"></script>
+
 </body>
+
 </html>
+
+

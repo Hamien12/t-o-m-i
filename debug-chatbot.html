@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        #chatbot-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        #chatbot-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #5a7c46, #4a6b3a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(90, 124, 70, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+        }
+        #chatbot-button:hover {
+            transform: scale(1.1);
+        }
+        #chatbot-box {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+        }
+        #chatbot-box.show {
+            display: flex;
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #5a7c46, #4a6b3a);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        .chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        .chat-input {
+            padding: 15px;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 10px;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        .chat-input button {
+            background: #5a7c46;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h1>Debug Chatbot Hạ Miên</h1>
+        <p>Nếu chatbot hoạt động, bạn sẽ thấy nút 💬 ở góc dưới bên phải.</p>
+        <p>Nhấn vào nút đó để mở chatbot.</p>
+        <div id="debug-info"></div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-button">💬</div>
+        <div id="chatbot-box">
+            <div class="chat-header">
+                <span>Hạ Miên Chatbot</span>
+                <button id="chat-close">×</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="bot-message">
+                    Xin chào, chúng mình là Hạ Miên, cảm ơn bạn đã liên hệ. Bạn muốn tư vấn về dịch vụ nào ạ?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input-field" placeholder="Nhập tin nhắn...">
+                <button id="chat-send">Gửi</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple chatbot functionality
+        const chatButton = document.getElementById('chatbot-button');
+        const chatBox = document.getElementById('chatbot-box');
+        const closeBtn = document.getElementById('chat-close');
+        const chatSend = document.getElementById('chat-send');
+        const chatInput = document.getElementById('chat-input-field');
+        const chatBody = document.getElementById('chat-body');
+        const debugInfo = document.getElementById('debug-info');
+
+        // Debug info
+        debugInfo.innerHTML = `
+            <p><strong>Elements found:</strong></p>
+            <p>Chat button: ${chatButton ? '✅' : '❌'}</p>
+            <p>Chat box: ${chatBox ? '✅' : '❌'}</p>
+            <p>Close button: ${closeBtn ? '✅' : '❌'}</p>
+            <p>Send button: ${chatSend ? '✅' : '❌'}</p>
+            <p>Input field: ${chatInput ? '✅' : '❌'}</p>
+        `;
+
+        // Toggle chat
+        if (chatButton && chatBox) {
+            chatButton.addEventListener('click', () => {
+                chatBox.classList.toggle('show');
+                debugInfo.innerHTML += '<p>Chat toggled!</p>';
+            });
+        }
+
+        // Close chat
+        if (closeBtn && chatBox) {
+            closeBtn.addEventListener('click', () => {
+                chatBox.classList.remove('show');
+                debugInfo.innerHTML += '<p>Chat closed!</p>';
+            });
+        }
+
+        // Send message
+        if (chatSend && chatInput && chatBody) {
+            chatSend.addEventListener('click', () => {
+                const message = chatInput.value.trim();
+                if (message) {
+                    chatBody.innerHTML += `<div class="user-message">${message}</div>`;
+                    chatInput.value = '';
+                    chatBody.innerHTML += `<div class="bot-message">Cảm ơn bạn đã gửi tin nhắn: "${message}"</div>`;
+                    debugInfo.innerHTML += '<p>Message sent!</p>';
+                }
+            });
+        }
+
+        // Enter key
+        if (chatInput) {
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    chatSend.click();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

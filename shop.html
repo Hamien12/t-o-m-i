@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Website</title>
+  
+  <!-- CSS chung -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<!-- Chatbot Widget -->
+<div id="chatbot-widget">
+  <div id="chatbot-button">💬</div>
+  <div id="chatbot-box" class="hidden">
+    <div class="chat-header">
+      <span>Hạ Miên Chatbot</span>
+      <button id="chat-close">×</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">
+        Xin chào, chúng mình là Hạ Miên, cảm ơn bạn đã liên hệ. Bạn muốn tư vấn về dịch vụ nào ạ?
+      </div>
+      <div class="chat-suggestions">
+        <button class="suggest-btn">Đặt hoa theo mẫu</button>
+        <button class="suggest-btn">Tư vấn</button>
+        <button class="suggest-btn">Thiết kế theo yêu cầu</button>
+        <button class="suggest-btn">Đặt hoa giao ngay</button>
+        <button class="suggest-btn">Deal hot theo mùa</button>
+        <button class="suggest-btn">Hỏi về đơn hàng</button>
+        <button class="suggest-btn">Tổ chức sự kiện</button>
+        <button class="suggest-btn">CSKH sau mua</button>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input-field" placeholder="Nhập tin nhắn...">
+      <button id="chat-send">Gửi</button>
+    </div>
+  </div>
+</div>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="image/logo.png" alt="Logo">
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+    <section class="shop-hero">
+        <div class="hero-content">
+            <h1>Shop Hoa Tươi</h1>
+            <p>Khám phá bộ sưu tập hoa tươi đẹp nhất từ Hạ Miên</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">500+</span>
+                    <span class="label">Sản phẩm</span>
+                </div>
+                <div class="stat">
+                    <span class="number">4.9★</span>
+                    <span class="label">Đánh giá</span>
+                </div>
+                <div class="stat">
+                    <span class="number">24h</span>
+                    <span class="label">Giao hàng</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="image/home/home.png" alt="Shop Hoa">
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop">
+        <div class="shop-header">
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a>
+                <span>/</span>
+                <span>Shop</span>
+            </div>
+            <h2>Sản phẩm</h2>
+            <div class="tools">
+                <button class="filter-toggle" aria-expanded="false">
+                    <i class="fas fa-filter"></i>
+                    Bộ lọc
+                </button>
+                <div class="search-box">
+                    <input type="text" id="shop-search" placeholder="Tìm hoa...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <label class="sort">
+                    <span>Sắp xếp</span>
+                    <select id="shop-sort">
+                        <option value="popular">Phổ biến</option>
+                        <option value="price-asc">Giá thấp → cao</option>
+                        <option value="price-desc">Giá cao → thấp</option>
+                        <option value="new">Mới nhất</option>
+                        <option value="rating">Đánh giá cao</option>
+                    </select>
+                </label>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-layout">
+            <aside class="filters" id="filters">
+                <div class="filter-header">
+                    <h3>Bộ lọc</h3>
+                    <button class="clear-filters">Xóa tất cả</button>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Danh mục</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="cat" value="bouquet">
+                            <span class="checkmark"></span>
+                            <span class="label">Bó hoa</span>
+                            <span class="count">(24)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cat" value="basket">
+                            <span class="checkmark"></span>
+                            <span class="label">Giỏ hoa</span>
+                            <span class="count">(18)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cat" value="box">
+                            <span class="checkmark"></span>
+                            <span class="label">Hộp hoa</span>
+                            <span class="count">(12)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cat" value="event">
+                            <span class="checkmark"></span>
+                            <span class="label">Hoa sự kiện</span>
+                            <span class="count">(8)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Khoảng giá</h4>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" placeholder="Từ" min="0">
+                            <span>-</span>
+                            <input type="number" id="max-price" placeholder="Đến" min="0">
+                        </div>
+                        <div class="price-slider">
+                            <input type="range" id="price-slider" min="0" max="2000" value="1000">
+                            <div class="price-labels">
+                                <span>0đ</span>
+                                <span>2.000.000đ</span>
+                            </div>
+                        </div>
+                        <button class="btn-apply" id="apply-price">Áp dụng</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Màu sắc</h4>
+                    <div class="color-chips" id="color-chips">
+                        <button data-color="red" class="color-chip" style="background: #ff4757;">
+                            <span class="color-name">Đỏ</span>
+                        </button>
+                        <button data-color="pink" class="color-chip" style="background: #ff9ff3;">
+                            <span class="color-name">Hồng</span>
+                        </button>
+                        <button data-color="white" class="color-chip" style="background: #ffffff; border: 1px solid #ddd;">
+                            <span class="color-name">Trắng</span>
+                        </button>
+                        <button data-color="yellow" class="color-chip" style="background: #ffa502;">
+                            <span class="color-name">Vàng</span>
+                        </button>
+                        <button data-color="purple" class="color-chip" style="background: #a55eea;">
+                            <span class="color-name">Tím</span>
+                        </button>
+                        <button data-color="blue" class="color-chip" style="background: #3742fa;">
+                            <span class="color-name">Xanh</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Đánh giá</h4>
+                    <div class="rating-filter">
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="5">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5 sao trở lên</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="4">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4 sao trở lên</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="radio" name="rating" value="3">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>3 sao trở lên</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Dịp sử dụng</h4>
+                    <div class="occasion-chips">
+                        <button class="occasion-chip" data-occasion="birthday">Sinh nhật</button>
+                        <button class="occasion-chip" data-occasion="wedding">Cưới hỏi</button>
+                        <button class="occasion-chip" data-occasion="valentine">Valentine</button>
+                        <button class="occasion-chip" data-occasion="mother">Ngày của mẹ</button>
+                        <button class="occasion-chip" data-occasion="graduation">Tốt nghiệp</button>
+                        <button class="occasion-chip" data-occasion="apology"></button>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="products-container">
+                <div class="products-header">
+                    <div class="results-info">
+                        <span id="results-count">Hiển thị 1-12 của 62 sản phẩm</span>
+                    </div>
+                    <div class="products-actions">
+                        <button class="btn-compare" id="compare-btn">
+                            <i class="fas fa-balance-scale"></i>
+                            So sánh (0)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="products" id="products">
+                    <!-- Product cards will be generated here -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <button class="page prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Trước
+                    </button>
+                    <div class="pages"></div>
+                    <button class="page next">
+                        Sau
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Đăng ký nhận tin</h3>
+            <p>Nhận thông tin về sản phẩm mới và ưu đãi đặc biệt</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Nhập email của bạn">
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-columns">
+        
+        <div class="footer-col">
+          <h3>HaMiên</h3>
+          <p>Nhận thông tin mới nhất</p>
+        </div>
+  
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h3>Services</h3>
+          <p>Personalized nutrition plans</p>
+          <p>Health and wellness coaching</p>
+          <p>Expand your spiritual knowledge</p>
+        </div>
+  
+        <div class="footer-col">
+          <h3>Address</h3>
+          <p>422 Vĩnh Hưng</p>
+          <p><b>Call Us:</b> 0987654321</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+  
+      </div>
+      <p class="copyright">Copyright © 2025 HaMiên</p>
+    </div>
+  </footer>
+  
+   <script src="script/script.js"></script>
+   
+   <!-- Chatbot Scripts -->
+   <script src="script/chatbot-config.js"></script>
+   <script src="script/chatbot.js"></script>
+   <script src="script/shop.js"></script>
+   
+   <!-- Debug script -->
+   <script>
+     console.log('Chatbot config loaded:', typeof window.CHATBOT_CONFIG);
+     console.log('Chatbot class loaded:', typeof HaMienChatbot);
+     
+     // Check if chatbot button exists
+     setTimeout(() => {
+       const button = document.getElementById('chatbot-button');
+       console.log('Chatbot button found:', button);
+       if (button) {
+         console.log('Chatbot button style:', window.getComputedStyle(button).display);
+         console.log('Chatbot button position:', window.getComputedStyle(button).position);
+       }
+       
+       const chatbot = window.hamienChatbot;
+       console.log('Chatbot instance:', chatbot);
+       if (chatbot) {
+         console.log('Chatbot isOpen:', chatbot.isOpen);
+         console.log('Chatbot chatHistory:', chatbot.chatHistory);
+       }
+     }, 1000);
+   </script>
+  </body>
+  </html>
+  
