@@ -1,0 +1,35 @@
+{
+  "id": "ccd18288-5340-495c-b6f5-6f86400815e9",
+  "name": "ituvan",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Không biết bạn đang quan tâm và muốn tư vấn về vấn đề nào vậy ạ? Bên mình có tư vấn đặt hoa, thiết kế theo ý tưởng của bạn, tư vấn các thông tin liên quan đến hoa tươi, các deal hot, thông tin buổi workshop, và giao hàng."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

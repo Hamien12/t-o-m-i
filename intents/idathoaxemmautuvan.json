@@ -1,0 +1,92 @@
+{
+  "id": "23df43f3-b82d-4450-9bac-15d37b8ee058",
+  "name": "idathoaxemmautuvan",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "d958e92c-d8f4-403b-9e5b-8b21249f2dc1",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c19eea91-1422-403f-8e89-f750a393cb11",
+          "name": "edathoaxemmmautuvan",
+          "required": false,
+          "dataType": "@edathoaxemmmautuvan",
+          "value": "$edathoaxemmmautuvan",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d7e6ee8f-66ae-4b2c-9b65-a1a467d17f14",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8afd501f-f729-4c63-a768-62732bc9fb08",
+          "name": "etuvan",
+          "required": false,
+          "dataType": "@etuvan",
+          "value": "$etuvan",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Dạ, sản phẩm mã #... hiện tại nhà Hạ còn hàng/hết hàng ạ. Sản phẩm này được tạo thành từ... có giá là ..."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

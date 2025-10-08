@@ -1,0 +1,9 @@
+{
+  "id": "d627d7ec-a9a9-400c-93e6-38d1a58b31d3",
+  "name": "ecamon",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

@@ -9,6 +9,7 @@ class HaMienChatbot {
     this.isTyping = false;
     this.apiKey = null; // Sẽ được cấu hình sau
     this.apiEndpoint = 'https://api.openai.com/v1/chat/completions';
+    this.dialogflow = { loaded: false, intents: {}, entities: {}, norm: (s)=>s };
     
     this.init();
   }
@@ -17,6 +18,8 @@ class HaMienChatbot {
     this.bindEvents();
     this.loadChatHistory();
     this.showWelcomeMessage();
+    this.prepareNormalizer();
+    this.loadDialogflowData();
   }
 
   bindEvents() {
@@ -94,8 +97,16 @@ class HaMienChatbot {
     // Clear existing messages
     chatBody.innerHTML = '';
 
-    // Add welcome message
-    this.addBotMessage("Xin chào! Tôi là chatbot của Hạ Miên 🌸 Tôi có thể giúp bạn tư vấn về các dịch vụ hoa tươi của chúng tôi. Bạn cần hỗ trợ gì ạ?");
+    // Add welcome message (random from config if available)
+    const config = window.CHATBOT_CONFIG || null;
+    let welcomeText = "Xin chào! Tôi là chatbot của Hạ Miên 🌸 Tôi có thể giúp bạn tư vấn về các dịch vụ hoa tươi của chúng tôi. Bạn cần hỗ trợ gì ạ?";
+    try {
+      if (config && config.chatbot && Array.isArray(config.chatbot.welcomeMessages)) {
+        const arr = config.chatbot.welcomeMessages;
+        welcomeText = arr[Math.floor(Math.random() * arr.length)] || welcomeText;
+      }
+    } catch (e) {}
+    this.addBotMessage(welcomeText);
 
     // Add suggestions
     this.addSuggestions();
@@ -105,9 +116,12 @@ class HaMienChatbot {
     const chatBody = document.getElementById("chat-body");
     if (!chatBody) return;
 
-    const suggestions = [
+    const config = window.CHATBOT_CONFIG || null;
+    const suggestions = (config && config.chatbot && Array.isArray(config.chatbot.suggestions))
+      ? config.chatbot.suggestions
+      : [
       "Đặt hoa theo mẫu",
-      "Tư vấn về hoa",
+          "Tư vấn",
       "Thiết kế theo yêu cầu",
       "Đặt hoa giao ngay",
       "Deal hot theo mùa",
@@ -204,6 +218,15 @@ class HaMienChatbot {
     this.isTyping = false;
   }
 
+  prepareNormalizer() {
+    // Simple VN diacritics normalizer
+    const from = 'àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ';
+    const to   = 'aaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuuyyyyydAAAAAAAAAAAAAAAAAEEEEEEEEEEEIIIIIoooooooooooooooooUUUUUUUUUUUYYYYYD';
+    const map = {};
+    for (let i=0; i<from.length; i++) map[from[i]] = to[i];
+    this.dialogflow.norm = (s) => (s || '').split('').map(ch => map[ch] || ch).join('').toLowerCase();
+  }
+
   async processMessage(message) {
     const typingDiv = this.showTypingIndicator();
 
@@ -219,12 +242,17 @@ class HaMienChatbot {
       console.log("AI API not available, using fallback responses");
     }
 
-    // Fallback to rule-based responses
+    // Rule-based responses
     setTimeout(() => {
       this.hideTypingIndicator(typingDiv);
-      const response = this.getFallbackResponse(message);
-      this.addBotMessage(response);
-    }, 1000 + Math.random() * 1000); // Simulate typing delay
+      const responses = this.getRuleBasedResponses(message);
+      responses.forEach(r => this.addBotMessage(r));
+      // Show follow-up suggestions if any
+      if (this.pendingSuggestions && this.pendingSuggestions.length) {
+        this.renderCustomSuggestions(this.pendingSuggestions);
+        this.pendingSuggestions = null;
+      }
+    }, 800 + Math.random() * 600);
   }
 
   async getAIResponse(message) {
@@ -273,48 +301,203 @@ class HaMienChatbot {
     return data.choices[0].message.content.trim();
   }
 
-  getFallbackResponse(message) {
-    const lowerMessage = message.toLowerCase();
+  renderCustomSuggestions(list) {
+    const chatBody = document.getElementById("chat-body");
+    if (!chatBody || !Array.isArray(list) || !list.length) return;
+    const suggestionsDiv = document.createElement("div");
+    suggestionsDiv.className = "chat-suggestions";
+    list.forEach(label => {
+      const btn = document.createElement("button");
+      btn.className = "suggest-btn";
+      btn.textContent = label;
+      suggestionsDiv.appendChild(btn);
+    });
+    chatBody.appendChild(suggestionsDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
 
-    // Keyword-based responses
-    if (lowerMessage.includes('đặt hoa') || lowerMessage.includes('mua hoa')) {
-      return "Cảm ơn bạn đã quan tâm đến dịch vụ của Hạ Miên! 🌸 Bạn có thể đặt hoa qua hotline 0987654321 hoặc đến trực tiếp tại 422 Vĩnh Hưng. Bạn muốn đặt loại hoa nào ạ?";
+  getRuleBasedResponses(message) {
+    const lower = this.dialogflow.norm(message || '');
+    const cfg = window.CHATBOT_CONFIG || {};
+    const intents = (cfg && cfg.intents) || {};
+    const flows = (cfg && cfg.flows) || {};
+
+    // 1) Try Dialogflow intents first if loaded
+    if (this.dialogflow.loaded) {
+      const matched = this.matchDialogflow(lower);
+      if (matched && matched.responses && matched.responses.length) {
+        // attach suggestions if configured
+        const cfg = window.CHATBOT_CONFIG || {};
+        const intentSugs = (cfg.intentSuggestions || {})[matched.name] || [];
+        this.pendingSuggestions = intentSugs.length ? intentSugs : this.pendingSuggestions;
+        return matched.responses;
+      }
     }
 
-    if (lowerMessage.includes('giá') || lowerMessage.includes('price')) {
-      return "Giá hoa tại Hạ Miên rất cạnh tranh và phụ thuộc vào loại hoa và kích thước. Bạn có thể gọi hotline 0987654321 để được báo giá chi tiết nhé! 💐";
+    const matchIntent = () => {
+      for (const key in intents) {
+        const keywords = (intents[key] || []).map(this.dialogflow.norm);
+        if (keywords.some(k => lower.includes(k))) return key;
+      }
+      return null;
+    };
+
+    const intent = matchIntent();
+    let texts = [];
+
+    if (intent && flows[intent]) {
+      texts = flows[intent].text || [];
+      this.pendingSuggestions = flows[intent].next || [];
+    } else {
+      texts = (flows.fallback && flows.fallback.text) || [
+        'Cảm ơn bạn đã liên hệ với Hạ Miên! 🌸 Bạn muốn Miên hỗ trợ phần nào ạ?'
+      ];
+      this.pendingSuggestions = (flows.fallback && flows.fallback.next) || [];
     }
 
-    if (lowerMessage.includes('giao hàng') || lowerMessage.includes('delivery')) {
-      return "Hạ Miên có dịch vụ giao hàng nhanh chóng và tận nơi! 🚚 Chúng tôi đảm bảo hoa được giao tươi và đúng giờ. Bạn ở khu vực nào để tôi tư vấn thời gian giao hàng ạ?";
-    }
+    return texts;
+  }
 
-    if (lowerMessage.includes('sự kiện') || lowerMessage.includes('event')) {
-      return "Hạ Miên chuyên tổ chức hoa cho các sự kiện lớn nhỏ! 🎉 Bạn có thể cho tôi biết quy mô, concept và thời gian để tôi tư vấn chi tiết nhé!";
-    }
+  async loadDialogflowData() {
+    try {
+      const cfg = (window.CHATBOT_CONFIG || {});
+      const manifest = Array.isArray(cfg.dialogflowManifest) ? cfg.dialogflowManifest : [];
+      if (!Array.isArray(manifest) || manifest.length === 0) return;
 
-    if (lowerMessage.includes('tư vấn') || lowerMessage.includes('advice')) {
-      return "Tôi rất vui được tư vấn cho bạn! 💡 Bạn muốn tư vấn về ý nghĩa hoa, cách chọn hoa phù hợp, hay cách chăm sóc hoa ạ?";
-    }
+      const loadOne = async (baseName) => {
+        try {
+          const intentRes = await fetch(`intents/${baseName}.json`);
+          if (!intentRes.ok) return null;
+          const intentJson = await intentRes.json();
 
-    if (lowerMessage.includes('cảm ơn') || lowerMessage.includes('thank')) {
-      return "Không có gì ạ! 😊 Hạ Miên luôn sẵn sàng phục vụ bạn. Bạn còn cần hỗ trợ gì nữa không?";
-    }
+          let phrases = [];
+          const saysPath = `intents/${baseName}_usersays_en.json`;
+          try {
+            const saysRes = await fetch(saysPath);
+            if (saysRes.ok) {
+              const says = await saysRes.json();
+              phrases = (says || []).map(item => {
+                const text = (item?.data || []).map(d => (d.text || '')).join('');
+                return text;
+              }).filter(t => !!t && t.trim().length > 1);
+            }
+          } catch (_) {}
 
-    if (lowerMessage.includes('chào') || lowerMessage.includes('hello')) {
-      return "Xin chào! 👋 Tôi là chatbot của Hạ Miên, rất vui được gặp bạn! Bạn cần tôi hỗ trợ gì về dịch vụ hoa tươi ạ?";
-    }
+          const responses = [];
+          const respBlocks = intentJson?.responses || [];
+          respBlocks.forEach(block => {
+            (block?.messages || []).forEach(msg => {
+              if (Array.isArray(msg.speech)) {
+                msg.speech.forEach(s => s && responses.push(s));
+              } else if (typeof msg.speech === 'string') {
+                responses.push(msg.speech);
+              }
+            });
+          });
 
-    if (lowerMessage.includes('địa chỉ') || lowerMessage.includes('address')) {
-      return "Cửa hàng Hạ Miên tọa lạc tại 422 Vĩnh Hưng 📍 Bạn có thể đến trực tiếp hoặc gọi hotline 0987654321 để đặt hàng nhé!";
-    }
+          // Collect entity hints from parameters
+          const entityHints = new Set();
+          respBlocks.forEach(block => {
+            (block?.parameters || []).forEach(p => {
+              const dt = (p?.dataType || '').toString();
+              if (dt.startsWith('@') && !dt.startsWith('@sys.')) {
+                entityHints.add(dt.slice(1));
+              }
+            });
+          });
+          // Also parse usersays meta to find entities used in examples
+          try {
+            const saysRes = await fetch(saysPath);
+            if (saysRes.ok) {
+              const says = await saysRes.json();
+              (says || []).forEach(item => {
+                (item?.data || []).forEach(d => {
+                  const meta = (d?.meta || '').toString();
+                  if (meta.startsWith('@') && !meta.startsWith('@sys.')) {
+                    entityHints.add(meta.slice(1));
+                  }
+                });
+              });
+            }
+          } catch(_) {}
 
-    if (lowerMessage.includes('hotline') || lowerMessage.includes('phone')) {
-      return "Hotline của Hạ Miên là 0987654321 📞 Chúng tôi phục vụ từ 8h sáng đến 8h tối hàng ngày. Bạn có thể gọi để được tư vấn và đặt hàng!";
-    }
+          return { name: baseName, phrases, responses, entityHints: Array.from(entityHints) };
+        } catch (_) { return null; }
+      };
 
-    // Default response
-    return "Cảm ơn bạn đã liên hệ với Hạ Miên! 🌸 Tôi có thể giúp bạn tư vấn về hoa tươi, đặt hàng, hoặc tổ chức sự kiện. Bạn muốn hỗ trợ gì cụ thể ạ? Hoặc bạn có thể gọi hotline 0987654321 để được tư vấn trực tiếp!";
+      const loaded = await Promise.all(manifest.map(loadOne));
+      loaded.filter(Boolean).forEach(item => {
+        this.dialogflow.intents[item.name] = item;
+      });
+      this.dialogflow.loaded = Object.keys(this.dialogflow.intents).length > 0;
+
+      // Load entities: union of config list + entities referenced by intents
+      const entSet = new Set();
+      const entManifestCfg = Array.isArray(cfg.entitiesManifest) ? cfg.entitiesManifest : [];
+      entManifestCfg.forEach(n => entSet.add(n));
+      loaded.filter(Boolean).forEach(it => {
+        (it.entityHints || []).forEach(n => entSet.add(n));
+      });
+
+      const loadEntity = async (baseName) => {
+        try {
+          const entRes = await fetch(`entities/${baseName}.json`);
+          if (!entRes.ok) return null;
+          const entJson = await entRes.json();
+          const values = [];
+          const entriesPath = `entities/${baseName}_entries_en.json`;
+          try {
+            const entriesRes = await fetch(entriesPath);
+            if (entriesRes.ok) {
+              const entries = await entriesRes.json();
+              entries.forEach(e => {
+                const v = (e?.value || '').toString();
+                const syns = Array.isArray(e?.synonyms) ? e.synonyms : [];
+                const pushSyn = (s) => {
+                  const parts = (s || '').split(/[;,]/).map(p => p.trim()).filter(p => p.length > 1);
+                  parts.forEach(p => values.push(this.dialogflow.norm(p)));
+                };
+                pushSyn(v);
+                syns.forEach(s => pushSyn(s));
+              });
+            }
+          } catch(_) {}
+          return { name: baseName, values: Array.from(new Set(values)).filter(Boolean) };
+        } catch(_) { return null; }
+      };
+      const ents = await Promise.all(Array.from(entSet).map(loadEntity));
+      ents.filter(Boolean).forEach(e => { this.dialogflow.entities[e.name] = e.values; });
+    } catch (e) {
+      this.dialogflow.loaded = false;
+    }
+  }
+
+  matchDialogflow(lowerMessage) {
+    // naive contains match against training phrases
+    const intents = this.dialogflow.intents || {};
+    for (const key in intents) {
+      const it = intents[key];
+      if (!it) continue;
+      const phraseHit = (it.phrases || []).some(p => {
+        const np = this.dialogflow.norm(p);
+        return np && (lowerMessage.includes(np) || np.includes(lowerMessage));
+      });
+      if (phraseHit) return it;
+    }
+    // try entity synonyms as weak signal (maps to broad intents)
+    const ent = this.dialogflow.entities || {};
+    const quickMap = [
+      { ents: ['exinchao'], intent: 'ixinchao' },
+      { ents: ['edonhang'], intent: 'idonhang' },
+      { ents: ['edathoa','edathoaxemmau','edathoaxemmmautuvan'], intent: 'idathoa' },
+      { ents: ['ephiship'], intent: 'iphiship' },
+      { ents: ['edealhotheothang','edealhottheothang'], intent: 'idealhotthang10' }
+    ];
+    for (const m of quickMap) {
+      const hit = m.ents.some(name => (ent[name]||[]).some(val => lowerMessage.includes(val)));
+      if (hit && intents[m.intent]) return intents[m.intent];
+    }
+    return null;
   }
 
   saveChatHistory() {

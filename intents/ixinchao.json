@@ -1,0 +1,78 @@
+{
+  "id": "e3938ad8-ed34-4e65-bcf7-005e71a9cde3",
+  "name": "ixinchao",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "36de5518-24b4-4291-a81d-2c491dd0dd8d",
+          "name": "exinchao",
+          "required": false,
+          "dataType": "@exinchao",
+          "value": "$exinchao",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cd9f3950-d8aa-4233-bbfa-80fb3b57e92b",
+          "name": "music-genre",
+          "required": false,
+          "dataType": "@sys.music-genre",
+          "value": "$music-genre",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "66ddc156-7f4a-44b6-a4c0-9b524544374d",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Hạ Miên xin chào, cảm ơn bạn đã liên hệ. Hạ Miên có thể giúp gì được cho bạn ạ?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,261 @@
+[
+  {
+    "id": "74ff0c89-3e3c-480b-a10a-22adc9b324fd",
+    "data": [
+      {
+        "text": "không",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " hề đẹp",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fbded3e8-a509-4f1d-954e-6047ea2e2f34",
+    "data": [
+      {
+        "text": "rất tệ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "df75703b-9c91-4344-9ca8-9538f84df81c",
+    "data": [
+      {
+        "text": "tệ ",
+        "userDefined": false
+      },
+      {
+        "text": "lắm",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "504e39ad-ebc2-4081-99d0-713f12a26748",
+    "data": [
+      {
+        "text": "xấu đau",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8605fd3e-dab1-42f9-922e-9a7ff035e6de",
+    "data": [
+      {
+        "text": "xấu ",
+        "userDefined": false
+      },
+      {
+        "text": "chê",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3672295c-a32c-4a78-9cee-35666a638e54",
+    "data": [
+      {
+        "text": "xấu tệ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2ff9b0f5-05f1-4c74-962a-a06e361e3d33",
+    "data": [
+      {
+        "text": "hộp k ",
+        "userDefined": false
+      },
+      {
+        "text": "chắc chắn",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8a859a2b-f9d7-4269-a12d-be9b8c22e079",
+    "data": [
+      {
+        "text": "hoa héo",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f3b101c4-ee0b-405d-a429-f28e0271d78d",
+    "data": [
+      {
+        "text": "giao hàng",
+        "meta": "@edathoatgiandiadiemgiaohang",
+        "alias": "edathoatgiandiadiemgiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "muộn",
+        "meta": "@edathoaconhucaukhacdathoa",
+        "alias": "edathoaconhucaukhacdathoa",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "dd6934d4-c816-4be4-b359-dd98297be6f9",
+    "data": [
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "bị",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " dập",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ab8ce064-059d-4eeb-8578-77c906b216fd",
+    "data": [
+      {
+        "text": "thật sự",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " xấu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "862ea879-7dc5-4701-958d-101befa3efb6",
+    "data": [
+      {
+        "text": "chê",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b54329fb-082f-4c81-8834-730ec8d37ca6",
+    "data": [
+      {
+        "text": "xấu quá",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f662a5b3-fc2d-4233-bcb7-cdb2932e6c98",
+    "data": [
+      {
+        "text": "tệ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1532ec1e-0f1c-44f1-a657-edcd6de3e31c",
+    "data": [
+      {
+        "text": "Không tốt",
+        "meta": "@echamsockhachhangphanhoi",
+        "alias": "echamsockhachhangphanhoi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "id": "1ae2e287-ca51-4c7f-a86a-67d9c6dac1d9",
+    "data": [
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gấp",
+        "meta": "@edathoagap",
+        "alias": "edathoagap",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "trong",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " tiếng",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "591dfd58-ca99-4b6e-a66b-c70b3e957f3f",
+    "data": [
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gấp",
+        "meta": "@edathoagap",
+        "alias": "edathoagap",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "trong",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "30p",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4601f0eb-ca72-4432-a392-3fe941817920",
+    "data": [
+      {
+        "text": "mình đang",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " vội ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " bó ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ngay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7c12e3e6-35c4-42d6-be0d-676c885f36c8",
+    "data": [
+      {
+        "text": "mình cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gấp",
+        "meta": "@edathoagap",
+        "alias": "edathoagap",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " bó ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0768ec67-ca1b-4d2b-9387-4b4f758089bc",
+    "data": [
+      {
+        "text": "SOS shop ơi, ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@edathoaconhucau",
+        "alias": "edathoaconhucau",
+        "userDefined": false
+      },
+      {
+        "text": " một bó ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ngay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0dba09df-036a-452d-8994-e833990760c4",
+    "data": [
+      {
+        "text": "Mình đang",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gấp",
+        "meta": "@edathoagap",
+        "alias": "edathoagap",
+        "userDefined": false
+      },
+      {
+        "text": " bó ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ea61534d-fe04-45c4-9f5c-48e20b98179c",
+    "data": [
+      {
+        "text": "mình cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " lấy ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " này ngay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "af0bce4c-c5b3-4d60-9529-5558ad24de2a",
+    "data": [
+      {
+        "text": "Shop ơi ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@edathoaconhucau",
+        "alias": "edathoaconhucau",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "đặt",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gấp",
+        "meta": "@edathoagap",
+        "alias": "edathoagap",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

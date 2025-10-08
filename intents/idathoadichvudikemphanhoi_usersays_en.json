@@ -1,0 +1,315 @@
+[
+  {
+    "id": "ed252ca1-4390-45a5-bfee-047f49ca5864",
+    "data": [
+      {
+        "text": "k đâu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e9ea75dd-694f-49d5-8bde-465ca23fd601",
+    "data": [
+      {
+        "text": "k ",
+        "userDefined": false
+      },
+      {
+        "text": "có",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "nhu cầu",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "42f9cef2-3204-4945-b87c-32750f6b8a69",
+    "data": [
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " k ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f3b92387-9b49-4ecf-acd9-e415bb3e4c2f",
+    "data": [
+      {
+        "text": "tôi k ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ab2a0ab9-fa2b-4672-8269-45941cbc8229",
+    "data": [
+      {
+        "text": "k ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " đâu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9a5e9546-dccc-448a-ae1a-f9d223e19715",
+    "data": [
+      {
+        "text": "hoa là",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "đủ",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " rồi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e7e27953-2fc8-4a7c-a5f7-b1c75d025821",
+    "data": [
+      {
+        "text": "không",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cần",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "68b80ac3-fe96-422a-ba56-c6efcb4ece85",
+    "data": [
+      {
+        "text": "Không",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "db20bd4e-d09e-4384-9fc9-5b8c55daa9f8",
+    "data": [
+      {
+        "text": "viết",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " thiệp ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ae8a6fee-8a9a-4535-89c8-3a6d05782a63",
+    "data": [
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@edathoaconhucau",
+        "alias": "edathoaconhucau",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "dùng",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " thiệp được k",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6cede8e4-124a-4c77-88ab-3cf407a55f43",
+    "data": [
+      {
+        "text": "ok",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "be7d8b4b-2cf3-477b-ac4f-defaf86babb1",
+    "data": [
+      {
+        "text": "Shop ",
+        "userDefined": false
+      },
+      {
+        "text": "viết",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " giúp ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a004d19b-8203-4585-99b0-e37cd04fa1ef",
+    "data": [
+      {
+        "text": "Có",
+        "meta": "@edathoadichvudikemphanhoi",
+        "alias": "edathoadichvudikemphanhoi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

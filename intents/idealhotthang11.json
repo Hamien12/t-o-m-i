@@ -1,0 +1,162 @@
+{
+  "id": "e9714987-7f7c-409d-bd02-4ad82d24d3df",
+  "name": "idealhotthang11",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "277d2e9f-ad9c-476e-8ab8-38065f25c3ec",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a2c85b25-c98b-4713-a0cb-3d2626f9a929",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b1aba8de-70df-4bd1-95b2-9861f4b51383",
+          "name": "person2",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person2",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d53e7760-8f4f-4436-907f-f43c68a73015",
+          "name": "person3",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person3",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "06029440-1f76-4dcf-8d35-dc2555384224",
+          "name": "date-time",
+          "required": false,
+          "dataType": "@sys.date-time",
+          "value": "$date-time",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e8aacdc0-3d76-4370-a24a-b5b14bd1097e",
+          "name": "edathoaconhucaukhacdathoa",
+          "required": false,
+          "dataType": "@edathoaconhucaukhacdathoa",
+          "value": "$edathoaconhucaukhacdathoa",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "60167047-a48c-4188-94f4-8b28068bb186",
+          "name": "edathoagiaohang",
+          "required": false,
+          "dataType": "@edathoagiaohang",
+          "value": "$edathoagiaohang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "33382703-2254-4cca-bf47-9151773cf4c7",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a81bc941-2264-400d-95d1-917a416fc78e",
+          "name": "edathoadichvudikemphanhoi",
+          "required": false,
+          "dataType": "@edathoadichvudikemphanhoi",
+          "value": "$edathoadichvudikemphanhoi",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Tiệm gửi bạn ưu đãi tháng này nha\nTháng 11, cùng Hạ Miên tri ân Ngày Nhà giáo Việt Nam với deal “Hoa đẹp, thiệp hay - Thay ngàn lời muốn nói”, giảm giá tới 20% tất cả các sản phẩm, áp dụng từ 1/11 đến 20/11. \nLời cảm ơn đong đầy trong từng cánh hoa.\n(link)\n(poster)"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

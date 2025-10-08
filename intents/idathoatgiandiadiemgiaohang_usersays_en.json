@@ -1,0 +1,294 @@
+[
+  {
+    "id": "17795676-8cff-4aee-9f43-b2594cff3911",
+    "data": [
+      {
+        "text": "lấy ",
+        "userDefined": false
+      },
+      {
+        "text": "hàng",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ở...",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a566bef6-3f3e-4e7f-9857-02f66d9316d1",
+    "data": [
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " tôi ",
+        "userDefined": false
+      },
+      {
+        "text": "đến",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": "...nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "522c3a40-09e0-4364-b663-c6cdc6cc70b2",
+    "data": [
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " tôi ",
+        "userDefined": false
+      },
+      {
+        "text": "đến",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": "... nehs",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "01c241c1-d1b6-4634-b7de-47c5f36af787",
+    "data": [
+      {
+        "text": "ngày... ",
+        "userDefined": false
+      },
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " tôi được ",
+        "userDefined": false
+      },
+      {
+        "text": "không",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "958c8e19-edd1-42f3-a07f-345b75c52c93",
+    "data": [
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "49b1bc68-1b1f-454f-805f-9215c090d01f",
+    "data": [
+      {
+        "text": "Giao ",
+        "userDefined": false
+      },
+      {
+        "text": "hàng cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0c6159bd-8513-4b75-bf16-0cb83ff00c72",
+    "data": [
+      {
+        "text": "Giao hàng",
+        "meta": "@edathoatgiandiadiemgiaohang",
+        "alias": "edathoatgiandiadiemgiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "cho",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " minhg",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "14ae5a9d-07bb-4ad7-ab6d-b7e76ca6c28f",
+    "data": [
+      {
+        "text": "Mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@edathoaconhucau",
+        "alias": "edathoaconhucau",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "đặt",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ạ",
+        "meta": "@sys.person",
+        "alias": "person2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

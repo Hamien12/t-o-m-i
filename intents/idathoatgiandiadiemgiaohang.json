@@ -1,0 +1,120 @@
+{
+  "id": "3bd3bcff-2009-447c-8529-fb74e79afdfc",
+  "name": "idathoatgiandiadiemgiaohang",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "4c6f2c73-97fb-49da-b947-6909bda33702",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "62728293-703b-42d8-a2c6-ef9ff5d652d4",
+          "name": "edathoaconhucau",
+          "required": false,
+          "dataType": "@edathoaconhucau",
+          "value": "$edathoaconhucau",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d882627e-26c0-4902-963d-f7184a87339e",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "15a9fbcc-36a0-4f43-8330-4a5ed4ab2362",
+          "name": "edathoagiaohang",
+          "required": false,
+          "dataType": "@edathoagiaohang",
+          "value": "$edathoagiaohang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2d69da1b-6e73-4997-8a35-8cdb5617b1d3",
+          "name": "person2",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "39abc458-eaa5-4d23-a0ef-5d508b538378",
+          "name": "edathoatgiandiadiemgiaohang",
+          "required": false,
+          "dataType": "@edathoatgiandiadiemgiaohang",
+          "value": "$edathoatgiandiadiemgiaohang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Dạ bạn cho Hạ Miên xin thời gian và địa chỉ mình lấy hoa nhé ạ 🩷"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

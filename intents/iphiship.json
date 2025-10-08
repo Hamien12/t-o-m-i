@@ -1,0 +1,92 @@
+{
+  "id": "4540d71d-29bf-4853-99cc-25183c360c6c",
+  "name": "iphiship",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "aa0be5d5-4a80-40e3-b51d-1f6c05b8b8c8",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "42324a58-fd24-45a0-9493-8dd862ba7f0b",
+          "name": "ephiship",
+          "required": false,
+          "dataType": "@ephiship",
+          "value": "$ephiship",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "723481da-d3f2-45ca-9750-5db5d81ca13e",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "491f2dfd-e3ca-4a08-b522-94ac024d9645",
+          "name": "person2",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Hạ Miên sẽ giao hàng tận nơi khi bạn đặt hàng trực tiếp ở tiệm hoặc đặt hàng trên web. Phí ship được tính như sau:\n+ Bán kính \u003c\u003d10km: freeship.\n+ Bán kính \u003e 10km: phí ship tính theo độ dài quãng đường."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

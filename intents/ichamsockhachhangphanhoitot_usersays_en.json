@@ -1,0 +1,200 @@
+[
+  {
+    "id": "8979faa3-91d8-4a22-aef1-22695d9ab737",
+    "data": [
+      {
+        "text": "giao",
+        "meta": "@edathoagiaohang",
+        "alias": "edathoagiaohang",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "đúng thời",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "gian",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "82f9ef70-81b3-493b-a8ac-fa033f718812",
+    "data": [
+      {
+        "text": "hàng đóng",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " gói ",
+        "userDefined": false
+      },
+      {
+        "text": "cẩn",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "thận",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9ebb7b4a-8a3a-4543-9524-719fc2c80757",
+    "data": [
+      {
+        "text": "nvien nhiệt tình",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "00c8c377-1653-4b10-b973-0bbf9967cb30",
+    "data": [
+      {
+        "text": "dịch vụ",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "tốt",
+        "meta": "@echamsockhachhangphanhoi",
+        "alias": "echamsockhachhangphanhoi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6722a00a-41ec-410a-a483-97b74182aef5",
+    "data": [
+      {
+        "text": "Hoa",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " đẹp quá sẽ ủng ",
+        "userDefined": false
+      },
+      {
+        "text": "hộ",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "56c15b8c-e5ad-4c4e-8e60-a824fd447585",
+    "data": [
+      {
+        "text": "Hoa",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " đẹp ",
+        "userDefined": false
+      },
+      {
+        "text": "lắm",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1c764c47-1033-4b79-8c34-9343d3cbba77",
+    "data": [
+      {
+        "text": "Mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " rất ",
+        "userDefined": false
+      },
+      {
+        "text": "thích",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3fda9efa-fb87-4625-9172-58c9218f0569",
+    "data": [
+      {
+        "text": "Tốt",
+        "meta": "@echamsockhachhangphanhoi",
+        "alias": "echamsockhachhangphanhoi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

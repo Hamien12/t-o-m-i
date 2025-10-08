@@ -1,0 +1,106 @@
+{
+  "id": "76772fed-5d66-4b81-aa04-bb7fab242e70",
+  "name": "idonhang",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "51948b0d-fe44-4da8-b5e2-fa6e55586684",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3b420eaf-4d1e-4d74-9e48-338f039f55ca",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "386ed4fd-f63d-4dc0-b7c5-5fc88215d12d",
+          "name": "edathoaconhucau",
+          "required": false,
+          "dataType": "@edathoaconhucau",
+          "value": "$edathoaconhucau",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e08d02da-df98-4671-ac5e-58d61cda3652",
+          "name": "edathoagiaohang",
+          "required": false,
+          "dataType": "@edathoagiaohang",
+          "value": "$edathoagiaohang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "23d2f9d5-1a26-49c4-a404-c7f32fb88d20",
+          "name": "edathoaconhucaukhacdathoa",
+          "required": false,
+          "dataType": "@edathoaconhucaukhacdathoa",
+          "value": "$edathoaconhucaukhacdathoa",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Bạn vui lòng gửi cho Hạ Miên mã đơn hàng, để tiệm tiện tra cứu và cập nhật tình trạng đơn hàng cho bạn nè!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

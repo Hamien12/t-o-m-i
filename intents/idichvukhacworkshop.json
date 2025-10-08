@@ -1,0 +1,134 @@
+{
+  "id": "893cd2b4-f712-4663-a639-6dbfc46ba4e6",
+  "name": "idichvukhacworkshop",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b83d6209-8b62-4cd9-b5ce-f2ac274ad069",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "345cc1d4-3a35-4165-aa14-cf62e72c6e9c",
+          "name": "edathoaxemmmautuvan",
+          "required": false,
+          "dataType": "@edathoaxemmmautuvan",
+          "value": "$edathoaxemmmautuvan",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "400a9e24-bcb1-43d1-a031-3bd24c01c366",
+          "name": "person1",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person1",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a8e9844b-3702-4587-b882-0d1284b5ef59",
+          "name": "person2",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person2",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0be36e6d-f9c9-47a7-99ad-927cd211a5f9",
+          "name": "edathoaconhucaukhacdathoa",
+          "required": false,
+          "dataType": "@edathoaconhucaukhacdathoa",
+          "value": "$edathoaconhucaukhacdathoa",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "39ce7f03-b1a1-41a4-8a66-560cc06b0136",
+          "name": "edathoaconhucau",
+          "required": false,
+          "dataType": "@edathoaconhucau",
+          "value": "$edathoaconhucau",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "81eae484-d39e-4917-9f3a-602cd921b277",
+          "name": "edathoadichvudikemphanhoi",
+          "required": false,
+          "dataType": "@edathoadichvudikemphanhoi",
+          "value": "$edathoadichvudikemphanhoi",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Dạ, Hiện tại bên tiệm có tổ chức Workshop dạy bó hoa vào ngày 15 hàng tháng với chi phí 650k/người (đã bao gồm: trà, bánh,...)\nĐến với Workshop, bạn không chỉ biết cách tự tay bó một bông hoa mà còn được trải nghiệm:\nKhông khí thư giãn, chữa lành\nĐược học và hướng dẫn trực tiếp bởi các florist chuyên nghiệp\nKết nối với người cùng đam mê \nVừa có hoa xinh, ảnh đẹp mang về; vừa học thêm được các kiến thức về hoa\nBạn có muốn Hạ Miên giúp bạn giữ một chỗ trong tháng này không ạ?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

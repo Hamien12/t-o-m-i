@@ -1,0 +1,50 @@
+{
+  "id": "26f38058-9564-46c4-83a5-bfd15a6aeaf3",
+  "name": "icamon",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "89ae1d31-152c-4794-a6d1-92736491967d",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Dạ vâng ạ, Hạ Miên xin chân thành cảm ơn quý khách đã lựa chọn dịch vụ tại cửa hàng, hy vọng quý khách đã có những trải nghiệm tốt nhất. Rất mong có thể phục vụ quý khách trong những lần tiếp theo ạ. Nếu quý khách có bất cứ vấn đề gì cần hỗ trợ hãy nhắn tin để chúng tôi giải đáp nhé."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

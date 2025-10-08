@@ -1,0 +1,92 @@
+{
+  "id": "23e7041a-7f59-47e1-863a-5e31c8c0a66c",
+  "name": "ichamsockhachhangphanhoixau",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "134089c8-d190-44be-b8e2-39a4f51f2f1d",
+          "name": "echamsockhachhangphanhoi",
+          "required": false,
+          "dataType": "@echamsockhachhangphanhoi",
+          "value": "$echamsockhachhangphanhoi",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "65be0ab9-f70e-458a-9441-259f8496cc23",
+          "name": "person",
+          "required": false,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "23c54296-19fc-4217-85d7-e06636cbcbf4",
+          "name": "edathoatgiandiadiemgiaohang",
+          "required": false,
+          "dataType": "@edathoatgiandiadiemgiaohang",
+          "value": "$edathoatgiandiadiemgiaohang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "31188273-ac0a-4225-8f0f-1a86fc741f57",
+          "name": "edathoaconhucaukhacdathoa",
+          "required": false,
+          "dataType": "@edathoaconhucaukhacdathoa",
+          "value": "$edathoaconhucaukhacdathoa",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Hạ Miên rất tiếc khi bạn chưa có trải nghiệm trọn vẹn khi sử dụng dịch vụ tại tiệm, bạn hãy liên hệ với tiệm qua hotline: 09xxxxx để có hướng xử lý và khắc phục trong thời gian sớm nhất nhé."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,443 @@
+[
+  {
+    "id": "c9a09819-cda6-4a0a-b8a4-1c7d6b1cd633",
+    "data": [
+      {
+        "text": "shop tính ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "thế",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " nào",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6285a0e0-54ea-4246-9211-8a683a7354cf",
+    "data": [
+      {
+        "text": "giá",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "sao",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ạ",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e970694c-5c9d-4720-926d-ecf7ca33abeb",
+    "data": [
+      {
+        "text": "phí ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " nnao",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "612ec7f0-8db7-4fca-8f30-8827d2144617",
+    "data": [
+      {
+        "text": "phí ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " nnapo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9eba5562-8521-4f10-90ae-f5b0154a6549",
+    "data": [
+      {
+        "text": "bên ",
+        "userDefined": false
+      },
+      {
+        "text": "mình",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " nnao",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f8944693-364f-43e9-8e88-12c56f5ba469",
+    "data": [
+      {
+        "text": "phí",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " tính ",
+        "userDefined": false
+      },
+      {
+        "text": "thế",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " nào",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "df8178e4-84a4-4032-b46e-256504de8111",
+    "data": [
+      {
+        "text": "phí ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5a8e1fe0-ee43-416e-92bf-db46c6c9681d",
+    "data": [
+      {
+        "text": "nội",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "thành",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "sao",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "669046ff-cc0f-4d14-9b59-dfa1deaf95e3",
+    "data": [
+      {
+        "text": "Gửi ",
+        "userDefined": false
+      },
+      {
+        "text": "hàng nội",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "thành",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": "/ngoại ",
+        "userDefined": false
+      },
+      {
+        "text": "thành",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "phí",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " tính ",
+        "userDefined": false
+      },
+      {
+        "text": "như",
+        "meta": "@sys.person",
+        "alias": "person2",
+        "userDefined": false
+      },
+      {
+        "text": " nào?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ae36cc5b-438e-40b3-9295-123c59abb74a",
+    "data": [
+      {
+        "text": "Tiền",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "là",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "bao",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " nhiêu ",
+        "userDefined": false
+      },
+      {
+        "text": "ạ",
+        "meta": "@sys.person",
+        "alias": "person2",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "61c28a6f-b145-4a39-8a29-e94e691c708e",
+    "data": [
+      {
+        "text": "Phí",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ship",
+        "meta": "@ephiship",
+        "alias": "ephiship",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "như",
+        "meta": "@sys.person",
+        "alias": "person1",
+        "userDefined": false
+      },
+      {
+        "text": " nào vậy ",
+        "userDefined": false
+      },
+      {
+        "text": "ạ",
+        "meta": "@sys.person",
+        "alias": "person2",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

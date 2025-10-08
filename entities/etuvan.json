@@ -1,0 +1,9 @@
+{
+  "id": "e1d3503e-a86e-46bd-ae32-4f32412f4c34",
+  "name": "etuvan",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}
