@@ -236,23 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if(rightBtn) rightBtn.disabled = track.scrollLeft >= maxScroll;
   });
 
-  // Category modal
-  var modal = document.createElement('div');
-  modal.className = 'svc-modal hidden';
-  modal.innerHTML = '<div class="overlay"></div><div class="dialog"><button class="close">×</button><h4 id="modal-title"></h4><p>Danh sách sản phẩm sẽ hiển thị tại đây theo danh mục bạn chọn.</p><button class="cta">Xem ngay</button></div>';
-  document.body.appendChild(modal);
-
-  function openModal(title){
-    modal.classList.remove('hidden');
-    modal.querySelector('#modal-title').textContent = title;
-  }
-  function closeModal(){ modal.classList.add('hidden'); }
-  modal.querySelector('.overlay').addEventListener('click', closeModal);
-  modal.querySelector('.close').addEventListener('click', closeModal);
-
-  document.querySelectorAll('.cat-card').forEach(function(b){
-    b.addEventListener('click', function(){ openModal(b.innerText.trim()); });
-  });
   // Set background images from data-img for cards
   document.querySelectorAll('.cat-card.with-img, .pill-card.with-img').forEach(function(el){
     var img = el.getAttribute('data-img');

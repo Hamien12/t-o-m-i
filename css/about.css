@@ -29,25 +29,26 @@
 }
 
 .about-section h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  color: #0a4d8c;
-  text-align: center; /* Đảm bảo chữ ở giữa */
-  margin-bottom: 40px;
+  color: #2f6f61;
+  text-align: center;
+  margin-bottom: 60px;
   position: relative;
-  display: inline-block; /* để tạo hiệu ứng trang trí */
+  display: inline-block;
+  letter-spacing: 1px;
 }
 
-/* Nếu muốn thêm đường gạch chân trang trí cho cân đối */
+/* Đường gạch chân trang trí */
 .about-section h2::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #1b75d0;
+  width: 100px;
+  height: 4px;
+  background-color: #2f6f61;
   border-radius: 2px;
 }
 .why-us .two-col {
@@ -63,33 +64,63 @@
 
 .about-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Căn đầu để chữ và ảnh cùng bắt đầu từ trên */
   justify-content: center;
-  gap: 80px; /* khoảng cách giữa ảnh và chữ */
-  max-width: 1100px;
+  gap: 60px; /* Giảm khoảng cách để cân xứng hơn */
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-image {
+  flex: 0 0 45%; /* Cố định kích thước ảnh */
+  display: flex;
+  justify-content: center;
 }
 
 .about-image img {
-  max-width: 350px;
-  border-radius: 12px; /* bo góc cho đẹp */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .about-text {
-  flex: 1;
+  flex: 0 0 50%; /* Cố định kích thước chữ */
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #333;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px; /* Căn chỉnh với ảnh */
 }
 
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .about-image {
+    flex: none;
+    width: 100%;
   }
 
   .about-text {
+    flex: none;
+    width: 100%;
     text-align: left;
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  .about-image img {
+    max-width: 100%;
   }
 }
 
@@ -115,19 +146,36 @@
 .story-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 50px;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .story-grid .text {
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+
+.story-grid .image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .story-grid .image img {
   width: 100%;
-  border-radius: 8px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   display: block;
 }
 
@@ -137,10 +185,24 @@
     flex-direction: column;
     text-align: center;
   }
+  
   .story-grid {
     grid-template-columns: 1fr; /* xuống 1 cột */
+    gap: 30px;
+    padding: 0 15px;
   }
-  .story-grid .text, .story-grid .image {
-    text-align: center;
+  
+  .story-grid .text {
+    text-align: left;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  
+  .story-grid .image {
+    justify-content: center;
+  }
+  
+  .story-grid .image img {
+    max-width: 100%;
   }
 }

@@ -31,70 +31,74 @@ class ShopManager {
     generateProducts() {
         // Dữ liệu sản phẩm từ Excel
         const excelData = [
-            {"STT": 1, "Mã sản phẩm": "#DR210", "Phân loại ": "Hoa bó", "Ý nghĩa": "https://kodo.vn/y-nghia-cac-loai-hoa/", "Unnamed: 4": "Hoa hồng vàng, cúc mẫu đơn cam nhạt, baby trắng, hoa thạch thảo", "Giá": 150.0},
-            {"STT": 2, "Mã sản phẩm": "#DR276", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa lưu ly xanh, baby trắng, lá bạc", "Giá": 150.0},
-            {"STT": 3, "Mã sản phẩm": "#DR150", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa đồng tiền hồng pastel, hoa hồng phấn, cúc họa mi trắng, lá phụ xanh.", "Giá": 200.0},
-            {"STT": 4, "Mã sản phẩm": "#DR252", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Thược dược hồng cam, hoa hồng pastel, đồng tiền hồng nhạt, hoa ly trắng, cỏ pampas.", "Giá": 250.0},
-            {"STT": 5, "Mã sản phẩm": "#DR261", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cẩm tú cầu xanh, lá bạch đàn", "Giá": 250.0},
-            {"STT": 6, "Mã sản phẩm": "#DR636", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng đỏ, cúc họa mi, lá phụ xanh", "Giá": 250.0},
-            {"STT": 7, "Mã sản phẩm": "#DR296", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip hồng pastel", "Giá": 200.0},
-            {"STT": 8, "Mã sản phẩm": "#DR901", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa cúc họa mi trắng, mao lương cam và hồng nhạt, tulip vàng, baby xanh", "Giá": 300.0},
-            {"STT": 9, "Mã sản phẩm": "#NT358", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cẩm chướng trắng, hoa đồng tiền hồng nhạt, hoa thanh tú xanh nhạt, hoa calla trắng", "Giá": 450.0},
-            {"STT": 10, "Mã sản phẩm": "#NT448", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc mẫu đơn cam, thược dược vàng, hoa cúc tây, baby trắng, lá xanh", "Giá": 600.0},
-            {"STT": 11, "Mã sản phẩm": "#NT729", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng phấn, đồng tiền hồng nhạt, baby trắng, cúc họa mi", "Giá": 700.0},
-            {"STT": 12, "Mã sản phẩm": "#NT426", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng kem, hồng pastel, cẩm chướng hồng, hoa lan mini", "Giá": 600.0},
-            {"STT": 13, "Mã sản phẩm": "#NT792", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Đồng tiền tím, hồng tím pastel, baby trắng, cúc tây tím, lá bạc", "Giá": 400.0},
-            {"STT": 14, "Mã sản phẩm": "#NT412", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng tím, cẩm chướng tím, baby trắng, hoa ly, lan tường", "Giá": 700.0},
-            {"STT": 15, "Mã sản phẩm": "#NT840", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly trắng kép, lá phụ xanh nhạt", "Giá": 600.0},
-            {"STT": 16, "Mã sản phẩm": "#NT237", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc mẫu đơn vàng, hồng kem, hoa bi trắng, lá bạc", "Giá": 500.0},
-            {"STT": 17, "Mã sản phẩm": "#NT209", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip cam, hồng đỏ cam, lá bạc", "Giá": 400.0},
-            {"STT": 18, "Mã sản phẩm": "#NT113", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng phấn, cúc mẫu đơn hồng, đồng tiền trắng, baby trắng", "Giá": 350.0},
-            {"STT": 19, "Mã sản phẩm": "#NT386", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Tulip hồng pastel, hoa hồng phấn, cúc họa mi trắng", "Giá": 500.0},
-            {"STT": 20, "Mã sản phẩm": "#NT741", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc vàng, hồng cam, thược dược vàng, baby trắng", "Giá": 500.0},
-            {"STT": 21, "Mã sản phẩm": "#NT210", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng đỏ, cẩm chướng kem, baby trắng, lá bạc", "Giá": 400.0},
-            {"STT": 22, "Mã sản phẩm": "#NT546", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa thược dược hồng, hoa lan trắng, hồng pastel, calla trắng", "Giá": 700.0},
-            {"STT": 23, "Mã sản phẩm": "#EL111", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly hồng, hoa hồng pastel, baby trắng, lá phụ xanh", "Giá": 500.0},
-            {"STT": 24, "Mã sản phẩm": "#EL222", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly hồng pastel, cẩm chướng trắng, baby trắng, lá bạc", "Giá": 600.0},
-            {"STT": 25, "Mã sản phẩm": "#EL333", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp trắng, hoa hồng kem, hồng pastel, cẩm chướng hồng, calla trắng, baby trắng", "Giá": 700.0},
-            {"STT": 26, "Mã sản phẩm": "#EL444", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa cẩm tú cầu xanh, baby trắng, lá bạch đàn", "Giá": 800.0},
-            {"STT": 27, "Mã sản phẩm": "#EL555", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng tím, cẩm tú cầu xanh tím, lan tím, baby trắng, lá phụ xanh", "Giá": 650.0},
-            {"STT": 28, "Mã sản phẩm": "#MD666", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan mokara hồng, lan hồ điệp, lá bạc", "Giá": 6000.0},
-            {"STT": 29, "Mã sản phẩm": "#MD448", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng đỏ, cẩm chướng hồng, nhài Clematis trắng, lan hồ điệp trắng, lá phụ xanh", "Giá": 8200.0},
-            {"STT": 30, "Mã sản phẩm": "#MD731", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lily, tulip, hoa hồng, cẩm chướng nhỏ, lá bạc", "Giá": 2000.0},
-            {"STT": 31, "Mã sản phẩm": "#MD572", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa rum, hoa hồng, lan hồ điệp trắng, cúc mẫu đơn vàng, lan vũ nữ nhỏ, lá phụ ", "Giá": 4000.0},
-            {"STT": 32, "Mã sản phẩm": "#MD361", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": " tulip vàng, cúc đồng tiền vàng, thược dược, lan hồ điệp, lan vũ nữ, lan mokara, hoa nhài", "Giá": 2000.0},
-            {"STT": 33, "Mã sản phẩm": "#MD210", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hướng dương, hoa hồng vàng, cúc mẫu đơn vàng nhạt", "Giá": 1200.0},
-            {"STT": 34, "Mã sản phẩm": "#MD471", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa mẫu đơn hồng, hoa anh đào, hoa lan hồng, hoa hồng pastel", "Giá": 1000.0},
-            {"STT": 35, "Mã sản phẩm": "#MD900", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp trắng – tím, hoa hồng , hoa mao lương", "Giá": 4800.0},
-            {"STT": 36, "Mã sản phẩm": "#MD520", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa cúc mẫu đơn xanh nhạt, hoa hồng đào, hoa mao lương, hoa cúc xanh, lá xanh và nụ sen trang trí", "Giá": 4500.0},
-            {"STT": 37, "Mã sản phẩm": "#MD131", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa rum trắng, hoa cúc xanh, hoa hồng xanh nhạt", "Giá": 1000.0},
-            {"STT": 38, "Mã sản phẩm": "#MD682", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa sen hồng nhạt, hoa sen trắng pha hồng, nụ sen, lá sen xanh và đài sen trang trí.", "Giá": 4800.0},
-            {"STT": 39, "Mã sản phẩm": "#MD359", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng hồng pastel, hoa tulip hồng nhạt, hoa cúc mẫu đơn hồng, hoa baby trắng và tím nhạt, hoa cẩm chướng", "Giá": 4500.0},
-            {"STT": 40, "Mã sản phẩm": "#MD846", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa sen trắng, nụ sen xanh, đài sen, hoa hồng trắng, hoa cát tường trắng", "Giá": 10000.0},
-            {"STT": 41, "Mã sản phẩm": "#MP276", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa mẫu đơn cam, hoa hồng đỏ và hồng cam, hoa cúc ping pong vàng, hoa dahlia đỏ, hoa cúc mẫu đơn hồng", "Giá": 500.0},
-            {"STT": 42, "Mã sản phẩm": "#MP101", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip hồng, hoa hồng pastel, hoa mẫu đơn hồng nhạt, hoa lan mokara hồng", "Giá": 720.0},
-            {"STT": 43, "Mã sản phẩm": "#MP102", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa tulip trắng, hoa cúc mẫu đơn hồng nhạt, hoa cẩm chướng trắng, hoa baby trắng", "Giá": 450.0},
-            {"STT": 44, "Mã sản phẩm": "#MP103", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa mẫu đơn hồng, hoa cúc ping pong hồng, hoa anthurium (môn hồng), hoa cẩm chướng trắng", "Giá": 900.0},
-            {"STT": 45, "Mã sản phẩm": "#MP104", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng tím, hoa cát tường tím, hoa cẩm chướng tím và lá phụ xanh", "Giá": 800.0},
-            {"STT": 46, "Mã sản phẩm": "#MP105", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cẩm chướng, hoa mẫu đơn hồng nhạt, hoa cúc ping pong trắng, hoa lan hồ điệp trắng và lá eucalyptus xanh bạc", "Giá": 450.0},
-            {"STT": 47, "Mã sản phẩm": "#MP106", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa lan hồ điệp tím, hoa tulip hồng, hoa cúc mẫu đơn, hoa baby trắng", "Giá": 2000.0},
-            {"STT": 48, "Mã sản phẩm": "#MP107", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng xanh lá, hoa lan mokara xanh, hoa cúc ping pong xanh, hoa mao lương xanh nhạt", "Giá": 800.0},
-            {"STT": 49, "Mã sản phẩm": "#MP108", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cát tường trắng, hoa mẫu đơn hồng nhạt, hoa cúc mẫu đơn nhỏ", "Giá": 700.0},
-            {"STT": 50, "Mã sản phẩm": "#MP109", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng hồng pastel, hoa cúc mẫu đơn hồng, hoa baby trắng, hoa sao tím", "Giá": 3000.0},
-            {"STT": 51, "Mã sản phẩm": "#MP110", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa đồng tiền cam nhạt, hoa hồng pastel, hoa cúc họa mi nhỏ, hoa baby hồng", "Giá": 150.0},
-            {"STT": 52, "Mã sản phẩm": "#MP111", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng vàng, hoa hồng kem, hoa cúc mẫu đơn trắng, hoa cúc nhỏ vàng nhạt", "Giá": 500.0},
-            {"STT": 53, "Mã sản phẩm": "#GZ971", "Phân loại ": "Hoa hộp", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp tím, hoa baby tím", "Giá": 500.0},
-            {"STT": 54, "Mã sản phẩm": "#GZ630", "Phân loại ": "Hoa hộp", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng cam và hồng nhạt, hoa cẩm tú cầu xanh trắng, hoa cúc nhỏ", "Giá": 600.0}
+            {"STT": 1, "Mã sản phẩm": "DR210", "Phân loại ": "Hoa bó", "Ý nghĩa": "https://kodo.vn/y-nghia-cac-loai-hoa/", "Unnamed: 4": "Hoa hồng vàng, cúc mẫu đơn cam nhạt, baby trắng, hoa thạch thảo", "Giá": 150.0},
+            {"STT": 2, "Mã sản phẩm": "DR276", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa lưu ly xanh, baby trắng, lá bạc", "Giá": 150.0},
+            {"STT": 3, "Mã sản phẩm": "DR150", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa đồng tiền hồng pastel, hoa hồng phấn, cúc họa mi trắng, lá phụ xanh.", "Giá": 200.0},
+            {"STT": 4, "Mã sản phẩm": "DR252", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Thược dược hồng cam, hoa hồng pastel, đồng tiền hồng nhạt, hoa ly trắng, cỏ pampas.", "Giá": 250.0},
+            {"STT": 5, "Mã sản phẩm": "DR261", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cẩm tú cầu xanh, lá bạch đàn", "Giá": 250.0},
+            {"STT": 6, "Mã sản phẩm": "DR636", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng đỏ, cúc họa mi, lá phụ xanh", "Giá": 250.0},
+            {"STT": 7, "Mã sản phẩm": "DR296", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip hồng pastel", "Giá": 200.0},
+            {"STT": 8, "Mã sản phẩm": "DR901", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa cúc họa mi trắng, mao lương cam và hồng nhạt, tulip vàng, baby xanh", "Giá": 300.0},
+            {"STT": 9, "Mã sản phẩm": "NT358", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cẩm chướng trắng, hoa đồng tiền hồng nhạt, hoa thanh tú xanh nhạt, hoa calla trắng", "Giá": 450.0},
+            {"STT": 10, "Mã sản phẩm": "NT448", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc mẫu đơn cam, thược dược vàng, hoa cúc tây, baby trắng, lá xanh", "Giá": 600.0},
+            {"STT": 11, "Mã sản phẩm": "NT729", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng phấn, đồng tiền hồng nhạt, baby trắng, cúc họa mi", "Giá": 700.0},
+            {"STT": 12, "Mã sản phẩm": "NT426", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng kem, hồng pastel, cẩm chướng hồng, hoa lan mini", "Giá": 600.0},
+            {"STT": 13, "Mã sản phẩm": "NT792", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Đồng tiền tím, hồng tím pastel, baby trắng, cúc tây tím, lá bạc", "Giá": 400.0},
+            {"STT": 14, "Mã sản phẩm": "NT412", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng tím, cẩm chướng tím, baby trắng, hoa ly, lan tường", "Giá": 700.0},
+            {"STT": 15, "Mã sản phẩm": "NT840", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly trắng kép, lá phụ xanh nhạt", "Giá": 600.0},
+            {"STT": 16, "Mã sản phẩm": "NT237", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc mẫu đơn vàng, hồng kem, hoa bi trắng, lá bạc", "Giá": 500.0},
+            {"STT": 17, "Mã sản phẩm": "NT209", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip cam, hồng đỏ cam, lá bạc", "Giá": 400.0},
+            {"STT": 18, "Mã sản phẩm": "NT113", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng phấn, cúc mẫu đơn hồng, đồng tiền trắng, baby trắng", "Giá": 350.0},
+            {"STT": 19, "Mã sản phẩm": "NT386", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Tulip hồng pastel, hoa hồng phấn, cúc họa mi trắng", "Giá": 500.0},
+            {"STT": 20, "Mã sản phẩm": "NT741", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Cúc vàng, hồng cam, thược dược vàng, baby trắng", "Giá": 500.0},
+            {"STT": 21, "Mã sản phẩm": "NT210", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hồng đỏ, cẩm chướng kem, baby trắng, lá bạc", "Giá": 400.0},
+            {"STT": 22, "Mã sản phẩm": "NT546", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa thược dược hồng, hoa lan trắng, hồng pastel, calla trắng", "Giá": 700.0},
+            {"STT": 23, "Mã sản phẩm": "EL111", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly hồng, hoa hồng pastel, baby trắng, lá phụ xanh", "Giá": 500.0},
+            {"STT": 24, "Mã sản phẩm": "EL222", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa ly hồng pastel, cẩm chướng trắng, baby trắng, lá bạc", "Giá": 600.0},
+            {"STT": 25, "Mã sản phẩm": "EL333", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp trắng, hoa hồng kem, hồng pastel, cẩm chướng hồng, calla trắng, baby trắng", "Giá": 700.0},
+            {"STT": 26, "Mã sản phẩm": "EL444", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa cẩm tú cầu xanh, baby trắng, lá bạch đàn", "Giá": 800.0},
+            {"STT": 27, "Mã sản phẩm": "EL555", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng tím, cẩm tú cầu xanh tím, lan tím, baby trắng, lá phụ xanh", "Giá": 650.0},
+            {"STT": 28, "Mã sản phẩm": "MD666", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan mokara hồng, lan hồ điệp, lá bạc", "Giá": 6000.0},
+            {"STT": 29, "Mã sản phẩm": "MD448", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng đỏ, cẩm chướng hồng, nhài Clematis trắng, lan hồ điệp trắng, lá phụ xanh", "Giá": 8200.0},
+            {"STT": 30, "Mã sản phẩm": "MD731", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lily, tulip, hoa hồng, cẩm chướng nhỏ, lá bạc", "Giá": 2000.0},
+            {"STT": 31, "Mã sản phẩm": "MD572", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa rum, hoa hồng, lan hồ điệp trắng, cúc mẫu đơn vàng, lan vũ nữ nhỏ, lá phụ ", "Giá": 4000.0},
+            {"STT": 32, "Mã sản phẩm": "MD361", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": " tulip vàng, cúc đồng tiền vàng, thược dược, lan hồ điệp, lan vũ nữ, lan mokara, hoa nhài", "Giá": 2000.0},
+            {"STT": 33, "Mã sản phẩm": "MD210", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hướng dương, hoa hồng vàng, cúc mẫu đơn vàng nhạt", "Giá": 1200.0},
+            {"STT": 34, "Mã sản phẩm": "MD471", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa mẫu đơn hồng, hoa anh đào, hoa lan hồng, hoa hồng pastel", "Giá": 1000.0},
+            {"STT": 35, "Mã sản phẩm": "MD900", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp trắng – tím, hoa hồng , hoa mao lương", "Giá": 4800.0},
+            {"STT": 36, "Mã sản phẩm": "MD520", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa cúc mẫu đơn xanh nhạt, hoa hồng đào, hoa mao lương, hoa cúc xanh, lá xanh và nụ sen trang trí", "Giá": 4500.0},
+            {"STT": 37, "Mã sản phẩm": "MD131", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa rum trắng, hoa cúc xanh, hoa hồng xanh nhạt", "Giá": 1000.0},
+            {"STT": 38, "Mã sản phẩm": "MD682", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa sen hồng nhạt, hoa sen trắng pha hồng, nụ sen, lá sen xanh và đài sen trang trí.", "Giá": 4800.0},
+            {"STT": 39, "Mã sản phẩm": "MD359", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng hồng pastel, hoa tulip hồng nhạt, hoa cúc mẫu đơn hồng, hoa baby trắng và tím nhạt, hoa cẩm chướng", "Giá": 4500.0},
+            {"STT": 40, "Mã sản phẩm": "MD846", "Phân loại ": "Hoa Bình", "Ý nghĩa": null, "Unnamed: 4": "Hoa sen trắng, nụ sen xanh, đài sen, hoa hồng trắng, hoa cát tường trắng", "Giá": 10000.0},
+            {"STT": 41, "Mã sản phẩm": "MP276", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa mẫu đơn cam, hoa hồng đỏ và hồng cam, hoa cúc ping pong vàng, hoa dahlia đỏ, hoa cúc mẫu đơn hồng", "Giá": 500.0},
+            {"STT": 42, "Mã sản phẩm": "MP101", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa tulip hồng, hoa hồng pastel, hoa mẫu đơn hồng nhạt, hoa lan mokara hồng", "Giá": 720.0},
+            {"STT": 43, "Mã sản phẩm": "MP102", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa tulip trắng, hoa cúc mẫu đơn hồng nhạt, hoa cẩm chướng trắng, hoa baby trắng", "Giá": 450.0},
+            {"STT": 44, "Mã sản phẩm": "MP103", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa mẫu đơn hồng, hoa cúc ping pong hồng, hoa anthurium (môn hồng), hoa cẩm chướng trắng", "Giá": 900.0},
+            {"STT": 45, "Mã sản phẩm": "MP104", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng tím, hoa cát tường tím, hoa cẩm chướng tím và lá phụ xanh", "Giá": 800.0},
+            {"STT": 46, "Mã sản phẩm": "MP105", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cẩm chướng, hoa mẫu đơn hồng nhạt, hoa cúc ping pong trắng, hoa lan hồ điệp trắng và lá eucalyptus xanh bạc", "Giá": 450.0},
+            {"STT": 47, "Mã sản phẩm": "MP106", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa lan hồ điệp tím, hoa tulip hồng, hoa cúc mẫu đơn, hoa baby trắng", "Giá": 2000.0},
+            {"STT": 48, "Mã sản phẩm": "MP107", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng xanh lá, hoa lan mokara xanh, hoa cúc ping pong xanh, hoa mao lương xanh nhạt", "Giá": 800.0},
+            {"STT": 49, "Mã sản phẩm": "MP108", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng pastel, hoa cát tường trắng, hoa mẫu đơn hồng nhạt, hoa cúc mẫu đơn nhỏ", "Giá": 700.0},
+            {"STT": 50, "Mã sản phẩm": "MP109", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng hồng pastel, hoa cúc mẫu đơn hồng, hoa baby trắng, hoa sao tím", "Giá": 3000.0},
+            {"STT": 51, "Mã sản phẩm": "MP110", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa đồng tiền cam nhạt, hoa hồng pastel, hoa cúc họa mi nhỏ, hoa baby hồng", "Giá": 150.0},
+            {"STT": 52, "Mã sản phẩm": "MP111", "Phân loại ": "Hoa Lẵng", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng vàng, hoa hồng kem, hoa cúc mẫu đơn trắng, hoa cúc nhỏ vàng nhạt", "Giá": 500.0},
+            {"STT": 53, "Mã sản phẩm": "GZ971", "Phân loại ": "Hoa hộp", "Ý nghĩa": null, "Unnamed: 4": "Hoa lan hồ điệp tím, hoa baby tím", "Giá": 500.0},
+            {"STT": 54, "Mã sản phẩm": "GZ630", "Phân loại ": "Hoa hộp", "Ý nghĩa": null, "Unnamed: 4": "Hoa hồng cam và hồng nhạt, hoa cẩm tú cầu xanh trắng, hoa cúc nhỏ", "Giá": 600.0},
+            {"STT": 55, "Mã sản phẩm": "DESIGN", "Phân loại ": "Hoa bó", "Ý nghĩa": null, "Unnamed: 4": "Thiết kế đặc biệt theo yêu cầu khách hàng", "Giá": 800.0}
         ];
 
         // Lọc bỏ các sản phẩm không có dữ liệu
         const validProducts = excelData.filter(item => 
             item["Mã sản phẩm"] && 
-            item["Mã sản phẩm"] !== "#" && 
+            item["Mã sản phẩm"] !== "" && 
             item["Phân loại "] && 
             item["Giá"] && 
             item["Unnamed: 4"]
         );
+
+        console.log(`Total products in Excel data: ${excelData.length}`);
+        console.log(`Valid products after filtering: ${validProducts.length}`);
 
         this.products = validProducts.map((item, index) => {
             // Xác định category dựa trên phân loại
@@ -122,8 +126,129 @@ class ShopManager {
             else if (description.includes('tốt nghiệp') || description.includes('graduation')) occasion = 'graduation';
             else if (description.includes('xin lỗi') || description.includes('apology')) occasion = 'apology';
 
-            // Tạo tên sản phẩm từ mô tả
-            const name = this.generateProductName(item["Unnamed: 4"], item["Mã sản phẩm"]);
+            // Sử dụng mã sản phẩm làm tên
+            const productCode = item["Mã sản phẩm"];
+            const name = productCode; // Tên sản phẩm = mã sản phẩm
+
+            // Xác định đường dẫn ảnh
+            let imagePath = 'image/shop/' + productCode + '.png';
+            
+            // Xử lý các trường hợp đặc biệt cho tên file
+            if (productCode === 'EL111') {
+                imagePath = 'image/shop/EL 111.png'; // Có khoảng trắng trong tên file
+            } else if (productCode === 'EL222') {
+                imagePath = 'image/shop/EL222.png';
+            } else if (productCode === 'EL333') {
+                imagePath = 'image/shop/EL333.png';
+            } else if (productCode === 'EL444') {
+                imagePath = 'image/shop/EL444.png';
+            } else if (productCode === 'EL555') {
+                imagePath = 'image/shop/EL555.png';
+            } else if (productCode === 'DR150') {
+                imagePath = 'image/shop/DR150.png';
+            } else if (productCode === 'DR252') {
+                imagePath = 'image/shop/DR252.png';
+            } else if (productCode === 'DR261') {
+                imagePath = 'image/shop/DR261.png';
+            } else if (productCode === 'DR276') {
+                imagePath = 'image/shop/DR276.png';
+            } else if (productCode === 'DR296') {
+                imagePath = 'image/shop/DR296.png';
+            } else if (productCode === 'DR636') {
+                imagePath = 'image/shop/DR636.png';
+            } else if (productCode === 'DR901') {
+                imagePath = 'image/shop/DR901.png';
+            } else if (productCode === 'GZ630') {
+                imagePath = 'image/shop/GZ630.png';
+            } else if (productCode === 'GZ971') {
+                imagePath = 'image/shop/GZ971.png';
+            } else if (productCode === 'MD131') {
+                imagePath = 'image/shop/MD131.png';
+            } else if (productCode === 'MD210') {
+                imagePath = 'image/shop/MD210.png';
+            } else if (productCode === 'MD359') {
+                imagePath = 'image/shop/MD359.png';
+            } else if (productCode === 'MD361') {
+                imagePath = 'image/shop/MD361.png';
+            } else if (productCode === 'MD448') {
+                imagePath = 'image/shop/MD448.png';
+            } else if (productCode === 'MD471') {
+                imagePath = 'image/shop/MD471.png';
+            } else if (productCode === 'MD520') {
+                imagePath = 'image/shop/MD520.png';
+            } else if (productCode === 'MD572') {
+                imagePath = 'image/shop/MD572.png';
+            } else if (productCode === 'MD666') {
+                imagePath = 'image/shop/MD666.png';
+            } else if (productCode === 'MD682') {
+                imagePath = 'image/shop/MD682.png';
+            } else if (productCode === 'MD731') {
+                imagePath = 'image/shop/MD731.png';
+            } else if (productCode === 'MD846') {
+                imagePath = 'image/shop/MD846.png';
+            } else if (productCode === 'MD900') {
+                imagePath = 'image/shop/MD900.png';
+            } else if (productCode === 'MP101') {
+                imagePath = 'image/shop/MP101.png';
+            } else if (productCode === 'MP102') {
+                imagePath = 'image/shop/MP102.png';
+            } else if (productCode === 'MP103') {
+                imagePath = 'image/shop/MP103.png';
+            } else if (productCode === 'MP104') {
+                imagePath = 'image/shop/MP104.png';
+            } else if (productCode === 'MP105') {
+                imagePath = 'image/shop/MP105.png';
+            } else if (productCode === 'MP106') {
+                imagePath = 'image/shop/MP106.png';
+            } else if (productCode === 'MP107') {
+                imagePath = 'image/shop/MP107.png';
+            } else if (productCode === 'MP108') {
+                imagePath = 'image/shop/MP108.png';
+            } else if (productCode === 'MP109') {
+                imagePath = 'image/shop/MP109.png';
+            } else if (productCode === 'MP110') {
+                imagePath = 'image/shop/MP110.png';
+            } else if (productCode === 'MP111') {
+                imagePath = 'image/shop/MP111.png';
+            } else if (productCode === 'MP276') {
+                imagePath = 'image/shop/MP276.png';
+            } else if (productCode === 'NT113') {
+                imagePath = 'image/shop/NT113.png';
+            } else if (productCode === 'NT209') {
+                imagePath = 'image/shop/NT209.png';
+            } else if (productCode === 'NT210') {
+                imagePath = 'image/shop/NT210.png';
+            } else if (productCode === 'NT237') {
+                imagePath = 'image/shop/NT237.png';
+            } else if (productCode === 'NT358') {
+                imagePath = 'image/shop/NT358.png';
+            } else if (productCode === 'NT386') {
+                imagePath = 'image/shop/NT386.png';
+            } else if (productCode === 'NT412') {
+                imagePath = 'image/shop/NT412.png';
+            } else if (productCode === 'NT426') {
+                imagePath = 'image/shop/NT426.png';
+            } else if (productCode === 'NT448') {
+                imagePath = 'image/shop/NT448.png';
+            } else if (productCode === 'NT546') {
+                imagePath = 'image/shop/NT546.png';
+            } else if (productCode === 'NT729') {
+                imagePath = 'image/shop/NT729.png';
+            } else if (productCode === 'NT741') {
+                imagePath = 'image/shop/NT741.png';
+            } else if (productCode === 'NT792') {
+                imagePath = 'image/shop/NT792.png';
+            } else if (productCode === 'NT840') {
+                imagePath = 'image/shop/NT840.png';
+            } else if (productCode === 'DESIGN') {
+                imagePath = 'image/shop/Thiết kế chưa có tên.png';
+            } else {
+                // Fallback cho các sản phẩm khác
+                imagePath = 'image/shop/' + productCode + '.png';
+            }
+
+            // Debug: Log image path
+            console.log(`Generated product: ${name}, Image path: ${imagePath}`);
 
             return {
                 id: index + 1,
@@ -132,10 +257,10 @@ class ShopManager {
                 category: category,
                 color: color,
                 rating: 4.0 + Math.random() * 1.0, // Random rating 4.0-5.0
-                image: 'image/products/' + item["Mã sản phẩm"] + '.jpg', // Placeholder for actual images
+                image: imagePath,
                 badge: Math.random() > 0.8 ? '-10%' : null, // 20% chance of discount
                 occasion: occasion,
-                productCode: item["Mã sản phẩm"],
+                productCode: productCode,
                 description: item["Unnamed: 4"],
                 meaning: item["Ý nghĩa"],
                 inStock: Math.random() > 0.1, // 90% in stock
@@ -145,27 +270,38 @@ class ShopManager {
         });
 
         this.filteredProducts = [...this.products];
+        console.log(`Final products created: ${this.products.length}`);
+        console.log(`Filtered products: ${this.filteredProducts.length}`);
+        
+        // Test: Log first few products
+        if (this.products.length > 0) {
+            console.log('First product:', this.products[0]);
+            console.log('First product image path:', this.products[0].image);
+        } else {
+            console.error('No products created! Creating fallback...');
+            // Create a simple fallback product
+            this.products = [{
+                id: 1,
+                name: 'DR261',
+                price: 250000,
+                category: 'bouquet',
+                color: 'blue',
+                rating: 4.5,
+                image: 'image/shop/DR261.png',
+                badge: null,
+                occasion: 'birthday',
+                productCode: 'DR261',
+                description: 'Cẩm tú cầu xanh, lá bạch đàn',
+                meaning: null,
+                inStock: true,
+                isNew: true,
+                isPopular: true
+            }];
+            this.filteredProducts = [...this.products];
+            console.log('Fallback product created:', this.products[0]);
+        }
     }
 
-    generateProductName(description, productCode) {
-        // Tạo tên sản phẩm từ mô tả
-        const words = description.split(',');
-        const mainFlower = words[0].trim();
-        
-        // Loại bỏ từ "Hoa" ở đầu nếu có
-        const cleanName = mainFlower.replace(/^Hoa\s+/, '');
-        
-        // Tạo tên sản phẩm
-        let name = cleanName;
-        if (productCode.startsWith('#DR')) name = `Bó ${cleanName}`;
-        else if (productCode.startsWith('#NT')) name = `Bó ${cleanName}`;
-        else if (productCode.startsWith('#EL')) name = `Bó ${cleanName}`;
-        else if (productCode.startsWith('#MD')) name = `Bình ${cleanName}`;
-        else if (productCode.startsWith('#MP')) name = `Lẵng ${cleanName}`;
-        else if (productCode.startsWith('#GZ')) name = `Hộp ${cleanName}`;
-        
-        return name;
-    }
 
     bindEvents() {
         // Filter toggle
@@ -370,12 +506,22 @@ class ShopManager {
     }
 
     renderProducts() {
+        console.log('renderProducts called');
         const productsContainer = document.getElementById('products');
-        if (!productsContainer) return;
+        if (!productsContainer) {
+            console.error('Products container not found!');
+            console.log('Available elements with id:', document.querySelectorAll('[id]'));
+            return;
+        }
+
+        console.log('Products container found:', productsContainer);
 
         const startIndex = (this.currentPage - 1) * this.productsPerPage;
         const endIndex = startIndex + this.productsPerPage;
         const productsToShow = this.filteredProducts.slice(startIndex, endIndex);
+
+        console.log(`Rendering ${productsToShow.length} products`);
+        console.log('Products to show:', productsToShow);
 
         if (this.currentView === 'list') {
             productsContainer.className = 'products list-view';
@@ -383,19 +529,32 @@ class ShopManager {
             productsContainer.className = 'products';
         }
 
-        productsContainer.innerHTML = productsToShow.map(product => this.createProductCard(product)).join('');
+        const html = productsToShow.map(product => this.createProductCard(product)).join('');
+        console.log('Generated HTML length:', html.length);
+        console.log('Generated HTML preview:', html.substring(0, 200) + '...');
+        productsContainer.innerHTML = html;
+        
+        // Test: Check if images are in DOM
+        const images = productsContainer.querySelectorAll('img');
+        console.log('Images found in DOM:', images.length);
+        images.forEach((img, index) => {
+            console.log(`Image ${index}:`, img.src, 'loaded:', img.complete);
+        });
     }
 
     createProductCard(product) {
         const badge = product.badge ? `<div class="badge">${product.badge}</div>` : '';
         const stockStatus = product.inStock ? '' : '<div class="out-of-stock">Hết hàng</div>';
         
+        // Debug: Log product image path
+        console.log(`Product: ${product.name}, Image: ${product.image}`);
+        
         if (this.currentView === 'list') {
             return `
                 <div class="product" data-price="${product.price}" data-cat="${product.category}" data-color="${product.color}">
                     ${badge}
                     <div class="thumb">
-                        <img src="${product.image}" alt="${product.name}" onerror="this.src='image/services.png'">
+                        <img src="${product.image}" alt="${product.name}" onerror="console.log('Image failed to load:', this.src); this.src='image/services.png'">
                     </div>
                     <div class="product-info">
                         <h5>${product.name}</h5>
@@ -415,7 +574,7 @@ class ShopManager {
                 <div class="product" data-price="${product.price}" data-cat="${product.category}" data-color="${product.color}">
                     ${badge}
                     <div class="thumb">
-                        <img src="${product.image}" alt="${product.name}" onerror="this.src='image/services.png'">
+                        <img src="${product.image}" alt="${product.name}" onerror="console.log('Image failed to load:', this.src); this.src='image/services.png'">
                     </div>
                     <div class="product-info">
                         <h5>${product.name}</h5>
@@ -553,7 +712,15 @@ class ShopManager {
 
 // Initialize shop when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new ShopManager();
+    console.log('DOM loaded, initializing ShopManager...');
+    try {
+        const shopManager = new ShopManager();
+        console.log('ShopManager created:', shopManager);
+        console.log('Products count:', shopManager.products.length);
+        console.log('Filtered products count:', shopManager.filteredProducts.length);
+    } catch (error) {
+        console.error('Error initializing ShopManager:', error);
+    }
 });
 
 // Add to cart functionality
@@ -581,10 +748,10 @@ document.addEventListener('click', (e) => {
         showNotification(`${productName} đã được thêm vào giỏ hàng!`, 'success');
         
         // Add to cart animation
-        e.target.style.background = '#28a745';
+        e.target.style.background = '28a745';
         e.target.textContent = 'Đã thêm!';
         setTimeout(() => {
-            e.target.style.background = '#5a7c46';
+            e.target.style.background = '5a7c46';
             e.target.textContent = 'Thêm vào giỏ';
         }, 1500);
     }
@@ -604,7 +771,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: ${type === 'success' ? '#28a745' : '#17a2b8'};
+        background: ${type === 'success' ? '28a745' : '17a2b8'};
         color: white;
         padding: 15px 20px;
         border-radius: 8px;
@@ -669,3 +836,25 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash.substring(1); // Lấy phần sau dấu #
+    if (hash) {
+      // Tìm checkbox có value trùng với hash (bouquet, basket, box, event)
+      const checkbox = document.querySelector(`input[value="${hash}"]`);
+      if (checkbox) {
+        checkbox.checked = true; // Tự bật filter tương ứng
+        checkbox.dispatchEvent(new Event("change"));
+  
+        // Cuộn đến khu vực filters để người dùng thấy rõ
+        checkbox.scrollIntoView({ behavior: "smooth", block: "center" });
+  
+        // Làm nổi bật filter vừa chọn (thêm hiệu ứng highlight nhẹ)
+        checkbox.closest("label").classList.add("highlight");
+        setTimeout(() => {
+          checkbox.closest("label").classList.remove("highlight");
+        }, 1500);
+      }
+    }
+  });
+  

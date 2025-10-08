@@ -63,7 +63,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
+         
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -86,11 +86,10 @@
       <div class="category-carousel">
         <button class="arrow left" aria-label="prev" data-target="#cat-track">&#8249;</button>
         <div class="track" id="cat-track">
-          <button class="cat-card with-img" data-category="bouquet" data-img="image/about/IMG_5067.jpg"><span>BÓ HOA</span></button>
-          <button class="cat-card with-img" data-category="basket" data-img="image/services.png"><span>GIỎ HOA</span></button>
-          <button class="cat-card with-img" data-category="box" data-img="image/contact.png"><span>HỘP HOA</span></button>
-          <button class="cat-card with-img" data-category="wedding" data-img="image/services.png"><span>HOA CƯỚI</span></button>
-          <button class="cat-card with-img" data-category="condolence" data-img="image/about/IMG_5067.jpg"><span>HOA CHIA BUỒN</span></button>
+          <button class="cat-card with-img" data-category="bouquet" data-img="image/services/home (3).png" id="bouquet-btn"><span>BÓ HOA</span></button>
+          <button class="cat-card with-img" data-category="basket" data-img="image/services/home.png" id="basket-btn"><span>GIỎ HOA</span></button>
+          <button class="cat-card with-img" data-category="box" data-img="image/services/home (1).png" id="box-btn"><span>HỘP HOA</span></button>
+          <button class="cat-card with-img" data-category="wedding" data-img="image/services/home (2).png" id="wedding-btn"><span>HOA CƯỚI</span></button>
         </div>
         <button class="arrow right" aria-label="next" data-target="#cat-track">&#8250;</button>
       </div>
@@ -100,10 +99,10 @@
     <section class="svc-section">
       <h3 class="svc-title">DEAL HOT THÁNG 10</h3>
       <div class="deal-grid" id="deal-grid">
-        <div class="pill-card with-img" data-img="image/about/IMG_5067.jpg"><span>DEAL 1</span></div>
-        <div class="pill-card with-img" data-img="image/services.png"><span>DEAL 2</span></div>
-        <div class="pill-card with-img" data-img="image/contact.png"><span>DEAL 3</span></div>
-        <div class="pill-card with-img" data-img="image/services.png"><span>DEAL 4</span></div>
+        <div class="pill-card with-img" data-img="image/services/home (4).png"><span>DEAL 1</span></div>
+        <div class="pill-card with-img" data-img="image/services/NT113.png"><span>DEAL 2</span></div>
+        <div class="pill-card with-img" data-img="image/services/EL333.png"><span>DEAL 3</span></div>
+        <div class="pill-card with-img" data-img="image/services/MD131.png"><span>DEAL 4</span></div>
       </div>
     </section>
 
@@ -114,7 +113,149 @@
     </div>
   </div>
 
- 
+  <!-- Modal cho Bó hoa -->
+  <div id="bouquet-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Bó Hoa Tươi</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="image/services/home (3).png" alt="Bó hoa tươi">
+        </div>
+        <div class="modal-info">
+          <p>Khám phá bộ sưu tập bó hoa tươi đẹp nhất từ Hạ Miên. Từ những bó hoa đơn giản đến những thiết kế cầu kỳ, chúng tôi có đủ mọi loại hoa phù hợp với mọi dịp.</p>
+          <div class="modal-features">
+            <div class="feature">
+              <i class="fas fa-leaf"></i>
+              <span>Hoa tươi 100%</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Giao hàng nhanh</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-heart"></i>
+              <span>Thiết kế độc đáo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="close-modal">Đóng</button>
+        <a href="shop.html#bouquet" class="btn-primary">Xem sản phẩm</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal cho Giỏ hoa -->
+  <div id="basket-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Giỏ Hoa Tươi</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="image/services/home.png" alt="Giỏ hoa tươi">
+        </div>
+        <div class="modal-info">
+          <p>Những giỏ hoa xinh xắn và tinh tế, phù hợp cho mọi dịp đặc biệt. Từ giỏ hoa nhỏ gọn đến những thiết kế lớn sang trọng, chúng tôi tạo ra những tác phẩm nghệ thuật từ hoa tươi.</p>
+          <div class="modal-features">
+            <div class="feature">
+              <i class="fas fa-gift"></i>
+              <span>Thiết kế độc đáo</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-star"></i>
+              <span>Chất lượng cao cấp</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Giao hàng tận nơi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="close-basket-modal">Đóng</button>
+        <a href="shop.html#basket" class="btn-primary">Xem sản phẩm</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal cho Hộp hoa -->
+  <div id="box-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hộp Hoa Sang Trọng</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="image/services/home (1).png" alt="Hộp hoa sang trọng">
+        </div>
+        <div class="modal-info">
+          <p>Những hộp hoa được thiết kế tinh tế với bao bì sang trọng, tạo nên món quà hoàn hảo cho những dịp đặc biệt. Mỗi hộp hoa là một tác phẩm nghệ thuật độc đáo.</p>
+          <div class="modal-features">
+            <div class="feature">
+              <i class="fas fa-box"></i>
+              <span>Bao bì sang trọng</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-heart"></i>
+              <span>Quà tặng ý nghĩa</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-crown"></i>
+              <span>Thiết kế cao cấp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="close-box-modal">Đóng</button>
+        <a href="shop.html#box" class="btn-primary">Xem sản phẩm</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal cho Hoa cưới -->
+  <div id="wedding-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hoa Cưới Lộng Lẫy</h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="image/services/home (2).png" alt="Hoa cưới lộng lẫy">
+        </div>
+        <div class="modal-info">
+          <p>Bộ sưu tập hoa cưới đa dạng từ hoa cầm tay cô dâu đến trang trí tiệc cưới. Chúng tôi tạo ra những thiết kế hoa cưới lộng lẫy và đáng nhớ cho ngày trọng đại của bạn.</p>
+          <div class="modal-features">
+            <div class="feature">
+              <i class="fas fa-ring"></i>
+              <span>Hoa cầm tay cô dâu</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-church"></i>
+              <span>Trang trí tiệc cưới</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-magic"></i>
+              <span>Thiết kế theo yêu cầu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="close-wedding-modal">Đóng</button>
+        <a href="shop.html#wedding" class="btn-primary">Xem sản phẩm</a>
+      </div>
+    </div>
+  </div>
 
  <!-- Footer -->
 
@@ -213,6 +354,86 @@
  <script src="script/chatbot-config.js"></script>
 
  <script src="script/chatbot.js"></script>
+
+ <!-- Modal Script -->
+ <script>
+   // Hàm mở modal
+   function openModal(modalId) {
+     const modal = document.getElementById(modalId);
+     modal.style.display = 'flex';
+     modal.classList.add('show');
+     document.body.style.overflow = 'hidden';
+   }
+
+   // Hàm đóng modal
+   function closeModal(modalId) {
+     const modal = document.getElementById(modalId);
+     modal.style.display = 'none';
+     modal.classList.remove('show');
+     document.body.style.overflow = 'auto';
+   }
+
+   // Lấy các elements
+   const bouquetBtn = document.getElementById('bouquet-btn');
+   const basketBtn = document.getElementById('basket-btn');
+   const boxBtn = document.getElementById('box-btn');
+   const weddingBtn = document.getElementById('wedding-btn');
+
+   // Mở modal khi bấm vào các nút
+   bouquetBtn.addEventListener('click', function() {
+     openModal('bouquet-modal');
+   });
+
+   basketBtn.addEventListener('click', function() {
+     openModal('basket-modal');
+   });
+
+   boxBtn.addEventListener('click', function() {
+     openModal('box-modal');
+   });
+
+   weddingBtn.addEventListener('click', function() {
+     openModal('wedding-modal');
+   });
+
+   // Xử lý đóng modal cho tất cả các modal
+   document.addEventListener('click', function(e) {
+     // Đóng modal khi bấm nút X
+     if (e.target.classList.contains('close')) {
+       const modal = e.target.closest('.modal');
+       closeModal(modal.id);
+     }
+
+     // Đóng modal khi bấm nút Đóng
+     if (e.target.id === 'close-modal') {
+       closeModal('bouquet-modal');
+     }
+     if (e.target.id === 'close-basket-modal') {
+       closeModal('basket-modal');
+     }
+     if (e.target.id === 'close-box-modal') {
+       closeModal('box-modal');
+     }
+     if (e.target.id === 'close-wedding-modal') {
+       closeModal('wedding-modal');
+     }
+
+     // Đóng modal khi bấm ra ngoài modal
+     if (e.target.classList.contains('modal')) {
+       closeModal(e.target.id);
+     }
+   });
+
+   // Đóng modal khi bấm phím ESC
+   document.addEventListener('keydown', function(e) {
+     if (e.key === 'Escape') {
+       const openModal = document.querySelector('.modal.show');
+       if (openModal) {
+         closeModal(openModal.id);
+       }
+     }
+   });
+ </script>
 
 </body>
 

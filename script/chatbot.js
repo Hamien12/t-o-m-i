@@ -469,7 +469,8 @@ class HaMienChatbot {
         const description = product["Unnamed: 4"];
         const code = product["Mã sản phẩm"];
         
-        response += `${index + 1}. **${code}** - ${description}\n`;
+        response += `${index + 1}. **${code}**\n`;
+        response += `   📝 ${description}\n`;
         response += `   💰 Giá: ${price}đ\n\n`;
       });
       
