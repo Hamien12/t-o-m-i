@@ -61,6 +61,15 @@
           
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <a href="cart.html" class="cart-button" aria-label="Giỏ hàng">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6h15l-1.5 9h-12L6 6z" stroke-width="1.6"/>
+            <path d="M6 6L5 3H3" stroke-width="1.6"/>
+            <circle cx="9" cy="20" r="1.6"/>
+            <circle cx="17" cy="20" r="1.6"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
       </nav>
       <button class="menu-toggle">☰</button>
     </div>
@@ -140,28 +149,28 @@
                 <div class="filter-group">
                     <h4>Danh mục</h4>
                     <div class="filter-options">
-                        <label class="filter-option" id="bouquet">
-                            <input type="checkbox" name="cat" value="bouquet">
+                        <label class="filter-option" id="hoabo">
+                            <input type="checkbox" name="cat" value="hoabo">
                             <span class="checkmark"></span>
-                            <span class="label">Bó hoa</span>
+                            <span class="label">Hoa bó</span>
                             <span class="count">(24)</span>
                         </label>
-                        <label class="filter-option" id="basket">
-                            <input type="checkbox" name="cat" value="basket">
+                        <label class="filter-option" id="hoabinh">
+                            <input type="checkbox" name="cat" value="hoabinh">
                             <span class="checkmark"></span>
-                            <span class="label">Giỏ hoa</span>
+                            <span class="label">Hoa bình</span>
                             <span class="count">(18)</span>
                         </label>
-                        <label class="filter-option" id="box">
-                            <input type="checkbox" name="cat" value="box">
+                        <label class="filter-option" id="hoalang">
+                            <input type="checkbox" name="cat" value="hoalang">
                             <span class="checkmark"></span>
-                            <span class="label">Hộp hoa</span>
+                            <span class="label">Hoa lẵng</span>
                             <span class="count">(12)</span>
                         </label>
-                        <label class="filter-option" id="wedding">
-                            <input type="checkbox" name="cat" value="event">
+                        <label class="filter-option" id="hopmica">
+                            <input type="checkbox" name="cat" value="hopmica">
                             <span class="checkmark"></span>
-                            <span class="label">Hoa sự kiện</span>
+                            <span class="label">Hộp mica</span>
                             <span class="count">(8)</span>
                         </label>
                     </div>
@@ -176,7 +185,7 @@
                             <input type="number" id="max-price" placeholder="Đến" min="0">
                         </div>
                         <div class="price-slider">
-                            <input type="range" id="price-slider" min="0" max="2000" value="1000">
+                            <input type="range" id="price-slider" min="0" max="2000000" value="2000000">
                             <div class="price-labels">
                                 <span>0đ</span>
                                 <span>2.000.000đ</span>

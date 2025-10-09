@@ -678,22 +678,30 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
-                linear-gradient(-45deg, #f8f9fa 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, #f8f9fa 75%),
-                linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    opacity: 0.3;
+    background: none; /* remove checkered overlay */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.product .thumb {
+    width: 100%;
+    height: 250px;              /* hoặc đúng chiều cao khuôn bạn muốn */
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+
+    display: flex;              /* CĂN ẢNH TRONG KHUÔN */
+    justify-content: center;
+    align-items: center;
 }
 
 .product .thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;          /* hoặc contain nếu muốn giữ nguyên */
     object-position: center;
-    transition: all 0.3s ease;
-    border-radius: 0; /* Remove border radius for better image display */
+    display: block;             /* bỏ khoảng trắng inline */
 }
 
 .product:hover .thumb img {

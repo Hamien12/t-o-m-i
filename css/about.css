@@ -2,7 +2,7 @@
 /* About Page Styles         */
 /* ========================= */
 /* Container chung */
-.container {
+.about-page .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;

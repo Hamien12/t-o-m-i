@@ -12,7 +12,7 @@ class ShopManager {
         this.filters = {
             categories: [],
             colors: [],
-            priceRange: { min: 0, max: 2000 },
+            priceRange: { min: 0, max: 2000000 }, // VND
             rating: null,
             occasions: [],
             search: ''
@@ -101,12 +101,13 @@ class ShopManager {
         console.log(`Valid products after filtering: ${validProducts.length}`);
 
         this.products = validProducts.map((item, index) => {
-            // Xác định category dựa trên phân loại
-            let category = 'bouquet';
-            if (item["Phân loại "].includes('Bình')) category = 'basket';
-            else if (item["Phân loại "].includes('Lẵng')) category = 'basket';
-            else if (item["Phân loại "].includes('hộp')) category = 'box';
-            else if (item["Phân loại "].includes('bó')) category = 'bouquet';
+            // Xác định category theo mã sản phẩm: DR/NT/EL -> hoabo, MD -> hoabinh, MP -> hoalang, GZ -> hopmica
+            const productCode = item["Mã sản phẩm"]; 
+            let category = 'hoabo';
+            if (/^(MD)/i.test(productCode)) category = 'hoabinh';
+            else if (/^(MP)/i.test(productCode)) category = 'hoalang';
+            else if (/^(GZ)/i.test(productCode)) category = 'hopmica';
+            else if (/^(DR|NT|EL)/i.test(productCode)) category = 'hoabo';
 
             // Xác định màu sắc từ mô tả
             let color = 'pink';
@@ -127,7 +128,6 @@ class ShopManager {
             else if (description.includes('xin lỗi') || description.includes('apology')) occasion = 'apology';
 
             // Sử dụng mã sản phẩm làm tên
-            const productCode = item["Mã sản phẩm"];
             const name = productCode; // Tên sản phẩm = mã sản phẩm
 
             // Xác định đường dẫn ảnh
@@ -245,6 +245,16 @@ class ShopManager {
             } else {
                 // Fallback cho các sản phẩm khác
                 imagePath = 'image/shop/' + productCode + '.png';
+            }
+
+            // Encode only the filename to handle spaces & Vietnamese characters
+            try {
+                const pathSegments = imagePath.split('/');
+                const fileName = pathSegments.pop();
+                const encodedFileName = encodeURIComponent(fileName);
+                imagePath = [...pathSegments, encodedFileName].join('/');
+            } catch (e) {
+                console.warn('Failed to encode image path, using raw path:', imagePath, e);
             }
 
             // Debug: Log image path
@@ -374,13 +384,14 @@ class ShopManager {
                 const value = parseInt(e.target.value);
                 this.filters.priceRange.max = value;
                 this.updatePriceDisplay();
+                this.applyFilters();
             });
         }
 
         if (applyPriceBtn) {
             applyPriceBtn.addEventListener('click', () => {
-                const min = parseInt(minPriceInput.value) || 0;
-                const max = parseInt(maxPriceInput.value) || 2000;
+                const min = (parseInt(minPriceInput.value) || 0) * 1000; // input tính theo nghìn
+                const max = (parseInt(maxPriceInput.value) || 2000) * 1000;
                 this.filters.priceRange = { min, max };
                 this.applyFilters();
             });
@@ -395,7 +406,7 @@ class ShopManager {
             });
         });
 
-        // Occasion filters
+        // Occasion filters (optional - keep existing behavior if present)
         const occasionChips = document.querySelectorAll('.occasion-chip');
         occasionChips.forEach(chip => {
             chip.addEventListener('click', () => {
@@ -415,6 +426,25 @@ class ShopManager {
 
         // Pagination
         this.bindPaginationEvents();
+
+        // Áp dụng filter theo hash (#hoabo, #hoabinh, #hoalang, #hopmica) và tương thích giá trị cũ
+        const hashValue = (window.location.hash || '').replace('#', '').toLowerCase();
+        const aliasMap = {
+            'bouquet': 'hoabo',
+            'basket': 'hoabinh',
+            'box': 'hopmica',
+            'event': 'hoalang'
+        };
+        const normalized = aliasMap[hashValue] || hashValue;
+        if (normalized && ['hoabo','hoabinh','hoalang','hopmica'].includes(normalized)) {
+            const checkbox = document.querySelector(`input[name="cat"][value="${normalized}"]`);
+            if (checkbox) {
+                checkbox.checked = true;
+                this.updateCategoryFilters();
+                this.applyFilters();
+                checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
     }
 
     updateCategoryFilters() {
@@ -540,6 +570,17 @@ class ShopManager {
         images.forEach((img, index) => {
             console.log(`Image ${index}:`, img.src, 'loaded:', img.complete);
         });
+
+        // Ensure fallback image always displays if loading fails
+        images.forEach((img) => {
+            // Set a tiny delay so "src" assignment below doesn't immediately trigger error twice
+            img.addEventListener('error', () => {
+                if (!img.dataset.fallbackApplied) {
+                    img.dataset.fallbackApplied = 'true';
+                    img.src = 'image/services.png';
+                }
+            }, { once: false });
+        });
     }
 
     createProductCard(product) {
@@ -553,14 +594,14 @@ class ShopManager {
             return `
                 <div class="product" data-price="${product.price}" data-cat="${product.category}" data-color="${product.color}">
                     ${badge}
-                    <div class="thumb">
-                        <img src="${product.image}" alt="${product.name}" onerror="console.log('Image failed to load:', this.src); this.src='image/services.png'">
+                    <div class="thumb" style="background-image:url('${product.image}'); background-size:cover; background-position:center;">
+                        <img src="${product.image}" alt="${product.name}" style="opacity:0; width:0; height:0; position:absolute;" onerror="this.closest('.thumb').style.backgroundImage='url(\\'image/services.png\\')'">
                     </div>
                     <div class="product-info">
                         <h5>${product.name}</h5>
                         <div class="meta">
                             <span class="price">${product.price.toLocaleString()}đ</span>
-                            <span class="rating">★ ${product.rating}</span>
+                            <span class="rating">★ ${product.rating.toFixed(1)}</span>
                         </div>
                         <button class="add" ${!product.inStock ? 'disabled' : ''}>
                             ${product.inStock ? 'Thêm vào giỏ' : 'Hết hàng'}
@@ -573,14 +614,14 @@ class ShopManager {
             return `
                 <div class="product" data-price="${product.price}" data-cat="${product.category}" data-color="${product.color}">
                     ${badge}
-                    <div class="thumb">
-                        <img src="${product.image}" alt="${product.name}" onerror="console.log('Image failed to load:', this.src); this.src='image/services.png'">
+                    <div class="thumb" style="background-image:url('${product.image}'); background-size:cover; background-position:center;">
+                        <img src="${product.image}" alt="${product.name}" style="opacity:0; width:0; height:0; position:absolute;" onerror="this.closest('.thumb').style.backgroundImage='url(\\'image/services.png\\')'">
                     </div>
                     <div class="product-info">
                         <h5>${product.name}</h5>
                         <div class="meta">
                             <span class="price">${product.price.toLocaleString()}đ</span>
-                            <span class="rating">★ ${product.rating}</span>
+                            <span class="rating">★ ${product.rating.toFixed(1)}</span>
                         </div>
                         <button class="add" ${!product.inStock ? 'disabled' : ''}>
                             ${product.inStock ? 'Thêm vào giỏ' : 'Hết hàng'}
@@ -718,6 +759,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('ShopManager created:', shopManager);
         console.log('Products count:', shopManager.products.length);
         console.log('Filtered products count:', shopManager.filteredProducts.length);
+
+        // Initialize cart count from localStorage
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+            const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            cartCount.textContent = cart.length;
+        }
     } catch (error) {
         console.error('Error initializing ShopManager:', error);
     }
@@ -731,7 +779,19 @@ document.addEventListener('click', (e) => {
         // Get product info
         const productCard = e.target.closest('.product');
         const productName = productCard.querySelector('h5').textContent;
-        const productPrice = productCard.querySelector('.price').textContent;
+        const priceText = productCard.querySelector('.price').textContent;
+        const productPrice = parseInt(priceText.replace(/\D/g, '')); // VND number
+        const productImage = productCard.querySelector('.thumb').style.backgroundImage.replace(/^url\("?|"?\)$/g, '').replace(/^url\('|\'\)$/g, '');
+        const product = {
+            id: productName,
+            name: productName,
+            price: productPrice,
+            image: productImage
+        };
+        // Persist to localStorage
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
         
         // Update cart count
         const cartCount = document.querySelector('.cart-count');

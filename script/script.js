@@ -86,6 +86,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Initialize cart badge on all pages
+document.addEventListener('DOMContentLoaded', function(){
+  const badge = document.querySelector('.cart-badge');
+  if (badge) {
+    try {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      badge.textContent = cart.length;
+    } catch { badge.textContent = '0'; }
+  }
+});
  
 
 
