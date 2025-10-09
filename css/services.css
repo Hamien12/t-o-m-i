@@ -16,7 +16,7 @@
 .services-banner img { display: block; width: 100%; height: auto; object-fit: contain; }
 
 .svc-section { padding: 36px 20px; max-width: var(--page-width); margin: 0 auto; }
-.svc-title { font-size: 11px; letter-spacing: .9px; color: #1f3c34; text-align: center; margin: 6px 0 14px; font-weight: 800; }
+.svc-title { font-size: 40px; letter-spacing: .9px; color: #1f3c34; text-align: center; margin: 6px 0 14px; font-weight: 800; }
 .svc-title:after { content: ""; display: block; width: 72px; height: 3px; background: #cfd6d3; border-radius: 2px; margin: 10px auto 0; }
 
 /* Category carousel */
@@ -26,7 +26,17 @@
 .category-carousel .arrow:disabled, .carousel .arrow:disabled { opacity: .35; cursor: default; }
 .category-carousel .track, .carousel .track { display: grid; grid-auto-flow: column; gap: 22px; overflow-x: auto; scroll-behavior: smooth; padding: 8px 6px; }
 /* Hiển thị đúng 3 thẻ lớn cho Danh mục; các mục còn lại xem bằng mũi tên */
-.category-carousel .track { grid-auto-columns: calc((100% - 2 * 22px) / 3); }
+.category-carousel .track {
+  grid-auto-columns: calc((100% - 2 * 24px) / 2); /* hiển thị 2 thẻ lớn hơn */
+  gap: 28px; /* khoảng cách rộng hơn */
+  padding: 12px 6px; /* padding tăng lên để thẻ không sát viền */
+}
+
+.cat-card {
+  font-size: 14px; /* chữ to hơn */
+  aspect-ratio: 1 / 1; /* giữ hình vuông */
+  height: auto; /* tự động theo aspect ratio */
+}
 .carousel.uniform .track { grid-auto-columns: minmax(160px, 1fr); }
 .category-carousel .track::-webkit-scrollbar, .carousel .track::-webkit-scrollbar { display: none; }
 .cat-card { position: relative; background: #2f6f61; border-radius: 12px; aspect-ratio: 1 / 1; height: auto; display: inline-flex; align-items: center; justify-content: center; color: #fff; text-transform: uppercase; font-size: 12px; box-shadow: 0 10px 18px rgba(47,111,97,.18); transition: transform .2s ease, box-shadow .2s ease; border: none; overflow: hidden; }
@@ -42,15 +52,41 @@
 .pill-card:after { content: ""; position: absolute; left: 22px; right: 22px; bottom: -12px; height: 4px; background: #cfd6d3; border-radius: 3px; }
 
 /* Grid cho Deal & Featured (to hơn, không có mũi tên) */
-.deal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding: 0 10px; }
-.deal-grid .pill-card { height: 220px; border-radius: 24px; font-size: 18px; }
-@media (max-width: 991px) { 
-  .deal-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-  .deal-grid .pill-card { height: 190px; }
+/* Deal hot (theo layout carousel) */
+.deal-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* Luôn 4 cột */
+  gap: 36px !important;
+  padding: 0 12px !important;
 }
-@media (min-width: 1400px) { 
-  .deal-grid { grid-template-columns: repeat(4, 1fr); }
-  .deal-grid .pill-card { height: 260px; }
+
+.deal-grid .pill-card {
+  height: 300px !important; /* Cao hơn */
+  border-radius: 24px;
+  font-size: 20px !important; /* Chữ to hơn */
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .deal-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+  .deal-grid .pill-card {
+    height: 220px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Rất lớn màn hình */
+@media (min-width: 1400px) {
+  .deal-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .deal-grid .pill-card {
+    height: 300px !important;
+    font-size: 22px !important;
+  }
 }
 
 /* Deals row */

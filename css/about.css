@@ -2,6 +2,10 @@
 /* About Page Styles         */
 /* ========================= */
 /* Container chung */
+
+@import url('https://fonts.googleapis.com/css2?family=Gulfs+Display:wght@400;700&display=swap');
+
+
 .about-page .container {
   width: 90%;
   max-width: 1200px;
@@ -132,10 +136,10 @@
 }
 
 .our-story h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-family: "Gulfs Display", sans-serif !important;
+  font-weight: 700 !important;
 }
+
 
 .our-story h2 {
   font-size: 2rem;
@@ -143,11 +147,12 @@
   font-weight: bold;
 }
 
+/* OUR STORY */
 .story-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center; /* Căn giữa dọc */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -160,14 +165,14 @@
   color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center; /* Canh chữ giữa cột */
   padding: 20px 0;
 }
 
 .story-grid .image {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; /* Căn ảnh chính giữa cột */
 }
 
 .story-grid .image img {
@@ -181,28 +186,58 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .why-us .two-col {
-    flex-direction: column;
-    text-align: center;
-  }
-  
   .story-grid {
-    grid-template-columns: 1fr; /* xuống 1 cột */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 0 15px;
   }
-  
+
   .story-grid .text {
     text-align: left;
     font-size: 1rem;
     padding: 10px 0;
   }
-  
-  .story-grid .image {
-    justify-content: center;
-  }
-  
+
   .story-grid .image img {
     max-width: 100%;
   }
 }
+
+
+
+
+
+
+.about-text,
+.story-grid .text,
+.text {
+  font-family: "Birthstone", cursive;
+}
+
+.about-text p,
+.story-grid .text p {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.our-story h2 {
+  font-family: 'Charm', serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.our-story h3 {
+  font-family: 'Gulfs Display', sans-serif;
+  font-size: 72px;          /* to và nổi bật */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 400;         /* Gulfs Display thường không cần quá bold */
+  text-align: center;
+}
+
+
+
