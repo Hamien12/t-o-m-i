@@ -272,6 +272,11 @@ class DialogflowLoader {
       return {
         name: entityName,
         entries: entries,
+        isOverridable: entityData.isOverridable,
+        isEnum: entityData.isEnum,
+        isRegexp: entityData.isRegexp,
+        automatedExpansion: entityData.automatedExpansion,
+        allowFuzzyExtraction: entityData.allowFuzzyExtraction,
         originalData: entityData
       };
     } catch (error) {

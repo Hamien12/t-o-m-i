@@ -407,40 +407,48 @@ class HaMienChatbot {
     }
   }
 
-  // Get smart responses based on context (optimized for speed)
+  // Get smart responses based on context (enhanced Dialogflow integration)
   getSmartResponses(message) {
+    console.log(`🤖 Processing message: "${message}"`);
     const lowerMessage = this.dialogflow ? this.dialogflow.norm(message) : message.toLowerCase();
     const responses = [];
     
-    // Try Dialogflow matching first (new enhanced method) - fastest path
+    // Enhanced Dialogflow matching with better entity recognition
     if (this.dialogflowLoader && this.dialogflowLoader.loaded) {
       try {
         const matchedIntent = this.dialogflowLoader.findMatchingIntent(message);
         if (matchedIntent) {
+          console.log(`🎯 Matched Dialogflow intent: ${matchedIntent.name}`);
+          
           this.conversationContext.lastIntent = this.conversationContext.currentIntent;
           this.conversationContext.currentIntent = matchedIntent;
           
-          // Get response from Dialogflow - single response for speed
-          const dialogflowResponse = this.dialogflowLoader.getRandomResponse(matchedIntent);
+          // Get response from Dialogflow with entity processing
+          const dialogflowResponse = this.getEnhancedDialogflowResponse(matchedIntent, message);
           if (dialogflowResponse) {
             responses.push(dialogflowResponse);
             return responses; // Return immediately for speed
           }
+        } else {
+          console.log(`⚠️ No Dialogflow intent matched for: "${message}"`);
         }
       } catch (error) {
         console.error('❌ Error in Dialogflow matching:', error);
       }
+    } else {
+      console.log(`⚠️ DialogflowLoader not loaded`);
     }
     
-    // Quick keyword matching for common queries
-    const quickResponse = this.getQuickResponse(lowerMessage);
+    // Enhanced keyword matching with Dialogflow knowledge (PRIORITY)
+    const quickResponse = this.getEnhancedQuickResponse(lowerMessage, message);
     if (quickResponse) {
+      console.log(`🎯 Quick response matched for: "${message}"`);
       responses.push(quickResponse);
       return responses;
     }
     
-    // Try product consultation (only if no quick match)
-    const productResponse = this.getProductConsultation(message);
+    // Try product consultation with entity awareness
+    const productResponse = this.getProductConsultationWithEntities(message);
     if (productResponse) {
       responses.push(productResponse);
       return responses;
@@ -463,32 +471,76 @@ class HaMienChatbot {
     return this.getContextAwareRuleBasedResponses(message);
   }
 
-  // Quick response for common queries (optimized for speed + FUN!)
+  // Quick response for common queries (TIẾNG VIỆT ONLY + FUN!)
   getQuickResponse(lowerMessage) {
-    // Pre-compiled quick responses for common queries - VERSION FUN! 🎉
+    // Pre-compiled quick responses for common queries - TIẾNG VIỆT VERSION! 🎉
     const quickResponses = {
+      // Chào hỏi
       'xin chào': 'Xin chào! Hạ Miên đây! 🌸✨\n\nTôi đang rất vui được gặp bạn! Bạn có muốn nghe tôi kể về những bông hoa xinh đẹp của chúng tôi không? 😊',
-      'hello': 'Hello! Welcome to Hạ Miên! 🌸\n\nI\'m so excited to meet you! Want to hear about our beautiful flowers? 😊',
-      'hi': 'Hi there! 🌸\n\nI\'m Hạ Miên\'s chatbot and I\'m absolutely thrilled to chat with you! What brings you here today? 😄',
-      'cảm ơn': 'Aww, cảm ơn bạn! 😊💕\n\nBạn làm tôi cảm thấy rất vui! Hạ Miên luôn sẵn sàng phục vụ bạn! 🌸',
-      'thank you': 'Aww, thank you! 😊💕\n\nYou just made my day! Hạ Miên is always here for you! 🌸',
-      'tạm biệt': 'Tạm biệt bạn! 😢\n\nTôi sẽ nhớ bạn lắm! Hãy quay lại sớm nhé! 🌸💕\n\nP.S: Tôi sẽ trồng thêm hoa đẹp để chờ bạn! 😄',
-      'bye': 'Bye bye! 😢\n\nI\'ll miss you! Please come back soon! 🌸💕\n\nP.S: I\'ll grow more beautiful flowers while waiting for you! 😄',
+      'chào': 'Chào bạn! 🌸\n\nTôi là chatbot của Hạ Miên! Rất vui được gặp bạn! Bạn cần tôi giúp gì không? 😊',
+      'hello': 'Xin chào! Chào mừng bạn đến với Hạ Miên! 🌸\n\nTôi rất vui được gặp bạn! Bạn có muốn nghe về những bông hoa xinh đẹp của chúng tôi không? 😊',
+      'hi': 'Chào bạn! 🌸\n\nTôi là chatbot của Hạ Miên và tôi rất vui được trò chuyện với bạn! Bạn đến đây để làm gì hôm nay? 😄',
+      'hé lô': 'Hé lô! 🌸\n\nTôi là chatbot của Hạ Miên! Rất vui được gặp bạn! Bạn cần tôi giúp gì không? 😊',
+      'hí lu': 'Hí lu! 🌸\n\nTôi là chatbot của Hạ Miên! Rất vui được gặp bạn! Bạn cần tôi giúp gì không? 😊',
+      'lô': 'Lô! 🌸\n\nTôi là chatbot của Hạ Miên! Rất vui được gặp bạn! Bạn cần tôi giúp gì không? 😊',
+      'alooo': 'Alooo! 🌸\n\nTôi là chatbot của Hạ Miên! Rất vui được gặp bạn! Bạn cần tôi giúp gì không? 😊',
       
-      // Responses thú vị cho các câu hỏi
+      // Cảm ơn
+      'cảm ơn': 'Aww, cảm ơn bạn! 😊💕\n\nBạn làm tôi cảm thấy rất vui! Hạ Miên luôn sẵn sàng phục vụ bạn! 🌸',
+      'thank you': 'Cảm ơn bạn! 😊💕\n\nBạn làm tôi cảm thấy rất vui! Hạ Miên luôn sẵn sàng phục vụ bạn! 🌸',
+      'thanks': 'Cảm ơn bạn! 😊💕\n\nBạn làm tôi cảm thấy rất vui! Hạ Miên luôn sẵn sàng phục vụ bạn! 🌸',
+      
+      // Tạm biệt
+      'tạm biệt': 'Tạm biệt bạn! 😢\n\nTôi sẽ nhớ bạn lắm! Hãy quay lại sớm nhé! 🌸💕\n\nP.S: Tôi sẽ trồng thêm hoa đẹp để chờ bạn! 😄',
+      'bye': 'Tạm biệt! 😢\n\nTôi sẽ nhớ bạn! Hãy quay lại sớm nhé! 🌸💕\n\nP.S: Tôi sẽ trồng thêm hoa đẹp để chờ bạn! 😄',
+      'goodbye': 'Tạm biệt! 😢\n\nTôi sẽ nhớ bạn! Hãy quay lại sớm nhé! 🌸💕\n\nP.S: Tôi sẽ trồng thêm hoa đẹp để chờ bạn! 😄',
+      
+      // Hỏi về khả năng
       'bạn có thể làm gì': 'Ồ! Tôi có thể làm rất nhiều thứ thú vị! 🎉\n\n🌸 Kể chuyện về hoa (tôi biết rất nhiều bí mật của chúng!)\n💐 Giúp bạn chọn hoa phù hợp (tôi có "mắt" rất tinh!)\n🎨 Thiết kế bó hoa độc đáo (tôi là nghệ sĩ đấy!)\n📦 Giao hàng siêu tốc (như Flash! ⚡)\n🎭 Kể chuyện cười về hoa (tôi rất hài hước!)\n\nBạn muốn thử cái nào trước? 😄',
       'bạn làm gì': 'Tôi là chatbot của Hạ Miên và tôi LOVEEEE hoa! 🌸💕\n\nHàng ngày tôi:\n• Ngắm hoa đẹp (công việc yêu thích!)\n• Giúp khách hàng chọn hoa (như một chuyên gia!)\n• Kể chuyện về hoa (tôi biết rất nhiều!)\n• Làm bạn vui (đó là sứ mệnh của tôi!)\n\nTôi có thể giúp gì cho bạn hôm nay? 😊',
-      'dịch vụ': 'Wow! Hạ Miên có những dịch vụ SIÊU COOL! 🚀\n\n🌸 Hoa tươi từ khắp nơi (tôi chọn lọc kỹ lắm!)\n💐 Bó hoa theo mẫu (đẹp như tranh!)\n🎨 Thiết kế riêng (độc nhất vô nhị!)\n📦 Giao hàng nhanh (nhanh hơn cả tia chớp!)\n🏢 Trang trí sự kiện (hoành tráng lắm!)\n🎂 Hoa sinh nhật (làm bữa tiệc thêm vui!)\n💒 Hoa cưới (lãng mạn như phim!)\n\nBạn muốn dịch vụ nào? Tôi sẽ làm cho bạn! 😄',
-      'sản phẩm': 'OMG! Hạ Miên có những sản phẩm hoa TUYỆT VỜI! 🌟\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\nTôi có thể kể chi tiết về từng loại! Bạn thích loại nào? 😍',
-      'hoa': 'YAY! Bạn hỏi về hoa! 🌸💕\n\nTôi có thể nói về hoa cả ngày không chán! Chúng tôi có:\n• Hoa hồng đỏ, hồng, trắng (mỗi màu có ý nghĩa riêng!)\n• Hoa hướng dương tươi (luôn hướng về mặt trời!)\n• Hoa lan đẹp (quý phái và sang trọng!)\n• Hoa cúc nhiều màu (vui tươi và rực rỡ!)\n• Bó hoa mix đặc biệt (độc đáo và ý nghĩa!)\n\nBạn muốn nghe câu chuyện về loại hoa nào? Tôi có rất nhiều chuyện hay! 😄',
-      'đặt hoa': 'WOW! Bạn muốn đặt hoa! 🎉\n\nTôi sẽ giúp bạn tạo ra một tác phẩm nghệ thuật! Bạn có thể:\n• Chọn từ bộ sưu tập có sẵn (đã được tôi chọn lọc kỹ!)\n• Thiết kế theo yêu cầu (tôi sẽ làm cho bạn!)\n• Giao hàng nhanh (nhanh hơn cả tốc độ ánh sáng!)\n\nHãy cho tôi biết bạn muốn đặt hoa cho dịp gì? Tôi sẽ tạo ra điều bất ngờ! 😍',
+      'tôi muốn hỏi': 'Tuyệt vời! Tôi sẵn sàng trả lời mọi câu hỏi của bạn! 🌸\n\nBạn có thể hỏi tôi về:\n• Dịch vụ của Hạ Miên\n• Sản phẩm hoa tươi\n• Giá cả và giao hàng\n• Cách chọn hoa phù hợp\n• Tư vấn thiết kế\n\nBạn muốn hỏi gì cụ thể? 😊',
+      'tôi muốn tư vấn': 'Tuyệt vời! Tôi là chuyên gia tư vấn hoa! 🌸👨‍🎓\n\nTôi có thể tư vấn về:\n• Chọn hoa phù hợp (tôi có "mắt" rất tinh!)\n• Màu sắc hài hòa (như một nhà thiết kế!)\n• Cách bảo quản (để hoa tươi lâu hơn!)\n• Ý nghĩa từng loại hoa (tôi biết rất nhiều bí mật!)\n• Cách trang trí (để không gian thêm đẹp!)\n\nBạn cần tư vấn về gì cụ thể? 😊',
+      
+      // Dịch vụ
+      'dịch vụ': 'Wow! Hạ Miên có những dịch vụ SIÊU COOL! 🚀\n\n🌸 Hoa tươi từ khắp nơi (tôi chọn lọc kỹ lắm!)\n💐 Bó hoa theo mẫu (đẹp như tranh!)\n🎨 Thiết kế riêng (độc nhất vô nhị!)\n📦 Giao hàng nhanh (nhanh hơn cả tia chớp!)\n🏢 Trang trí sự kiện (hoành tráng lắm!)\n🎂 Hoa sinh nhật (làm bữa tiệc thêm vui!)\n💒 Hoa cưới (lãng mạn như phim!)\n\n👉 <a href="services.html" target="_blank">Xem chi tiết dịch vụ</a>\n\nBạn muốn dịch vụ nào? Tôi sẽ làm cho bạn! 😄',
+      'services': 'Wow! Hạ Miên có những dịch vụ SIÊU COOL! 🚀\n\n🌸 Hoa tươi từ khắp nơi (tôi chọn lọc kỹ lắm!)\n💐 Bó hoa theo mẫu (đẹp như tranh!)\n🎨 Thiết kế riêng (độc nhất vô nhị!)\n📦 Giao hàng nhanh (nhanh hơn cả tia chớp!)\n🏢 Trang trí sự kiện (hoành tráng lắm!)\n🎂 Hoa sinh nhật (làm bữa tiệc thêm vui!)\n💒 Hoa cưới (lãng mạn như phim!)\n\n👉 <a href="services.html" target="_blank">Xem chi tiết dịch vụ</a>\n\nBạn muốn dịch vụ nào? Tôi sẽ làm cho bạn! 😄',
+      'sản phẩm': 'OMG! Hạ Miên có những sản phẩm hoa TUYỆT VỜI! 🌟\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href="shop.html" target="_blank">Xem tất cả sản phẩm</a>\n\nTôi có thể kể chi tiết về từng loại! Bạn thích loại nào? 😍',
+      'cho tôi các sản phẩm': 'OMG! Bạn muốn xem sản phẩm! 🌟\n\nHạ Miên có những sản phẩm hoa TUYỆT VỜI:\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href="shop.html" target="_blank">Xem tất cả sản phẩm</a>\n\nBạn thích loại hoa nào? Tôi có thể kể chi tiết! 😍',
+      'cần sản phẩm': 'OMG! Bạn muốn xem sản phẩm! 🌟\n\nHạ Miên có những sản phẩm hoa TUYỆT VỜI:\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href="shop.html" target="_blank">Xem tất cả sản phẩm</a>\n\nBạn thích loại hoa nào? Tôi có thể kể chi tiết! 😍',
+      'các sản phẩm': 'OMG! Bạn muốn xem sản phẩm! 🌟\n\nHạ Miên có những sản phẩm hoa TUYỆT VỜI:\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href="shop.html" target="_blank">Xem tất cả sản phẩm</a>\n\nBạn thích loại hoa nào? Tôi có thể kể chi tiết! 😍',
+      'hoa': 'YAY! Bạn hỏi về hoa! 🌸💕\n\nTôi có thể nói về hoa cả ngày không chán! Chúng tôi có:\n• Hoa hồng đỏ, hồng, trắng (mỗi màu có ý nghĩa riêng!)\n• Hoa hướng dương tươi (luôn hướng về mặt trời!)\n• Hoa lan đẹp (quý phái và sang trọng!)\n• Hoa cúc nhiều màu (vui tươi và rực rỡ!)\n• Bó hoa mix đặc biệt (độc đáo và ý nghĩa!)\n\n👉 <a href="shop.html" target="_blank">Xem tất cả hoa</a>\n\nBạn muốn nghe câu chuyện về loại hoa nào? Tôi có rất nhiều chuyện hay! 😄',
+      'đặt hoa': 'WOW! Bạn muốn đặt hoa! 🎉\n\nTôi sẽ giúp bạn tạo ra một tác phẩm nghệ thuật! Bạn có thể:\n• Chọn từ bộ sưu tập có sẵn (đã được tôi chọn lọc kỹ!)\n• Thiết kế theo yêu cầu (tôi sẽ làm cho bạn!)\n• Giao hàng nhanh (nhanh hơn cả tốc độ ánh sáng!)\n\n👉 <a href="shop.html" target="_blank">Đặt hoa ngay</a>\n\nHãy cho tôi biết bạn muốn đặt hoa cho dịp gì? Tôi sẽ tạo ra điều bất ngờ! 😍',
       'tư vấn': 'Tuyệt vời! Tôi là chuyên gia tư vấn hoa! 🌸👨‍🎓\n\nTôi có thể tư vấn về:\n• Chọn hoa phù hợp (tôi có "mắt" rất tinh!)\n• Màu sắc hài hòa (như một nhà thiết kế!)\n• Cách bảo quản (để hoa tươi lâu hơn!)\n• Ý nghĩa từng loại hoa (tôi biết rất nhiều bí mật!)\n• Cách trang trí (để không gian thêm đẹp!)\n\nBạn cần tư vấn về gì cụ thể? Tôi sẽ chia sẻ tất cả bí quyết! 😊',
       
-      // Responses vui nhộn
-      'giá': 'Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕\n\nTôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄',
+      // Giá cả
+      'giá': 'Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕\n\n👉 <a href="shop.html" target="_blank">Xem giá chi tiết</a>\n\nTôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄',
+      'giá cả': 'Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕\n\n👉 <a href="shop.html" target="_blank">Xem giá chi tiết</a>\n\nTôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄',
+      'price': 'Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕\n\n👉 <a href="shop.html" target="_blank">Xem giá chi tiết</a>\n\nTôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄',
+      'bao nhiêu tiền': 'Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕\n\n👉 <a href="shop.html" target="_blank">Xem giá chi tiết</a>\n\nTôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄',
+      
+      // Giao hàng
       'giao hàng': 'Giao hàng? Tôi làm như Flash! ⚡\n\nNội thành: 2-4h (nhanh hơn cả pizza!)\nNgoại thành: 1-2 ngày (nhưng hoa vẫn tươi như mới!)\n\nBạn có muốn đặt giao ngay không? Tôi sẽ đảm bảo hoa đến tay bạn còn thơm ngát! 🌸',
-      'địa chỉ': 'Hạ Miên ở 206 Yên Phụ, Tây Hồ, Hà Nội! 📍\n\nĐó là một nơi rất đẹp, gần hồ Tây! Bạn có thể đến thăm tôi và ngắm hoa! 😊\n\nBạn có cần hướng dẫn đường đi không? Tôi sẽ chỉ đường rất chi tiết! 🗺️',
-      'hotline': 'Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄'
+      'ship': 'Giao hàng? Tôi làm như Flash! ⚡\n\nNội thành: 2-4h (nhanh hơn cả pizza!)\nNgoại thành: 1-2 ngày (nhưng hoa vẫn tươi như mới!)\n\nBạn có muốn đặt giao ngay không? Tôi sẽ đảm bảo hoa đến tay bạn còn thơm ngát! 🌸',
+      'delivery': 'Giao hàng? Tôi làm như Flash! ⚡\n\nNội thành: 2-4h (nhanh hơn cả pizza!)\nNgoại thành: 1-2 ngày (nhưng hoa vẫn tươi như mới!)\n\nBạn có muốn đặt giao ngay không? Tôi sẽ đảm bảo hoa đến tay bạn còn thơm ngát! 🌸',
+      
+      // Địa chỉ
+      'địa chỉ': 'Hạ Miên ở 206 Yên Phụ, Tây Hồ, Hà Nội! 📍\n\nĐó là một nơi rất đẹp, gần hồ Tây! Bạn có thể đến thăm tôi và ngắm hoa! 😊\n\n👉 <a href="contact.html" target="_blank">Xem bản đồ và liên hệ</a>\n\nBạn có cần hướng dẫn đường đi không? Tôi sẽ chỉ đường rất chi tiết! 🗺️',
+      'address': 'Hạ Miên ở 206 Yên Phụ, Tây Hồ, Hà Nội! 📍\n\nĐó là một nơi rất đẹp, gần hồ Tây! Bạn có thể đến thăm tôi và ngắm hoa! 😊\n\n👉 <a href="contact.html" target="_blank">Xem bản đồ và liên hệ</a>\n\nBạn có cần hướng dẫn đường đi không? Tôi sẽ chỉ đường rất chi tiết! 🗺️',
+      'ở đâu': 'Hạ Miên ở 206 Yên Phụ, Tây Hồ, Hà Nội! 📍\n\nĐó là một nơi rất đẹp, gần hồ Tây! Bạn có thể đến thăm tôi và ngắm hoa! 😊\n\n👉 <a href="contact.html" target="_blank">Xem bản đồ và liên hệ</a>\n\nBạn có cần hướng dẫn đường đi không? Tôi sẽ chỉ đường rất chi tiết! 🗺️',
+      
+      // Hotline
+      'hotline': 'Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\n👉 <a href="contact.html" target="_blank">Xem thông tin liên hệ</a>\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄',
+      'số điện thoại': 'Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\n👉 <a href="contact.html" target="_blank">Xem thông tin liên hệ</a>\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄',
+      'phone': 'Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\n👉 <a href="contact.html" target="_blank">Xem thông tin liên hệ</a>\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄',
+      
+      // Hỏi về shop
+      'shop': 'Chào mừng bạn đến với Hạ Miên! 🌸\n\nTôi là chatbot của shop hoa Hạ Miên! Chúng tôi chuyên cung cấp hoa tươi, bó hoa đẹp và dịch vụ trang trí sự kiện! 😊\n\n👉 <a href="index.html" target="_blank">Trang chủ</a> | <a href="about.html" target="_blank">Giới thiệu</a>\n\nBạn cần tôi giúp gì không?',
+      'tiệm': 'Chào mừng bạn đến với Hạ Miên! 🌸\n\nTôi là chatbot của tiệm hoa Hạ Miên! Chúng tôi chuyên cung cấp hoa tươi, bó hoa đẹp và dịch vụ trang trí sự kiện! 😊\n\n👉 <a href="index.html" target="_blank">Trang chủ</a> | <a href="about.html" target="_blank">Giới thiệu</a>\n\nBạn cần tôi giúp gì không?',
+      'cửa hàng': 'Chào mừng bạn đến với Hạ Miên! 🌸\n\nTôi là chatbot của cửa hàng hoa Hạ Miên! Chúng tôi chuyên cung cấp hoa tươi, bó hoa đẹp và dịch vụ trang trí sự kiện! 😊\n\n👉 <a href="index.html" target="_blank">Trang chủ</a> | <a href="about.html" target="_blank">Giới thiệu</a>\n\nBạn cần tôi giúp gì không?',
+      
+      // Hỏi về thông tin
+      'thông tin': 'Tôi sẵn sàng cung cấp mọi thông tin về Hạ Miên! 🌸\n\nBạn muốn biết về:\n• Dịch vụ của chúng tôi\n• Sản phẩm hoa tươi\n• Giá cả và giao hàng\n• Địa chỉ và liên hệ\n• Cách chọn hoa phù hợp\n\n👉 <a href="about.html" target="_blank">Giới thiệu</a> | <a href="contact.html" target="_blank">Liên hệ</a>\n\nBạn muốn hỏi gì cụ thể? 😊',
+      'info': 'Tôi sẵn sàng cung cấp mọi thông tin về Hạ Miên! 🌸\n\nBạn muốn biết về:\n• Dịch vụ của chúng tôi\n• Sản phẩm hoa tươi\n• Giá cả và giao hàng\n• Địa chỉ và liên hệ\n• Cách chọn hoa phù hợp\n\n👉 <a href="about.html" target="_blank">Giới thiệu</a> | <a href="contact.html" target="_blank">Liên hệ</a>\n\nBạn muốn hỏi gì cụ thể? 😊'
     };
 
     // Check for exact matches first (fastest)
@@ -496,9 +548,63 @@ class HaMienChatbot {
       return quickResponses[lowerMessage];
     }
 
-    // Check for partial matches
+    // Enhanced partial matching with priority and fuzzy matching
+    const priorityMatches = [
+      'cho tôi các sản phẩm',
+      'cần sản phẩm', 
+      'các sản phẩm',
+      'sản phẩm',
+      'hoa',
+      'dịch vụ',
+      'đặt hoa',
+      'tư vấn',
+      'giá',
+      'giao hàng',
+      'địa chỉ',
+      'hotline'
+    ];
+
+    // Check priority matches first
+    for (const key of priorityMatches) {
+      if (lowerMessage.includes(key)) {
+        return quickResponses[key] || quickResponses[key.split(' ')[0]];
+      }
+    }
+
+    // Enhanced fuzzy matching for better understanding
+    const fuzzyMatches = [
+      { keywords: ['cho', 'tôi', 'sản phẩm'], response: 'sản phẩm' },
+      { keywords: ['cần', 'sản phẩm'], response: 'sản phẩm' },
+      { keywords: ['xem', 'sản phẩm'], response: 'sản phẩm' },
+      { keywords: ['muốn', 'sản phẩm'], response: 'sản phẩm' },
+      { keywords: ['có', 'sản phẩm'], response: 'sản phẩm' },
+      { keywords: ['dịch', 'vụ'], response: 'dịch vụ' },
+      { keywords: ['đặt', 'hoa'], response: 'đặt hoa' },
+      { keywords: ['mua', 'hoa'], response: 'đặt hoa' },
+      { keywords: ['tư', 'vấn'], response: 'tư vấn' },
+      { keywords: ['hỏi'], response: 'tư vấn' },
+      { keywords: ['giá', 'cả'], response: 'giá' },
+      { keywords: ['bao', 'nhiêu'], response: 'giá' },
+      { keywords: ['giao', 'hàng'], response: 'giao hàng' },
+      { keywords: ['ship'], response: 'giao hàng' },
+      { keywords: ['địa', 'chỉ'], response: 'địa chỉ' },
+      { keywords: ['ở', 'đâu'], response: 'địa chỉ' },
+      { keywords: ['hotline'], response: 'hotline' },
+      { keywords: ['số', 'điện', 'thoại'], response: 'hotline' },
+      { keywords: ['phone'], response: 'hotline' }
+    ];
+
+    // Check fuzzy matches
+    for (const match of fuzzyMatches) {
+      const matchCount = match.keywords.filter(keyword => lowerMessage.includes(keyword)).length;
+      if (matchCount >= 2 || (matchCount === 1 && match.keywords.length === 1)) {
+        return quickResponses[match.response];
+      }
+    }
+
+    // Check for other partial matches
     for (const [keyword, response] of Object.entries(quickResponses)) {
-      if (lowerMessage.includes(keyword)) {
+      if (lowerMessage.includes(keyword) && !priorityMatches.includes(keyword)) {
         return response;
       }
     }
@@ -674,38 +780,44 @@ class HaMienChatbot {
     return baseResponse;
   }
 
-  // Get context-aware rule-based responses (FUN VERSION!)
+  // Get context-aware rule-based responses (TIẾNG VIỆT ONLY + FUN!)
   getContextAwareRuleBasedResponses(message) {
     const lowerMessage = this.dialogflow ? this.dialogflow.norm(message) : message.toLowerCase();
     const stage = this.conversationContext.conversationStage;
     const responses = [];
     
-    // Enhanced keyword matching with FUN responses
+    // Enhanced keyword matching with TIẾNG VIỆT responses
     if (lowerMessage.includes('cảm ơn') || lowerMessage.includes('thank')) {
       responses.push("Aww, cảm ơn bạn! 😊💕\n\nBạn làm tôi cảm thấy rất vui! Hạ Miên luôn sẵn sàng phục vụ bạn! 🌸");
       if (stage === 'ordering') {
         responses.push("Bạn có muốn đặt thêm hoa nào khác không? Tôi có thể tạo ra những tác phẩm nghệ thuật tuyệt vời! 🎨🌸");
       }
-    } else if (lowerMessage.includes('giá') || lowerMessage.includes('price')) {
+    } else if (lowerMessage.includes('sản phẩm') || lowerMessage.includes('sản phẩm') || lowerMessage.includes('cho tôi') || lowerMessage.includes('cần sản phẩm') || lowerMessage.includes('các sản phẩm')) {
+      responses.push("OMG! Bạn muốn xem sản phẩm! 🌟\n\nHạ Miên có những sản phẩm hoa TUYỆT VỜI:\n\n🌹 Hoa hồng (đỏ như trái tim, hồng như má em!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href=\"shop.html\" target=\"_blank\">Xem tất cả sản phẩm</a>\n\nBạn thích loại hoa nào? Tôi có thể kể chi tiết! 😍");
+    } else if (lowerMessage.includes('giá') || lowerMessage.includes('price') || lowerMessage.includes('bao nhiêu')) {
       responses.push("Ah! Bạn hỏi về giá! 💰\n\nHạ Miên có giá từ 200k - 2 triệu, nhưng giá trị tình cảm thì vô giá! 💕");
       responses.push("Tôi có thể giúp bạn chọn hoa phù hợp với ngân sách! Bạn muốn xem bộ sưu tập nào cụ thể không? 😄");
-    } else if (lowerMessage.includes('giao hàng') || lowerMessage.includes('ship')) {
+    } else if (lowerMessage.includes('giao hàng') || lowerMessage.includes('ship') || lowerMessage.includes('delivery')) {
       responses.push("Giao hàng? Tôi làm như Flash! ⚡\n\nNội thành: 2-4h (nhanh hơn cả pizza!)\nNgoại thành: 1-2 ngày (nhưng hoa vẫn tươi như mới!)");
       responses.push("Bạn có muốn đặt giao ngay không? Tôi sẽ đảm bảo hoa đến tay bạn còn thơm ngát! 🌸");
-    } else if (lowerMessage.includes('bạn có thể') || lowerMessage.includes('bạn làm gì')) {
+    } else if (lowerMessage.includes('bạn có thể') || lowerMessage.includes('bạn làm gì') || lowerMessage.includes('bạn biết gì')) {
       responses.push("Ồ! Tôi có thể làm rất nhiều thứ thú vị! 🎉\n\n🌸 Kể chuyện về hoa (tôi biết rất nhiều bí mật!)\n💐 Giúp bạn chọn hoa phù hợp (tôi có \"mắt\" rất tinh!)\n🎨 Thiết kế bó hoa độc đáo (tôi là nghệ sĩ!)\n📦 Giao hàng siêu tốc (như Flash! ⚡)\n🎭 Kể chuyện cười về hoa (tôi rất hài hước!)\n\nBạn muốn thử cái nào trước? 😄");
     } else if (lowerMessage.includes('dịch vụ') || lowerMessage.includes('service')) {
-      responses.push("Wow! Hạ Miên có những dịch vụ SIÊU COOL! 🚀\n\n🌸 Hoa tươi từ khắp nơi (tôi chọn lọc kỹ!)\n💐 Bó hoa theo mẫu (đẹp như tranh!)\n🎨 Thiết kế riêng (độc nhất vô nhị!)\n📦 Giao hàng nhanh (nhanh hơn tia chớp!)\n🏢 Trang trí sự kiện (hoành tráng!)\n🎂 Hoa sinh nhật (làm tiệc thêm vui!)\n💒 Hoa cưới (lãng mạn như phim!)\n\nBạn muốn dịch vụ nào? Tôi sẽ làm cho bạn! 😄");
-    } else if (lowerMessage.includes('sản phẩm') || lowerMessage.includes('hoa')) {
-      responses.push("OMG! Hạ Miên có những sản phẩm hoa TUYỆT VỜI! 🌟\n\n🌹 Hoa hồng (đỏ như trái tim!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\nTôi có thể kể chi tiết về từng loại! Bạn thích loại nào? 😍");
-    } else if (lowerMessage.includes('đặt hoa') || lowerMessage.includes('order')) {
-      responses.push("WOW! Bạn muốn đặt hoa! 🎉\n\nTôi sẽ giúp bạn tạo ra một tác phẩm nghệ thuật! Bạn có thể:\n• Chọn từ bộ sưu tập có sẵn (đã được tôi chọn lọc!)\n• Thiết kế theo yêu cầu (tôi sẽ làm cho bạn!)\n• Giao hàng nhanh (nhanh hơn tốc độ ánh sáng!)\n\nHãy cho tôi biết bạn muốn đặt hoa cho dịp gì? Tôi sẽ tạo ra điều bất ngờ! 😍");
-    } else if (lowerMessage.includes('tư vấn') || lowerMessage.includes('advice')) {
+      responses.push("Wow! Hạ Miên có những dịch vụ SIÊU COOL! 🚀\n\n🌸 Hoa tươi từ khắp nơi (tôi chọn lọc kỹ!)\n💐 Bó hoa theo mẫu (đẹp như tranh!)\n🎨 Thiết kế riêng (độc nhất vô nhị!)\n📦 Giao hàng nhanh (nhanh hơn tia chớp!)\n🏢 Trang trí sự kiện (hoành tráng!)\n🎂 Hoa sinh nhật (làm tiệc thêm vui!)\n💒 Hoa cưới (lãng mạn như phim!)\n\n👉 <a href=\"services.html\" target=\"_blank\">Xem chi tiết dịch vụ</a>\n\nBạn muốn dịch vụ nào? Tôi sẽ làm cho bạn! 😄");
+    } else if (lowerMessage.includes('sản phẩm') || lowerMessage.includes('hoa') || lowerMessage.includes('product')) {
+      responses.push("OMG! Hạ Miên có những sản phẩm hoa TUYỆT VỜI! 🌟\n\n🌹 Hoa hồng (đỏ như trái tim!)\n🌻 Hoa hướng dương (vui tươi như nắng mai!)\n🌺 Hoa lan (quý phái như nữ hoàng!)\n🌸 Hoa cúc (dịu dàng như mẹ hiền!)\n🌷 Hoa tulip (thanh lịch như thiếu nữ!)\n💐 Bó hoa mix (đa dạng như cuộc sống!)\n🎁 Hộp hoa (bí ẩn như kho báu!)\n\n👉 <a href=\"shop.html\" target=\"_blank\">Xem tất cả sản phẩm</a>\n\nTôi có thể kể chi tiết về từng loại! Bạn thích loại nào? 😍");
+    } else if (lowerMessage.includes('đặt hoa') || lowerMessage.includes('order') || lowerMessage.includes('mua hoa')) {
+      responses.push("WOW! Bạn muốn đặt hoa! 🎉\n\nTôi sẽ giúp bạn tạo ra một tác phẩm nghệ thuật! Bạn có thể:\n• Chọn từ bộ sưu tập có sẵn (đã được tôi chọn lọc!)\n• Thiết kế theo yêu cầu (tôi sẽ làm cho bạn!)\n• Giao hàng nhanh (nhanh hơn tốc độ ánh sáng!)\n\n👉 <a href=\"shop.html\" target=\"_blank\">Đặt hoa ngay</a>\n\nHãy cho tôi biết bạn muốn đặt hoa cho dịp gì? Tôi sẽ tạo ra điều bất ngờ! 😍");
+    } else if (lowerMessage.includes('tư vấn') || lowerMessage.includes('advice') || lowerMessage.includes('hỏi')) {
       responses.push("Tuyệt vời! Tôi là chuyên gia tư vấn hoa! 🌸👨‍🎓\n\nTôi có thể tư vấn về:\n• Chọn hoa phù hợp (tôi có \"mắt\" rất tinh!)\n• Màu sắc hài hòa (như nhà thiết kế!)\n• Cách bảo quản (để hoa tươi lâu!)\n• Ý nghĩa từng loại hoa (tôi biết nhiều bí mật!)\n• Cách trang trí (để không gian đẹp!)\n\nBạn cần tư vấn về gì? Tôi sẽ chia sẻ tất cả bí quyết! 😊");
     } else if (lowerMessage.includes('chán') || lowerMessage.includes('boring')) {
       responses.push("Chán? Không thể nào! 😄\n\nTôi sẽ làm cho bạn vui ngay! Hãy để tôi kể một câu chuyện vui về hoa:\n\n\"Có một bông hoa hướng dương luôn nói: 'Tôi không bao giờ buồn vì tôi luôn hướng về mặt trời!'\" 🌻☀️\n\nBạn muốn nghe thêm chuyện vui không? Tôi có rất nhiều! 😊");
     } else if (lowerMessage.includes('vui') || lowerMessage.includes('fun')) {
       responses.push("YAY! Bạn muốn vui! 🎉\n\nTôi sẽ làm cho bạn cười! Đây là một câu chuyện vui:\n\n\"Tại sao hoa hồng đỏ lại đỏ? Vì nó xấu hổ khi thấy bạn đẹp quá!\" 🌹😊\n\nBạn có muốn nghe thêm chuyện vui không? Tôi có cả kho chuyện cười! 😄");
+    } else if (lowerMessage.includes('địa chỉ') || lowerMessage.includes('address') || lowerMessage.includes('ở đâu')) {
+      responses.push("Hạ Miên ở 206 Yên Phụ, Tây Hồ, Hà Nội! 📍\n\nĐó là một nơi rất đẹp, gần hồ Tây! Bạn có thể đến thăm tôi và ngắm hoa! 😊\n\nBạn có cần hướng dẫn đường đi không? Tôi sẽ chỉ đường rất chi tiết! 🗺️");
+    } else if (lowerMessage.includes('hotline') || lowerMessage.includes('phone') || lowerMessage.includes('số điện thoại')) {
+      responses.push("Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄");
     } else {
       // Default contextual response with FUN twist
       const defaultResponse = this.getDefaultContextualResponse(stage);
@@ -716,7 +828,7 @@ class HaMienChatbot {
         if (Math.random() < 0.3) { // 30% chance for random fun response
           responses.push(this.getRandomFunResponse());
         } else {
-          responses.push("Xin chào! Tôi là chatbot của Hạ Miên! 🌸✨\n\nTôi có thể giúp bạn:\n• Tư vấn về hoa tươi (tôi biết rất nhiều!)\n• Đặt hoa theo mẫu (đẹp như tranh!)\n• Thiết kế theo yêu cầu (tôi là nghệ sĩ!)\n• Hỏi về đơn hàng (tôi nhớ tất cả!)\n• Kể chuyện vui về hoa (tôi rất hài hước!)\n\nBạn muốn làm gì? Tôi sẽ làm cho bạn vui! 😄");
+          responses.push("Xin chào! Tôi là chatbot của Hạ Miên! 🌸✨\n\nTôi có thể giúp bạn:\n• Tư vấn về hoa tươi (tôi biết rất nhiều!)\n• Đặt hoa theo mẫu (đẹp như tranh!)\n• Thiết kế theo yêu cầu (tôi là nghệ sĩ!)\n• Hỏi về đơn hàng (tôi nhớ tất cả!)\n• Kể chuyện vui về hoa (tôi rất hài hước!)\n\n👉 <a href=\"shop.html\" target=\"_blank\">Xem sản phẩm</a> | <a href=\"services.html\" target=\"_blank\">Dịch vụ</a> | <a href=\"contact.html\" target=\"_blank\">Liên hệ</a>\n\nBạn muốn làm gì? Tôi sẽ làm cho bạn vui! 😄");
         }
       }
     }
@@ -748,7 +860,7 @@ class HaMienChatbot {
     return stageSuggestions[stage] || ['Tư vấn', 'Đặt hoa', 'Xem sản phẩm', 'Liên hệ'];
   }
 
-  // Add random fun responses
+  // Add random fun responses (TIẾNG VIỆT ONLY)
   getRandomFunResponse() {
     const funResponses = [
       "Bạn biết không? Hoa hướng dương luôn hướng về mặt trời! Giống như tôi luôn hướng về bạn vậy! 🌻☀️",
@@ -758,10 +870,184 @@ class HaMienChatbot {
       "Bạn biết không? Hoa lan được gọi là 'nữ hoàng của các loài hoa'! Nhưng bạn là nữ hoàng của trái tim tôi! 🌺👑",
       "Tôi vừa tạo ra một bó hoa mix mới! Nó có hoa hồng đỏ (tình yêu), hoa cúc vàng (hạnh phúc), và hoa lan tím (quý phái)! Bạn có muốn xem không? 💐✨",
       "Bạn có biết tại sao tôi thích hoa không? Vì chúng luôn làm cho mọi người mỉm cười! Giống như bạn đang làm với tôi vậy! 😊🌸",
+      "Tôi đang học cách làm hoa giấy! Nhưng hoa thật vẫn đẹp hơn nhiều! Bạn có muốn tôi kể về cách chọn hoa tươi không? 🌸📚",
+      "Bạn có biết không? Hoa hồng đỏ tượng trưng cho tình yêu, hoa hồng hồng tượng trưng cho lòng biết ơn, và hoa hồng trắng tượng trưng cho sự trong trắng! 🌹💕",
+      "Tôi vừa phát hiện ra một bí mật: Hoa cúc có thể sống đến 2 tuần nếu được chăm sóc đúng cách! Nhưng tình bạn của chúng ta sẽ sống mãi! 🌸💕",
+      "Bạn có biết tại sao hoa tulip lại có hình dạng như vậy không? Vì chúng muốn ôm lấy tất cả tình yêu của bạn! 🌷💕",
+      "Tôi đang nghĩ về một câu chuyện vui: Có một bông hoa hướng dương nói với hoa cúc 'Bạn vàng quá!' và hoa cúc trả lời 'Tôi vàng vì tôi hạnh phúc khi gặp bạn!' 🌻🌼",
+      "Bạn biết không? Hoa lan có thể sống đến 50 năm! Nhưng tình bạn của chúng ta sẽ sống mãi mãi! 🌺💕",
+      "Tôi vừa tạo ra một bó hoa mix mới! Nó có hoa hồng đỏ (tình yêu), hoa hướng dương (hạnh phúc), và hoa cúc (lòng biết ơn)! Bạn có muốn xem không? 💐✨",
+      "Bạn có biết tại sao tôi thích hoa không? Vì chúng luôn làm cho mọi người mỉm cười! Giống như bạn đang làm với tôi vậy! 😊🌸",
       "Tôi đang học cách làm hoa giấy! Nhưng hoa thật vẫn đẹp hơn nhiều! Bạn có muốn tôi kể về cách chọn hoa tươi không? 🌸📚"
     ];
     
     return funResponses[Math.floor(Math.random() * funResponses.length)];
+  }
+
+  // Enhanced Dialogflow response with entity processing
+  getEnhancedDialogflowResponse(intent, message) {
+    try {
+      // Get base response from Dialogflow
+      const baseResponse = this.dialogflowLoader.getRandomResponse(intent);
+      if (!baseResponse) return null;
+
+      // Process entities in the message
+      const entities = this.extractEntitiesFromMessage(message);
+      
+      // Enhance response based on entities found
+      let enhancedResponse = baseResponse;
+      
+      if (entities.length > 0) {
+        console.log(`🔍 Found entities: ${entities.map(e => e.name).join(', ')}`);
+        
+        // Add personalized touch based on entities
+        enhancedResponse = this.personalizeResponseWithEntities(baseResponse, entities, intent);
+      }
+      
+      return enhancedResponse;
+    } catch (error) {
+      console.error('❌ Error in enhanced Dialogflow response:', error);
+      return null;
+    }
+  }
+
+  // Extract entities from message using Dialogflow entities
+  extractEntitiesFromMessage(message) {
+    const entities = [];
+    if (!this.dialogflowLoader || !this.dialogflowLoader.entities) return entities;
+
+    const lowerMessage = message.toLowerCase();
+    
+    for (const [entityName, entity] of Object.entries(this.dialogflowLoader.entities)) {
+      if (entity.entries) {
+        for (const entry of entity.entries) {
+          // Check main value
+          if (lowerMessage.includes(entry.value.toLowerCase())) {
+            entities.push({
+              name: entityName,
+              value: entry.value,
+              type: 'main'
+            });
+          }
+          
+          // Check synonyms
+          for (const synonym of entry.synonyms) {
+            if (lowerMessage.includes(synonym.toLowerCase())) {
+              entities.push({
+                name: entityName,
+                value: synonym,
+                type: 'synonym',
+                originalValue: entry.value
+              });
+            }
+          }
+        }
+      }
+    }
+    
+    return entities;
+  }
+
+  // Personalize response based on entities found
+  personalizeResponseWithEntities(baseResponse, entities, intent) {
+    let personalizedResponse = baseResponse;
+    
+    // Add entity-specific enhancements
+    for (const entity of entities) {
+      switch (entity.name) {
+        case 'echaohoi':
+          personalizedResponse = `Xin chào! ${baseResponse}`;
+          break;
+        case 'edathoa':
+          personalizedResponse = `Tuyệt vời! Bạn muốn đặt hoa! ${baseResponse}`;
+          break;
+        case 'etuvan':
+          personalizedResponse = `Tôi hiểu bạn cần tư vấn! ${baseResponse}`;
+          break;
+        case 'eloaihoa':
+          personalizedResponse = `Ah! Bạn quan tâm đến ${entity.value}! ${baseResponse}`;
+          break;
+        case 'emauhoa':
+          personalizedResponse = `Màu ${entity.value} rất đẹp! ${baseResponse}`;
+          break;
+        case 'esoluong':
+          personalizedResponse = `Bạn muốn ${entity.value} bông hoa! ${baseResponse}`;
+          break;
+      }
+    }
+    
+    return personalizedResponse;
+  }
+
+  // Enhanced quick response with Dialogflow knowledge
+  getEnhancedQuickResponse(lowerMessage, originalMessage) {
+    // First try the original quick response (HIGHEST PRIORITY)
+    const originalResponse = this.getQuickResponse(lowerMessage);
+    if (originalResponse) {
+      console.log(`✅ Quick response found for: "${originalMessage}"`);
+      return originalResponse;
+    }
+
+    // Check for Dialogflow entities in the message
+    const entities = this.extractEntitiesFromMessage(originalMessage);
+    if (entities.length > 0) {
+      console.log(`🔍 Entity-based response for: "${originalMessage}"`);
+      return this.generateEntityBasedResponse(entities);
+    }
+
+    return null;
+  }
+
+  // Generate response based on entities found (TIẾNG VIỆT ONLY)
+  generateEntityBasedResponse(entities) {
+    const entity = entities[0]; // Use first entity found
+    
+    switch (entity.name) {
+      case 'echaohoi':
+        return `Xin chào! Tôi là chatbot của Hạ Miên! 🌸✨\n\nTôi rất vui được gặp bạn! Bạn có muốn tôi giúp gì không? 😊`;
+      
+      case 'edathoa':
+        return `Tuyệt vời! Bạn muốn đặt hoa! 🎉\n\nTôi sẽ giúp bạn tạo ra một tác phẩm nghệ thuật! Bạn có thể:\n• Chọn từ bộ sưu tập có sẵn\n• Thiết kế theo yêu cầu\n• Giao hàng nhanh\n\nBạn muốn đặt hoa cho dịp gì? 😍`;
+      
+      case 'etuvan':
+        return `Tuyệt vời! Tôi là chuyên gia tư vấn hoa! 🌸👨‍🎓\n\nTôi có thể tư vấn về:\n• Chọn hoa phù hợp\n• Màu sắc hài hòa\n• Cách bảo quản\n• Ý nghĩa từng loại hoa\n\nBạn cần tư vấn về gì cụ thể? 😊`;
+      
+      case 'eloaihoa':
+        return `Ah! Bạn quan tâm đến ${entity.value}! 🌸\n\nTôi có thể kể cho bạn nghe về loại hoa này! ${entity.value} có ý nghĩa rất đặc biệt và rất đẹp! 😍\n\nBạn muốn tôi tư vấn thêm về ${entity.value} không?`;
+      
+      case 'emauhoa':
+        return `Màu ${entity.value} rất đẹp! 🌈\n\nMàu ${entity.value} có ý nghĩa rất đặc biệt! Tôi có thể giúp bạn chọn hoa màu ${entity.value} phù hợp! 😊\n\nBạn muốn xem những bông hoa màu ${entity.value} nào?`;
+      
+      case 'esoluong':
+        return `Bạn muốn ${entity.value} bông hoa! 🌸\n\nTuyệt vời! ${entity.value} bông hoa sẽ tạo ra một bó hoa rất đẹp! Tôi sẽ giúp bạn chọn loại hoa phù hợp! 😍\n\nBạn muốn loại hoa nào?`;
+      
+      case 'edichvu':
+        return `Ah! Bạn hỏi về dịch vụ! 🌸\n\nHạ Miên có rất nhiều dịch vụ tuyệt vời:\n• Hoa tươi từ khắp nơi\n• Bó hoa theo mẫu\n• Thiết kế riêng\n• Giao hàng nhanh\n• Trang trí sự kiện\n\n👉 <a href="services.html" target="_blank">Xem chi tiết dịch vụ</a>\n\nBạn quan tâm đến dịch vụ nào? 😊`;
+      
+      case 'esanpham':
+        return `Tuyệt vời! Bạn hỏi về sản phẩm! 🌸\n\nChúng tôi có rất nhiều sản phẩm hoa đẹp:\n• Hoa hồng đỏ, hồng, trắng\n• Hoa hướng dương tươi\n• Hoa lan đẹp\n• Hoa cúc nhiều màu\n• Bó hoa mix đặc biệt\n\n👉 <a href="shop.html" target="_blank">Xem tất cả sản phẩm</a>\n\nBạn thích loại hoa nào? 😍`;
+      
+      case 'ephuongthucthanhtoan':
+        return `Ah! Bạn hỏi về phương thức thanh toán! 💳\n\nHạ Miên chấp nhận nhiều hình thức thanh toán:\n• Tiền mặt\n• Chuyển khoản\n• Thẻ tín dụng\n• Ví điện tử\n\nBạn muốn thanh toán bằng cách nào? 😊`;
+      
+      case 'ehotline':
+        return `Hotline của Hạ Miên là 0987654321! 📞\n\nBạn có thể gọi trực tiếp để được tư vấn nhanh nhất! Tôi sẽ trả lời ngay lập tức! ⚡\n\n👉 <a href="contact.html" target="_blank">Xem thông tin liên hệ</a>\n\nHoặc bạn có thể chat với tôi ở đây! Tôi rất thích trò chuyện! 😄`;
+      
+      default:
+        return `Tôi thấy bạn đang nói về ${entity.value}! 🌸\n\nĐó là một chủ đề rất thú vị! Tôi có thể giúp bạn tìm hiểu thêm về ${entity.value}! 😊`;
+    }
+  }
+
+  // Product consultation with entity awareness
+  getProductConsultationWithEntities(message) {
+    const entities = this.extractEntitiesFromMessage(message);
+    
+    if (entities.length > 0) {
+      return this.generateEntityBasedResponse(entities);
+    }
+    
+    // Fallback to original product consultation
+    return this.getProductConsultation(message);
   }
 
   // Get default response based on conversation stage
@@ -956,7 +1242,7 @@ class HaMienChatbot {
       console.log('📝 Generated responses:', responses);
       
       if (responses && responses.length > 0) {
-        responses.forEach(r => this.addBotMessage(r));
+      responses.forEach(r => this.addBotMessage(r));
       } else {
         console.warn('⚠️ No responses generated, using fallback');
         this.addBotMessage("Xin chào! Tôi là chatbot của Hạ Miên 🌸 Bạn cần hỗ trợ gì ạ?");
