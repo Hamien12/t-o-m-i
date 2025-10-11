@@ -1,0 +1,106 @@
+{
+  "id": "b5a6e604-d7f4-49e8-be7c-5277c4a06ff9",
+  "name": "iphanhoitot",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "632f3795-5d2a-44eb-be13-5c3f7727645c",
+          "name": "ephanhoitot",
+          "required": true,
+          "dataType": "@ephanhoitot",
+          "value": "$ephanhoitot",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8eacaaa3-180a-4422-9a61-b4c8744e5acc",
+          "name": "echaohoi",
+          "required": false,
+          "dataType": "@echaohoi",
+          "value": "$echaohoi",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7008ca76-4035-44a9-8331-087b5de7916f",
+          "name": "enoiban",
+          "required": false,
+          "dataType": "@enoiban",
+          "value": "$enoiban",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f9a28fdf-741c-40f2-a5ca-213b9ec07fcd",
+          "name": "ecamon",
+          "required": false,
+          "dataType": "@ecamon",
+          "value": "$ecamon",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "94fb1d87-81d8-444b-96be-026d03dfb7a3",
+          "name": "ecamon1",
+          "required": false,
+          "dataType": "@ecamon",
+          "value": "$ecamon1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "vi",
+          "speech": [
+            "Cảm ơn bạn đã tin tưởng lựa chọn hoa của Hạ Miên giữa vô vàn các shop hoa khác, Hạ Miên sẽ tặng bạn một món quà nho nhỏ cho lần sử dụng dịch vụ tiếp theo của bạn nhé!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

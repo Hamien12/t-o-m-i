@@ -1,0 +1,113 @@
+[
+  {
+    "id": "74d9e5b7-53eb-4eeb-b11a-b7cf488fd681",
+    "data": [
+      {
+        "text": "làm đẹp thế ",
+        "userDefined": false
+      },
+      {
+        "text": "hộp mica",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " hoa có bán ko em?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "a7a1359b-5ab6-44a4-aed9-879e0eb23866",
+    "data": [
+      {
+        "text": "ngoài bán ",
+        "userDefined": false
+      },
+      {
+        "text": "bình hoa",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " tiệm còn gì không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "44136a0a-c510-463e-b932-6299155a5190",
+    "data": [
+      {
+        "text": "nhà Hạ có bao nhiêu ",
+        "userDefined": false
+      },
+      {
+        "text": "sản phẩm",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " về hoa",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "c5c9e8cf-3d54-44a4-ac0d-5d00f6eb9a8e",
+    "data": [
+      {
+        "text": "Sản phẩm",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " bên em là gì",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "13574e2f-9708-48f1-8d01-7a755a8d8819",
+    "data": [
+      {
+        "text": "Bên shop có những ",
+        "userDefined": false
+      },
+      {
+        "text": "sản phẩm",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " gì ạ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

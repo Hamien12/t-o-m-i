@@ -1,0 +1,139 @@
+[
+  {
+    "id": "8ccb28ea-bc70-4d88-a895-43746bd2d416",
+    "data": [
+      {
+        "text": "Tớ ",
+        "userDefined": false
+      },
+      {
+        "text": "cảm ưnn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d114e162-d627-4e65-af91-2bea342a7877",
+    "data": [
+      {
+        "text": "Cảm ơnnn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f295392c-ae5b-49d1-af4f-6a7bdbcdbbfb",
+    "data": [
+      {
+        "text": "Thank",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      },
+      {
+        "text": " youu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "693be0fe-f653-47f7-8c18-614941d54df1",
+    "data": [
+      {
+        "text": "Mình rất hài lòng về dịch vụ của tiệm, ",
+        "userDefined": false
+      },
+      {
+        "text": "cảm ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      },
+      {
+        "text": " tiệm",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "54509491-579c-4cec-a24e-d4ecdeef876e",
+    "data": [
+      {
+        "text": "Thanks",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      },
+      {
+        "text": " shop nhé!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "41cba65f-6105-4626-a665-23e2aecbd817",
+    "data": [
+      {
+        "text": "Dạ em ",
+        "userDefined": false
+      },
+      {
+        "text": "cảm ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      },
+      {
+        "text": " nhiềuuuu ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "1c59508e-6b4c-488a-b621-cd962c605647",
+    "data": [
+      {
+        "text": "Cảm ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": true
+      },
+      {
+        "text": " shop, lần tới em ghé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

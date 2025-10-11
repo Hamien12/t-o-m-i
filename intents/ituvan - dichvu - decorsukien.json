@@ -1,20 +1,24 @@
 {
-  "id": "7be6fa70-ca82-4d54-a241-21f20e6bd0f6",
-  "name": "iphiship",
+  "id": "4290d09a-dae7-4161-8cd6-e750209bf000",
+  "parentId": "2e086237-c0a7-474a-abd1-cbf6710eccd2",
+  "rootParentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "name": "ituvan - dichvu - decorsukien",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "ituvan-dichvu-followup"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "ituvan.ituvan-custom.ituvan-dichvu-custom-2",
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f2a6eca8-bb73-44ed-a35a-ef7008844725",
-          "name": "enoiban",
+          "id": "829aea29-2633-4466-9f2c-21736e1b4909",
+          "name": "edichvu",
           "required": false,
-          "dataType": "@enoiban",
-          "value": "$enoiban",
+          "dataType": "@edichvu",
+          "value": "$edichvu",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -24,11 +28,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a49b928f-96f5-4d48-b24a-ff25b3ce0bec",
-          "name": "enoidatmua",
-          "required": true,
-          "dataType": "@enoidatmua",
-          "value": "$enoidatmua",
+          "id": "aaf613ca-0cb7-42ec-b37e-273d57f1ca45",
+          "name": "etuvan",
+          "required": false,
+          "dataType": "@etuvan",
+          "value": "$etuvan",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,7 +49,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Hạ Miên sẽ giao hàng tận nơi khi bạn đặt hàng trực tiếp ở tiệm hoặc đặt hàng trên web trong khu vực thành phố Hà Nội. Phí ship được tính như sau:\n+ Bán kính \u003c\u003d10km: freeship.\n+ Bán kính \u003e 10km: phí ship tính theo độ dài quãng đường."
+            "Bạn vui lòng liên hệ tới số hotline: 0398068898 để được tiệm hỗ trợ sớm nhất và đồng hành trong quá trình sử dụng dịch vụ ạ."
           ],
           "condition": ""
         }

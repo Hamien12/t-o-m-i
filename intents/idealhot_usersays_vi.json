@@ -1,0 +1,114 @@
+[
+  {
+    "id": "fcd661e3-47aa-4ae2-b5cc-0cfde77d4591",
+    "data": [
+      {
+        "text": "sắp ",
+        "userDefined": false
+      },
+      {
+        "text": "20/10",
+        "meta": "@engaygio",
+        "alias": "engaygio",
+        "userDefined": false
+      },
+      {
+        "text": " rồi shop có ",
+        "userDefined": false
+      },
+      {
+        "text": "ưu đãi",
+        "meta": "@edealhot",
+        "alias": "edealhot",
+        "userDefined": false
+      },
+      {
+        "text": " gì không",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d3adb828-e98b-42c9-a62b-062ba395bb57",
+    "data": [
+      {
+        "text": "Tháng 10 này có  ",
+        "userDefined": false
+      },
+      {
+        "text": "dealhot,",
+        "meta": "@edealhot",
+        "alias": "edealhot",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "deal hời",
+        "meta": "@edealhot",
+        "alias": "edealhot",
+        "userDefined": true
+      },
+      {
+        "text": " gì không vậy ạ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "74e25e43-9392-4267-992c-dbb715a4143f",
+    "data": [
+      {
+        "text": "Có chương trình ",
+        "userDefined": false
+      },
+      {
+        "text": "khuyến mại",
+        "meta": "@edealhot",
+        "alias": "edealhot",
+        "userDefined": false
+      },
+      {
+        "text": " không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "7dad0c3b-ef04-4354-bc19-46addab5341a",
+    "data": [
+      {
+        "text": "Sắp tới có ngày lễ không được ",
+        "userDefined": false
+      },
+      {
+        "text": "giảm giá",
+        "meta": "@edealhot",
+        "alias": "edealhot",
+        "userDefined": false
+      },
+      {
+        "text": " sao?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

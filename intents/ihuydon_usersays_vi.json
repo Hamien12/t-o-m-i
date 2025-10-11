@@ -1,0 +1,172 @@
+[
+  {
+    "id": "e48b9a3b-b40c-43ad-8320-1123a4523ed8",
+    "data": [
+      {
+        "text": "mai",
+        "meta": "@engaygio",
+        "alias": "engaygio",
+        "userDefined": false
+      },
+      {
+        "text": " anh có việc đột xuất, ",
+        "userDefined": false
+      },
+      {
+        "text": "không nhận",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " đc hàng anh ",
+        "userDefined": false
+      },
+      {
+        "text": "cancel",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": false
+      },
+      {
+        "text": " nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "981b691d-1fd6-484f-b2d0-d66d18090701",
+    "data": [
+      {
+        "text": "thôi",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " em eyy anh mới chia tay ng yêu, ",
+        "userDefined": false
+      },
+      {
+        "text": "hủy",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " giúp anh",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "4cb6d5a3-fe0c-4136-b76e-353c6713cd59",
+    "data": [
+      {
+        "text": "Tôi ",
+        "userDefined": false
+      },
+      {
+        "text": "hủy đơn",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " hoa đặt trước nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "c40630d6-1356-4bdf-acff-14c0090a3dc8",
+    "data": [
+      {
+        "text": "Hủy ",
+        "userDefined": false
+      },
+      {
+        "text": "đơn hoa",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " tiệm nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "fa4090f2-dc35-4e74-8362-d2c3c79bdc1c",
+    "data": [
+      {
+        "text": "Mình có việc, mình ",
+        "userDefined": false
+      },
+      {
+        "text": "không lấy",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " đơn nữa nha",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "eccbe47d-c6cd-4dfd-ae20-604d01e63539",
+    "data": [
+      {
+        "text": "Shop ",
+        "userDefined": false
+      },
+      {
+        "text": "hủy",
+        "meta": "@ehuydon",
+        "alias": "ehuydon",
+        "userDefined": true
+      },
+      {
+        "text": " giúp mình đơn ",
+        "userDefined": false
+      },
+      {
+        "text": "hôm qua",
+        "meta": "@engaygio",
+        "alias": "engaygio",
+        "userDefined": true
+      },
+      {
+        "text": " với",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

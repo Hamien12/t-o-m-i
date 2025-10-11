@@ -1,0 +1,100 @@
+[
+  {
+    "id": "234a9ca4-2adf-43e7-81af-87a02a18470f",
+    "data": [
+      {
+        "text": "anh trong ",
+        "userDefined": false
+      },
+      {
+        "text": "Bến Tre",
+        "meta": "@enoidatmua",
+        "alias": "enoidatmua",
+        "userDefined": false
+      },
+      {
+        "text": " đặt ship onl đc ko em?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "652a6ba1-0d5d-4456-a813-cc7ce3bbfbb2",
+    "data": [
+      {
+        "text": "ship ra ",
+        "userDefined": false
+      },
+      {
+        "text": "ngoại thành",
+        "meta": "@enoidatmua",
+        "alias": "enoidatmua",
+        "userDefined": false
+      },
+      {
+        "text": " mất bao nhiêu tiền?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "7d0cc470-2673-4f05-9194-5112bf60dac9",
+    "data": [
+      {
+        "text": "ở ",
+        "userDefined": false
+      },
+      {
+        "text": "Hà Nội",
+        "meta": "@enoidatmua",
+        "alias": "enoidatmua",
+        "userDefined": false
+      },
+      {
+        "text": " có đc freeship không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "80f68d98-2a03-4d43-a6ba-05d89b167f70",
+    "data": [
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " có ship ",
+        "userDefined": false
+      },
+      {
+        "text": "tỉnh",
+        "meta": "@enoidatmua",
+        "alias": "enoidatmua",
+        "userDefined": false
+      },
+      {
+        "text": " không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

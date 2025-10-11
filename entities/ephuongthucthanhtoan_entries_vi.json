@@ -1,0 +1,39 @@
+[
+  {
+    "value": "chuyển khoản",
+    "synonyms": [
+      "chuyển khoản",
+      "banking",
+      "bank",
+      "ck",
+      "ckhoan",
+      "chuyển tiền"
+    ]
+  },
+  {
+    "value": "tiền mặt",
+    "synonyms": [
+      "tiền mặt",
+      "cash",
+      "cành",
+      "trăm",
+      "tiền",
+      "củ"
+    ]
+  },
+  {
+    "value": "thanh toán",
+    "synonyms": [
+      "thanh toán",
+      "hình thức thanh toán",
+      "pay"
+    ]
+  },
+  {
+    "value": "trả",
+    "synonyms": [
+      "trả",
+      "trả tiền"
+    ]
+  }
+]

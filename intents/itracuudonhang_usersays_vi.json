@@ -1,0 +1,155 @@
+[
+  {
+    "id": "e62ba71a-1072-44dd-80e1-056b711f34a8",
+    "data": [
+      {
+        "text": "Tôi muốn theo dõi ",
+        "userDefined": false
+      },
+      {
+        "text": "đơn hàng",
+        "meta": "@edonhang",
+        "alias": "edonhang",
+        "userDefined": false
+      },
+      {
+        "text": " của mình",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "e3094950-2a9e-47c4-acca-991097398e74",
+    "data": [
+      {
+        "text": "Đơn",
+        "meta": "@edonhang",
+        "alias": "edonhang",
+        "userDefined": true
+      },
+      {
+        "text": " của mình có thể ",
+        "userDefined": false
+      },
+      {
+        "text": "tới",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " trước ",
+        "userDefined": false
+      },
+      {
+        "text": "ngày mai",
+        "meta": "@engaygio",
+        "alias": "engaygio",
+        "userDefined": false
+      },
+      {
+        "text": " không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "09f03265-cb3f-4815-bdee-0cacfd1113b9",
+    "data": [
+      {
+        "text": "Đơn hàng",
+        "meta": "@edonhang",
+        "alias": "edonhang",
+        "userDefined": false
+      },
+      {
+        "text": " sao rồi, mình có thể đến ",
+        "userDefined": false
+      },
+      {
+        "text": "lấy",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": false
+      },
+      {
+        "text": " vào ",
+        "userDefined": false
+      },
+      {
+        "text": "ngày mai",
+        "meta": "@engaygio",
+        "alias": "engaygio",
+        "userDefined": false
+      },
+      {
+        "text": " không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "6aabe85c-18d8-4c3e-9638-0d39ac1efade",
+    "data": [
+      {
+        "text": "Hoa của mình được ",
+        "userDefined": false
+      },
+      {
+        "text": "vận chuyển",
+        "meta": "@edonhang",
+        "alias": "edonhang",
+        "userDefined": false
+      },
+      {
+        "text": " tới đâu rồi ạ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "17a783f0-938a-4c89-b84e-231d301b859e",
+    "data": [
+      {
+        "text": "Shop ơi",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": false
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "đơn hàng",
+        "meta": "@edonhang",
+        "alias": "edonhang",
+        "userDefined": false
+      },
+      {
+        "text": " của mình thế nào rồi?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

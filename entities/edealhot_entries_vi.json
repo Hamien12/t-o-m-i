@@ -1,0 +1,34 @@
+[
+  {
+    "value": "dealhot",
+    "synonyms": [
+      "dealhot",
+      "deal hời",
+      "deal tốt",
+      "deal"
+    ]
+  },
+  {
+    "value": "sale",
+    "synonyms": [
+      "sale",
+      "giảm giá",
+      "offer",
+      "discount",
+      "giảm"
+    ]
+  },
+  {
+    "value": "khuyến mãi",
+    "synonyms": [
+      "khuyến mãi",
+      "khuyến mại"
+    ]
+  },
+  {
+    "value": "ưu đãi",
+    "synonyms": [
+      "ưu đãi"
+    ]
+  }
+]

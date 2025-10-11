@@ -1,0 +1,106 @@
+{
+  "id": "9f7a8887-8447-46d8-a034-e7d276b83b74",
+  "name": "itracuudonhang",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5b3c9205-3a2d-45d7-a77b-b0cd6a4bd4d6",
+          "name": "echaohoi",
+          "required": false,
+          "dataType": "@echaohoi",
+          "value": "$echaohoi",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4c67dc5a-af95-411d-bff2-a56b29852a9e",
+          "name": "edonhang",
+          "required": true,
+          "dataType": "@edonhang",
+          "value": "$edonhang",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c54127f5-ac08-4368-88ba-ce236561375a",
+          "name": "edathoa",
+          "required": false,
+          "dataType": "@edathoa",
+          "value": "$edathoa",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5610df25-46ab-4ddf-b98d-0d66717668e8",
+          "name": "engaygio",
+          "required": false,
+          "dataType": "@engaygio",
+          "value": "$engaygio",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4ec56a6d-a5d0-4a36-8d39-aa929d32e980",
+          "name": "ephanhoixau",
+          "required": false,
+          "dataType": "@ephanhoixau",
+          "value": "$ephanhoixau",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "vi",
+          "speech": [
+            "Bạn vui lòng truy cập mục tra cứu đơn hàng tại trang chủ của đơn vị vận chuyển: viettelpost.com.vn để tiện theo dõi tình trạng đơn hàng nhé!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

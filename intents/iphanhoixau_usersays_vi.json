@@ -1,0 +1,179 @@
+[
+  {
+    "id": "31f21e1e-1c54-4000-9f7b-f98deb3025a5",
+    "data": [
+      {
+        "text": "chị rate ",
+        "userDefined": false
+      },
+      {
+        "text": "1 sao",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": true
+      },
+      {
+        "text": " nhé, hàng giao ",
+        "userDefined": false
+      },
+      {
+        "text": "muộn",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " mà còn bị ",
+        "userDefined": false
+      },
+      {
+        "text": "dập cánh",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "53a5e4ac-e065-4857-8fe2-91d70a6a06c8",
+    "data": [
+      {
+        "text": "ôi chất lượng dạo này hơi ",
+        "userDefined": false
+      },
+      {
+        "text": "tệ",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": true
+      },
+      {
+        "text": " đấy nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "ee66cfe0-3eaf-404a-89ce-70cf18506357",
+    "data": [
+      {
+        "text": "sau anh ",
+        "userDefined": false
+      },
+      {
+        "text": "ko mua",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": true
+      },
+      {
+        "text": " nữa nhá",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "a972dbde-a9f1-4f4b-b6cc-5356f8645054",
+    "data": [
+      {
+        "text": "e ơi chị ko muốn nói đâu nhưng sao hàng đợt này ",
+        "userDefined": false
+      },
+      {
+        "text": "chán",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " thế",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "8d0be0e4-371c-4441-aa85-3b7f10d5d37d",
+    "data": [
+      {
+        "text": "giao đến ",
+        "userDefined": false
+      },
+      {
+        "text": "muộn",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " thế, lỡ hết cả việc",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "124f4d08-4dfa-40eb-b2b3-02b0d00ed995",
+    "data": [
+      {
+        "text": "hàng ",
+        "userDefined": false
+      },
+      {
+        "text": "chán",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " thế, không đẹp gì cả",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d46a538f-2777-480d-9a3f-661604087a1d",
+    "data": [
+      {
+        "text": "eooo hoa ",
+        "userDefined": false
+      },
+      {
+        "text": "6",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": true
+      },
+      {
+        "text": " thế, iu sốp ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

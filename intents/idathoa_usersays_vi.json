@@ -1,0 +1,161 @@
+[
+  {
+    "id": "f3892960-9f89-4cb4-9745-680c0ad006e1",
+    "data": [
+      {
+        "text": "lên đơn",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": false
+      },
+      {
+        "text": " cho mình 1 bó hồng trắng mix tulip, và 1 bình ly hồng nhé  shop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d963f048-d7f0-4220-a5e4-5ad689ef915a",
+    "data": [
+      {
+        "text": "mình ",
+        "userDefined": false
+      },
+      {
+        "text": "lấy",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": true
+      },
+      {
+        "text": " mẫu này nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "04541bad-0631-4e14-bb14-01550de0b77a",
+    "data": [
+      {
+        "text": "tôi muốn ",
+        "userDefined": false
+      },
+      {
+        "text": "mua",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": true
+      },
+      {
+        "text": " hoa hồng",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "801abb57-4804-45e7-a626-733792ffacf6",
+    "data": [
+      {
+        "text": "ok ok cho chị ",
+        "userDefined": false
+      },
+      {
+        "text": "đặt",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": false
+      },
+      {
+        "text": " hàng nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "6c337444-e552-4f73-85f1-834048a3c347",
+    "data": [
+      {
+        "text": "chốt",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": false
+      },
+      {
+        "text": " mẫu này em nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "7185a2fd-ce1e-4b13-828a-d2ce2eafcbb8",
+    "data": [
+      {
+        "text": "hoa đẹp lắm, ",
+        "userDefined": false
+      },
+      {
+        "text": "lên đơn",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": true
+      },
+      {
+        "text": " cho chị em nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "0426bb6e-8a6a-43a6-8ffa-e1e707370679",
+    "data": [
+      {
+        "text": "tư vấn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " nhiệt tình lắm, cho chị ",
+        "userDefined": false
+      },
+      {
+        "text": "đặt",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": true
+      },
+      {
+        "text": " luôn nhé!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

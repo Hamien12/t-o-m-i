@@ -1,0 +1,129 @@
+[
+  {
+    "id": "39e8309d-25b0-4b93-bd0b-e98c05928e7e",
+    "data": [
+      {
+        "text": "Chị đặt hoa hướng dương số lượng lớn cho ",
+        "userDefined": false
+      },
+      {
+        "text": "sự kiện",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " sắp tới nhé!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "a3b5c69b-72a3-434f-949e-2b338b111a17",
+    "data": [
+      {
+        "text": "công ty mình đặt hoa cho ",
+        "userDefined": false
+      },
+      {
+        "text": "lễ khánh thành",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "0978fc97-343b-4833-abe4-5642636508c5",
+    "data": [
+      {
+        "text": "tháng sau bên anh ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " đặt hoa ",
+        "userDefined": false
+      },
+      {
+        "text": "khai trương",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "4e211d1b-0d9c-4258-b91f-2be1bb7da525",
+    "data": [
+      {
+        "text": "Mình ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " đặt hoa cho ",
+        "userDefined": false
+      },
+      {
+        "text": "lễ cưới",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " với số lượng lớn",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "2ab2d3e7-ace6-4bdd-8cb3-80a263982d3b",
+    "data": [
+      {
+        "text": "Tôi cần nhiều hoa cho ",
+        "userDefined": false
+      },
+      {
+        "text": "sự kiện lớn",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " , shop có đáp ứng được không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

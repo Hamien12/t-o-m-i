@@ -1,25 +1,24 @@
 {
-  "id": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
-  "name": "ituvan",
+  "id": "29718926-7309-44cc-ba19-d8bae747bdf5",
+  "parentId": "3c27f3c9-a750-4eaa-9e58-9ffc75edef9e",
+  "rootParentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "name": "ituvan - sanpham - xemmau",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "ituvan-sanpham-followup"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
-      "affectedContexts": [
-        {
-          "name": "ituvan-followup",
-          "lifespan": 2
-        }
-      ],
+      "action": "ituvan.ituvan-custom.ituvan-sanpham-custom-2",
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "d562e045-8d37-4c29-a31b-e73e2a3f61cd",
-          "name": "etuvan",
+          "id": "9c641712-bceb-4832-98a2-994f82a9ebc9",
+          "name": "esanpham",
           "required": false,
-          "dataType": "@etuvan",
-          "value": "$etuvan",
+          "dataType": "@esanpham",
+          "value": "$esanpham",
           "defaultValue": "",
           "isList": true,
           "prompts": [],
@@ -36,8 +35,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Dạ, không biết bạn đang quan tâm và muốn tư vấn về dịch vụ hay sản phẩm nào của Hạ Miên vậy ạ?",
-            "Dạ, Hạ Miên hiện cung cấp các sản phẩm có sẵn cùng với một số dịch vụ. Không biết bạn đang quan tâm đến vấn đề nào ạ?"
+            "Bạn có thể truy cập vào trang \"Services\" để xem các mẫu sản phẩm hoa đã có tại tiệm ạ.\nBạn ưng ý mẫu nào thì đừng quên thêm vào giỏ hàng và đặt mua ngay để tránh tình trạng hết hàng nhé!"
           ],
           "condition": ""
         }

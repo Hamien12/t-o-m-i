@@ -1,0 +1,217 @@
+[
+  {
+    "id": "1397ea8e-3c80-4824-9eef-859eb7103c7b",
+    "data": [
+      {
+        "text": "Chú ngại ",
+        "userDefined": false
+      },
+      {
+        "text": "hỏi",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " trực tiếp quá, chatbot ",
+        "userDefined": false
+      },
+      {
+        "text": "tư vấn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "giúp",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " chú đc ko?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "ef300714-0685-46c0-8ac7-22edf4fe3024",
+    "data": [
+      {
+        "text": "shop đẹp quá cho mình ",
+        "userDefined": false
+      },
+      {
+        "text": "xin thông tin",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "2e60b238-2567-4fd8-99cc-3aac01e35822",
+    "data": [
+      {
+        "text": "chị mới đc giới thiệu về shop em, bên mình ",
+        "userDefined": false
+      },
+      {
+        "text": "có gì",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " thế ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "99b710b1-5c90-4f72-9ec5-1775ab4d6dc2",
+    "data": [
+      {
+        "text": "Tiệm ",
+        "userDefined": false
+      },
+      {
+        "text": "tư vấn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " giúp anh với",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "c5498dd6-7a51-45da-a720-57276f5ad384",
+    "data": [
+      {
+        "text": "Tớ ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn biết",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " thêm thông tin về dịch vụ và sản phẩm",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "1f6727b1-b933-4755-9880-ea662b423f00",
+    "data": [
+      {
+        "text": "Tư vấn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " sản phẩm và dịch vụ cho chị với",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "21532eb2-17a9-4800-b3ad-90bfdc054122",
+    "data": [
+      {
+        "text": "Sốp ",
+        "userDefined": false
+      },
+      {
+        "text": "tư vấn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " cho em vớii",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "47503f20-a3f8-40cd-99f5-f9fd088a0457",
+    "data": [
+      {
+        "text": "shop ơi cho em ",
+        "userDefined": false
+      },
+      {
+        "text": "hỏi",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "58e2db8b-5421-4dcc-a9cc-5b4e2307d17c",
+    "data": [
+      {
+        "text": "Bên shop ",
+        "userDefined": false
+      },
+      {
+        "text": "có những gì",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " ạ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

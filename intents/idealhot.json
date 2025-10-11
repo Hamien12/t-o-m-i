@@ -1,6 +1,6 @@
 {
-  "id": "7be6fa70-ca82-4d54-a241-21f20e6bd0f6",
-  "name": "iphiship",
+  "id": "eccdaae8-f6d8-4ecd-8977-4814853b566c",
+  "name": "idealhot",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -10,13 +10,13 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f2a6eca8-bb73-44ed-a35a-ef7008844725",
-          "name": "enoiban",
-          "required": false,
-          "dataType": "@enoiban",
-          "value": "$enoiban",
+          "id": "2560f27f-c6a9-44ad-9e03-b8e2a686d68b",
+          "name": "edealhot",
+          "required": true,
+          "dataType": "@edealhot",
+          "value": "$edealhot",
           "defaultValue": "",
-          "isList": false,
+          "isList": true,
           "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
@@ -24,11 +24,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a49b928f-96f5-4d48-b24a-ff25b3ce0bec",
-          "name": "enoidatmua",
-          "required": true,
-          "dataType": "@enoidatmua",
-          "value": "$enoidatmua",
+          "id": "e19da684-4e96-43b4-82ec-be58963add36",
+          "name": "engaygio",
+          "required": false,
+          "dataType": "@engaygio",
+          "value": "$engaygio",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,7 +45,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Hạ Miên sẽ giao hàng tận nơi khi bạn đặt hàng trực tiếp ở tiệm hoặc đặt hàng trên web trong khu vực thành phố Hà Nội. Phí ship được tính như sau:\n+ Bán kính \u003c\u003d10km: freeship.\n+ Bán kính \u003e 10km: phí ship tính theo độ dài quãng đường."
+            "Dạ tháng 10 này,  \nHạ Miên chào mừng ngày Phụ nữ Việt Nam 20/10 cùng deal “Tháng 10 dịu dàng, hoa tươi ngập tràn”: giá xinh yêu, freeship tận nơi khi đặt hàng trước ngày 20/10.\nHãy để những bông hoa xinh tươi thay bạn trao gửi yêu thương tới những người phụ nữ tuyệt vời💕"
           ],
           "condition": ""
         }

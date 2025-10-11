@@ -1,6 +1,6 @@
 {
-  "id": "d908e189-53b5-4a10-88fc-ee4b7763d109",
-  "name": "idathoa",
+  "id": "59f0dd5f-244d-4271-807a-2a4405ba4398",
+  "name": "ithongtinshop",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -10,7 +10,35 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "fe38353b-8260-4795-b35f-3856059051d6",
+          "id": "18708b10-4c1c-4396-b7b6-cfa824eb0730",
+          "name": "enoiban",
+          "required": false,
+          "dataType": "@enoiban",
+          "value": "$enoiban",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0cfb558b-8fef-48b4-9f44-3c3253c93892",
+          "name": "ehotline",
+          "required": false,
+          "dataType": "@ehotline",
+          "value": "$ehotline",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c6f5f460-15c0-4a03-99b6-0c5aececb50e",
           "name": "etuvan",
           "required": false,
           "dataType": "@etuvan",
@@ -24,9 +52,9 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6205666f-32a3-401e-8537-cfed3dd9aceb",
+          "id": "21f80c1a-d64b-4235-a9fb-cf0acfae9deb",
           "name": "edathoa",
-          "required": true,
+          "required": false,
           "dataType": "@edathoa",
           "value": "$edathoa",
           "defaultValue": "",
@@ -45,8 +73,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Bạn có thể đặt mua sản phẩm của Hạ Miên bằng cách chọn nút \"mua hàng\" ngay trên website, gọi tới hotline: 0398068898 hoặc tới mua trực tiếp tại cửa hàng ạ.",
-            "Bạn ghé qua danh mục \"Services\" và nhấn nút \"mua hàng\" để Hạ Miên giúp bạn lên đơn nhaa, hoặc mình có thể qua cửa hàng đặt hoa đó ạ."
+            "Dạ Hạ Miên hiện có 1 kênh website, 1 cửa hàng duy nhất tại số 206 Yên Phụ, Tây Hồ, Hà Nội. Bạn có thể liên hệ trực tiếp với Hạ Miên qua số hotline: 0398068898."
           ],
           "condition": ""
         }

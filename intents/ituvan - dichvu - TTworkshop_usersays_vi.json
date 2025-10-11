@@ -1,0 +1,120 @@
+[
+  {
+    "id": "35602045-5457-49ae-88be-349d3c96e583",
+    "data": [
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " ơi ",
+        "userDefined": false
+      },
+      {
+        "text": "workshop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " bên ",
+        "userDefined": false
+      },
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban1",
+        "userDefined": false
+      },
+      {
+        "text": " có gì mà tháng nào người yêu em cũng đến thế?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "e346c3c7-97ce-464b-b112-c0e995c782bd",
+    "data": [
+      {
+        "text": "em ơi ",
+        "userDefined": false
+      },
+      {
+        "text": "hội thảo",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " bên mình ",
+        "userDefined": false
+      },
+      {
+        "text": "có gì",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " vui không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "e7b6e022-34b5-46d5-ad6c-7e145d83d848",
+    "data": [
+      {
+        "text": "Shop mình ơi, ",
+        "userDefined": false
+      },
+      {
+        "text": "work shop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " ngày mấy tổ chức ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "8e877fb6-b417-46cd-b4bd-4b90ccfff8c6",
+    "data": [
+      {
+        "text": "cho mìn thông tin cụ thể về ",
+        "userDefined": false
+      },
+      {
+        "text": "workshop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " tháng ni",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

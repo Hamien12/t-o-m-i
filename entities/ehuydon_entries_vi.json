@@ -1,0 +1,50 @@
+[
+  {
+    "value": "hủy",
+    "synonyms": [
+      "hủy",
+      "bùng",
+      "bùng đơn",
+      "hủy đơn",
+      "hủy hàng",
+      "cancel"
+    ]
+  },
+  {
+    "value": "không lấy nữa",
+    "synonyms": [
+      "không lấy nữa",
+      "ko nhận",
+      "ko lấy",
+      "khong lấy",
+      "k lấy",
+      "k nhận",
+      "không nhận"
+    ]
+  },
+  {
+    "value": "không muốn",
+    "synonyms": [
+      "không muốn",
+      "k muốn",
+      "khong muốn"
+    ]
+  },
+  {
+    "value": "không cần",
+    "synonyms": [
+      "ko cần",
+      "không cần",
+      "k cần",
+      "hong cần",
+      "no need"
+    ]
+  },
+  {
+    "value": "đừng giao",
+    "synonyms": [
+      "đừng giao",
+      "đừng gửi"
+    ]
+  }
+]

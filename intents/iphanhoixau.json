@@ -1,25 +1,20 @@
 {
-  "id": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
-  "name": "ituvan",
+  "id": "4b942068-8f95-4853-bd25-6d64981ad6e6",
+  "name": "iphanhoixau",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [
-        {
-          "name": "ituvan-followup",
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "d562e045-8d37-4c29-a31b-e73e2a3f61cd",
-          "name": "etuvan",
-          "required": false,
-          "dataType": "@etuvan",
-          "value": "$etuvan",
+          "id": "63d70498-3c74-4663-a4c0-2ff0e08edcbc",
+          "name": "ephanhoixau",
+          "required": true,
+          "dataType": "@ephanhoixau",
+          "value": "$ephanhoixau",
           "defaultValue": "",
           "isList": true,
           "prompts": [],
@@ -36,8 +31,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Dạ, không biết bạn đang quan tâm và muốn tư vấn về dịch vụ hay sản phẩm nào của Hạ Miên vậy ạ?",
-            "Dạ, Hạ Miên hiện cung cấp các sản phẩm có sẵn cùng với một số dịch vụ. Không biết bạn đang quan tâm đến vấn đề nào ạ?"
+            "Hạ Miên rất tiếc khi bạn chưa có trải nghiệm trọn vẹn khi sử dụng dịch vụ tại tiệm, bạn hãy liên hệ với tiệm qua hotline: 0398068898 để có hướng xử lý và khắc phục trong thời gian sớm nhất nhé."
           ],
           "condition": ""
         }

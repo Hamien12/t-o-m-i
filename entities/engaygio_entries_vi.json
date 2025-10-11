@@ -1,0 +1,207 @@
+[
+  {
+    "value": "sáng nay",
+    "synonyms": [
+      "sáng nay",
+      "sáng ni",
+      "sáng hôm nay",
+      "sáng ngày hôm nay",
+      "sáng hôm ni"
+    ]
+  },
+  {
+    "value": "chiều nay",
+    "synonyms": [
+      "chiều nay",
+      "chiều ni",
+      "chiều hôm nay",
+      "chiều ngày hôm nay",
+      "chiều hôm ni"
+    ]
+  },
+  {
+    "value": "tối nay",
+    "synonyms": [
+      "tối nay",
+      "tối ni",
+      "tối hôm ni",
+      "tối hôm nay",
+      "tối ngày hôm nay",
+      "tonight"
+    ]
+  },
+  {
+    "value": "hôm nay",
+    "synonyms": [
+      "hôm nay",
+      "hôm ni",
+      "ngày hôm ni",
+      "ngày hôm nay",
+      "bữa nay",
+      "bữa ni",
+      "trong hôm nay",
+      "trong ngày hôm nay",
+      "today"
+    ]
+  },
+  {
+    "value": "ngày mai",
+    "synonyms": [
+      "ngày mai",
+      "ngày hôm sau",
+      "bữa sau",
+      "ngày kế",
+      "mai",
+      "tomorrow"
+    ]
+  },
+  {
+    "value": "ngày kia",
+    "synonyms": [
+      "ngày kia",
+      "sau ngày mai"
+    ]
+  },
+  {
+    "value": "đầu tuần",
+    "synonyms": [
+      "đầu tuần",
+      "đầu tuần sau",
+      "đầu tuần tới"
+    ]
+  },
+  {
+    "value": "cuối tuần",
+    "synonyms": [
+      "cuối tuần",
+      "cuối tuần này",
+      "thứ 7 tuần này",
+      "chủ nhật tuần này",
+      "cuối tuần ni",
+      "thứ 7 ni",
+      "chủ nhật ni"
+    ]
+  },
+  {
+    "value": "đầu tháng",
+    "synonyms": [
+      "đầu tháng",
+      "đầu tháng tới",
+      "đầu tháng sau"
+    ]
+  },
+  {
+    "value": "cuối tháng",
+    "synonyms": [
+      "cuối tháng",
+      "cuối tháng ni",
+      "hết tháng ni"
+    ]
+  },
+  {
+    "value": "Valentine",
+    "synonyms": [
+      "Valentine",
+      "14 tháng 2",
+      "14/2",
+      "14-2",
+      "lễ tình nhân",
+      "valen"
+    ]
+  },
+  {
+    "value": "ngày 8/3",
+    "synonyms": [
+      "ngày 8/3",
+      "ngày quốc tế phụ nữ",
+      "8 tháng 3",
+      "8-3",
+      "international women\u0027s day"
+    ]
+  },
+  {
+    "value": "ngày 1/6",
+    "synonyms": [
+      "ngày 1/6",
+      "quốc tế thiếu nhi",
+      "International Children\u0027s Day",
+      "mồng 1 tháng 6"
+    ]
+  },
+  {
+    "value": "trung thu",
+    "synonyms": [
+      "trung thu",
+      "tết trung thu",
+      "15 tháng 8 âm lịch",
+      "rằm tháng 8 âm lịch",
+      "rằm tháng 8",
+      "tết đoàn viên",
+      "tết trông trăng"
+    ]
+  },
+  {
+    "value": "ngày 20/10",
+    "synonyms": [
+      "ngày 20/10",
+      "20 tháng 10",
+      "20-10",
+      "phụ nữ việt nam",
+      "Vietnamese Women\u0027s Day"
+    ]
+  },
+  {
+    "value": "ngày 20/11",
+    "synonyms": [
+      "ngày 20/11",
+      "20 tháng 11",
+      "20-11",
+      "nhà giáo việt nam",
+      "ngày thầy cô",
+      "Vietnamese Teachers\u0027 Day"
+    ]
+  },
+  {
+    "value": "ngày 25/12",
+    "synonyms": [
+      "ngày 25/12",
+      "25 tháng 12",
+      "25-12",
+      "noel",
+      "nô en",
+      "giáng sinh",
+      "christmas",
+      "Xmas"
+    ]
+  },
+  {
+    "value": "ngày tốt nghiệp",
+    "synonyms": [
+      "ngày tốt nghiệp",
+      "tốt nghiệp",
+      "kỷ yếu"
+    ]
+  },
+  {
+    "value": "sáng thứ 5",
+    "synonyms": [
+      "sáng thứ 5",
+      "sáng t5",
+      "sáng ngày t5",
+      "sáng hôm t5",
+      "sáng hôm thứ 5",
+      "sáng ngày thứ 5"
+    ]
+  },
+  {
+    "value": "chiều thứ 3",
+    "synonyms": [
+      "chiều thứ 3",
+      "chiều t3",
+      "chiều ngày thứ 3",
+      "chiều hôm t3",
+      "chiều ngày t3",
+      "chiều hôm thứ 3"
+    ]
+  }
+]

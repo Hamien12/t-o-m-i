@@ -1,27 +1,22 @@
 {
-  "id": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
-  "name": "ituvan",
+  "id": "1f17383a-eeb1-417f-8258-c13d3d9b604e",
+  "name": "ichaohoi",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [
-        {
-          "name": "ituvan-followup",
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "d562e045-8d37-4c29-a31b-e73e2a3f61cd",
-          "name": "etuvan",
-          "required": false,
-          "dataType": "@etuvan",
-          "value": "$etuvan",
+          "id": "f897f0af-5425-4ea4-b208-55b342a41678",
+          "name": "echaohoi",
+          "required": true,
+          "dataType": "@echaohoi",
+          "value": "$echaohoi",
           "defaultValue": "",
-          "isList": true,
+          "isList": false,
           "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
@@ -36,8 +31,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Dạ, không biết bạn đang quan tâm và muốn tư vấn về dịch vụ hay sản phẩm nào của Hạ Miên vậy ạ?",
-            "Dạ, Hạ Miên hiện cung cấp các sản phẩm có sẵn cùng với một số dịch vụ. Không biết bạn đang quan tâm đến vấn đề nào ạ?"
+            "Hạ Miên xin chào, cảm ơn bạn đã liên hệ. Hạ Miên có thể giúp gì cho bạn ạ?"
           ],
           "condition": ""
         }

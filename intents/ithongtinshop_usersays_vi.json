@@ -1,0 +1,162 @@
+[
+  {
+    "id": "cdf41ee0-d8df-48db-971f-7f30b5ae4eb4",
+    "data": [
+      {
+        "text": "địa chỉ",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": true
+      },
+      {
+        "text": " shop ở đâu?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "481d340a-b49e-4755-a221-67e6820c49d9",
+    "data": [
+      {
+        "text": "0356xxx có phải ",
+        "userDefined": false
+      },
+      {
+        "text": "số hotline",
+        "meta": "@ehotline",
+        "alias": "ehotline",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "75f1ffad-b9b8-484a-9ec9-b00b8cd18fb8",
+    "data": [
+      {
+        "text": "anh không thấy ",
+        "userDefined": false
+      },
+      {
+        "text": "số hotline",
+        "meta": "@ehotline",
+        "alias": "ehotline",
+        "userDefined": false
+      },
+      {
+        "text": " em ơi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d5e47717-0597-453c-9c10-32c3be3a6c3a",
+    "data": [
+      {
+        "text": "shop ở đâu ",
+        "userDefined": false
+      },
+      {
+        "text": "Tây Hồ",
+        "meta": "@ehotline",
+        "alias": "ehotline",
+        "userDefined": true
+      },
+      {
+        "text": " nhỉ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "2475d5ad-a746-46f9-b47b-a5a40cedc315",
+    "data": [
+      {
+        "text": "cho mình ",
+        "userDefined": false
+      },
+      {
+        "text": "số điện thoại",
+        "meta": "@ehotline",
+        "alias": "ehotline",
+        "userDefined": false
+      },
+      {
+        "text": " đi mình ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "đặt hàng",
+        "meta": "@edathoa",
+        "alias": "edathoa",
+        "userDefined": false
+      },
+      {
+        "text": " ngay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f1a7ceaa-d842-4e52-8227-eddd03ea9c7b",
+    "data": [
+      {
+        "text": "cửa hàng",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " ở đâu vậy?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

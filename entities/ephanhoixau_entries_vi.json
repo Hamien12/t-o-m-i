@@ -1,0 +1,115 @@
+[
+  {
+    "value": "không tốt",
+    "synonyms": [
+      "không tốt",
+      "ko tốt",
+      "khongg tốt",
+      "k tốt"
+    ]
+  },
+  {
+    "value": "tệ",
+    "synonyms": [
+      "tệ",
+      "tồi",
+      "kém"
+    ]
+  },
+  {
+    "value": "xấu",
+    "synonyms": [
+      "xấu",
+      "66",
+      "6666"
+    ]
+  },
+  {
+    "value": "chê",
+    "synonyms": [
+      "chê"
+    ]
+  },
+  {
+    "value": "hỏng",
+    "synonyms": [
+      "hỏng",
+      "dập cánh",
+      "hư hại"
+    ]
+  },
+  {
+    "value": "ko đẹp",
+    "synonyms": [
+      "ko đẹp",
+      "không đẹp",
+      "chẳng ra làm sao"
+    ]
+  },
+  {
+    "value": "chậm",
+    "synonyms": [
+      "chậm",
+      "muộn",
+      "lâu",
+      "chờ mãi",
+      "chậm trễ",
+      "trễ giờ",
+      "muộn giờ",
+      "muộn hạn"
+    ]
+  },
+  {
+    "value": "không giống mẫu",
+    "synonyms": [
+      "không giống mẫu",
+      "ko giống",
+      "k giống\u0027k như mong đợi",
+      "ko như mong muốn"
+    ]
+  },
+  {
+    "value": "ko thích",
+    "synonyms": [
+      "ko thích",
+      "k thít",
+      "không thíchh"
+    ]
+  },
+  {
+    "value": "chán",
+    "synonyms": [
+      "chán",
+      "boring"
+    ]
+  },
+  {
+    "value": "chả đẹp",
+    "synonyms": [
+      "chả đẹp",
+      "k đẹp"
+    ]
+  },
+  {
+    "value": "ko mua nữa",
+    "synonyms": [
+      "ko mua nữa",
+      "k mua nữa",
+      "hong mua nữa",
+      "không mua nữa",
+      "không bao giờ quay lại"
+    ]
+  },
+  {
+    "value": "1 sao",
+    "synonyms": [
+      "1 sao"
+    ]
+  },
+  {
+    "value": "2 sao",
+    "synonyms": [
+      "2 sao"
+    ]
+  }
+]

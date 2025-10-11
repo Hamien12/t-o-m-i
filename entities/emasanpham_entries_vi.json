@@ -1,0 +1,399 @@
+[
+  {
+    "value": "DR210",
+    "synonyms": [
+      "DR210",
+      "dr210",
+      "#DR210",
+      "#dr210"
+    ]
+  },
+  {
+    "value": "DR276",
+    "synonyms": [
+      "DR276",
+      "dr276",
+      "#dr276",
+      "#DR276"
+    ]
+  },
+  {
+    "value": "DR150",
+    "synonyms": [
+      "DR150",
+      "dr150",
+      "#DR150",
+      "#dr150"
+    ]
+  },
+  {
+    "value": "DR252",
+    "synonyms": [
+      "DR252",
+      "dr252",
+      "#DR252",
+      "#dr252"
+    ]
+  },
+  {
+    "value": "DR261",
+    "synonyms": [
+      "DR261",
+      "#DR261",
+      "dr261",
+      "#dr261"
+    ]
+  },
+  {
+    "value": "DR636",
+    "synonyms": [
+      "DR636",
+      "dr636",
+      "#DR636",
+      "#dr636"
+    ]
+  },
+  {
+    "value": "DR296",
+    "synonyms": [
+      "DR296",
+      "dr296",
+      "#DR296",
+      "#dr296"
+    ]
+  },
+  {
+    "value": "DR901",
+    "synonyms": [
+      "DR901",
+      "dr901",
+      "#DR901",
+      "#dr901"
+    ]
+  },
+  {
+    "value": "NT358",
+    "synonyms": [
+      "NT358",
+      "nt358",
+      "#NT358",
+      "#nt358"
+    ]
+  },
+  {
+    "value": "NT448",
+    "synonyms": [
+      "NT448",
+      "#nt448"
+    ]
+  },
+  {
+    "value": "nt729",
+    "synonyms": [
+      "nt729",
+      "#NT729"
+    ]
+  },
+  {
+    "value": "NT462",
+    "synonyms": [
+      "NT462",
+      "#nt462"
+    ]
+  },
+  {
+    "value": "NT792",
+    "synonyms": [
+      "NT792",
+      "#Nt792"
+    ]
+  },
+  {
+    "value": "Nt412",
+    "synonyms": [
+      "Nt412",
+      "#NT412"
+    ]
+  },
+  {
+    "value": "NT840",
+    "synonyms": [
+      "NT840",
+      "#NT840",
+      "nt840"
+    ]
+  },
+  {
+    "value": "NT237",
+    "synonyms": [
+      "NT237",
+      "#NT237"
+    ]
+  },
+  {
+    "value": "NT207",
+    "synonyms": [
+      "NT207",
+      "#NT209"
+    ]
+  },
+  {
+    "value": "NT113",
+    "synonyms": [
+      "NT113",
+      "#NT113"
+    ]
+  },
+  {
+    "value": "NT386",
+    "synonyms": [
+      "NT386",
+      "#NT386"
+    ]
+  },
+  {
+    "value": "NT741",
+    "synonyms": [
+      "NT741",
+      "#NT741"
+    ]
+  },
+  {
+    "value": "nT210",
+    "synonyms": [
+      "nT210",
+      "#NT210"
+    ]
+  },
+  {
+    "value": "NT546",
+    "synonyms": [
+      "NT546",
+      "#NT546"
+    ]
+  },
+  {
+    "value": "EL111",
+    "synonyms": [
+      "EL111",
+      "#EL111"
+    ]
+  },
+  {
+    "value": "EL222",
+    "synonyms": [
+      "EL222",
+      "#EL222"
+    ]
+  },
+  {
+    "value": "EL333",
+    "synonyms": [
+      "EL333",
+      "#EL333"
+    ]
+  },
+  {
+    "value": "EL444",
+    "synonyms": [
+      "EL444",
+      "#EL444"
+    ]
+  },
+  {
+    "value": "EL555",
+    "synonyms": [
+      "EL555",
+      "#EL555"
+    ]
+  },
+  {
+    "value": "MD666",
+    "synonyms": [
+      "MD666",
+      "#MD666"
+    ]
+  },
+  {
+    "value": "MD448",
+    "synonyms": [
+      "MD448",
+      "#MD448"
+    ]
+  },
+  {
+    "value": "MD731",
+    "synonyms": [
+      "MD731",
+      "#MD731"
+    ]
+  },
+  {
+    "value": "MD572",
+    "synonyms": [
+      "MD572",
+      "#MD572"
+    ]
+  },
+  {
+    "value": "MD361",
+    "synonyms": [
+      "MD361",
+      "#MD361"
+    ]
+  },
+  {
+    "value": "MD210",
+    "synonyms": [
+      "MD210",
+      "#MD210"
+    ]
+  },
+  {
+    "value": "MD471",
+    "synonyms": [
+      "MD471",
+      "#MD471"
+    ]
+  },
+  {
+    "value": "MD900",
+    "synonyms": [
+      "MD900",
+      "#MD900"
+    ]
+  },
+  {
+    "value": "MD520",
+    "synonyms": [
+      "MD520",
+      "#MD520"
+    ]
+  },
+  {
+    "value": "MD131",
+    "synonyms": [
+      "MD131",
+      "#MD131"
+    ]
+  },
+  {
+    "value": "MD682",
+    "synonyms": [
+      "MD682",
+      "#MD682"
+    ]
+  },
+  {
+    "value": "MD359",
+    "synonyms": [
+      "MD359",
+      "#MD359"
+    ]
+  },
+  {
+    "value": "MD846",
+    "synonyms": [
+      "MD846",
+      "#MD846"
+    ]
+  },
+  {
+    "value": "MP276",
+    "synonyms": [
+      "MP276",
+      "#MP276"
+    ]
+  },
+  {
+    "value": "MP101",
+    "synonyms": [
+      "MP101",
+      "#MP101"
+    ]
+  },
+  {
+    "value": "MP102",
+    "synonyms": [
+      "MP102",
+      "#MP102"
+    ]
+  },
+  {
+    "value": "MP103",
+    "synonyms": [
+      "MP103",
+      "#MP103"
+    ]
+  },
+  {
+    "value": "MP104",
+    "synonyms": [
+      "MP104",
+      "#MP104"
+    ]
+  },
+  {
+    "value": "MP105",
+    "synonyms": [
+      "MP105",
+      "#MP105"
+    ]
+  },
+  {
+    "value": "MP106",
+    "synonyms": [
+      "MP106",
+      "#MP106"
+    ]
+  },
+  {
+    "value": "MP107",
+    "synonyms": [
+      "MP107",
+      "#MP107"
+    ]
+  },
+  {
+    "value": "MP108",
+    "synonyms": [
+      "MP108",
+      "#MP108"
+    ]
+  },
+  {
+    "value": "MP109",
+    "synonyms": [
+      "MP109",
+      "#MP109"
+    ]
+  },
+  {
+    "value": "MP110",
+    "synonyms": [
+      "MP110",
+      "#MP110"
+    ]
+  },
+  {
+    "value": "MP111",
+    "synonyms": [
+      "MP111",
+      "#MP111"
+    ]
+  },
+  {
+    "value": "GZ971",
+    "synonyms": [
+      "GZ971",
+      "#GZ971"
+    ]
+  },
+  {
+    "value": "GZ630",
+    "synonyms": [
+      "GZ630",
+      "#GZ630"
+    ]
+  }
+]

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "4e3c2994-3ed2-46dc-b88a-36628d386482",
+    "data": [
+      {
+        "text": "Thiệp",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " bên mình là đi kèm hay mất thêm phí ạ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "df3eb1b9-a851-48ed-b512-9898aa185eb3",
+    "data": [
+      {
+        "text": "Em ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " tỏ tình crush nhưng ngại nói trực tiếp tiệm giúp em ",
+        "userDefined": false
+      },
+      {
+        "text": "bày tỏ",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": true
+      },
+      {
+        "text": " qua thư được ko?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "efc5402e-dbce-47fd-80af-7e30340c7512",
+    "data": [
+      {
+        "text": "tớ ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "viết",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " vài lời ",
+        "userDefined": false
+      },
+      {
+        "text": "cảm ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": false
+      },
+      {
+        "text": ", tri ân tới thầy cô, ",
+        "userDefined": false
+      },
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "viết",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "giúp",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " tớ nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "7d8e04c8-fd76-445b-a6b2-4ae8d6068bee",
+    "data": [
+      {
+        "text": "mình ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " gửi vài ",
+        "userDefined": false
+      },
+      {
+        "text": "lời nhắn",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "tới",
+        "meta": "@ephanhoixau",
+        "alias": "ephanhoixau",
+        "userDefined": false
+      },
+      {
+        "text": " bên nhận, shop ",
+        "userDefined": false
+      },
+      {
+        "text": "viết",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " hộ mình nhé!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "4145049e-20bb-40e0-801c-eb218f2214b3",
+    "data": [
+      {
+        "text": "đằng ấy có ",
+        "userDefined": false
+      },
+      {
+        "text": "viết thiệp",
+        "meta": "@ethuthiep",
+        "alias": "ethuthiep",
+        "userDefined": false
+      },
+      {
+        "text": " hộ không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

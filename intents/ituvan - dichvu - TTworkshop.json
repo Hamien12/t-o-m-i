@@ -1,0 +1,96 @@
+{
+  "id": "2658227a-ca68-477f-af2d-e89af4ea7042",
+  "parentId": "2e086237-c0a7-474a-abd1-cbf6710eccd2",
+  "rootParentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "name": "ituvan - dichvu - TTworkshop",
+  "auto": true,
+  "contexts": [
+    "ituvan-dichvu-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ituvan.ituvan-custom.ituvan-dichvu-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "c9e34f0b-cf0d-48a2-af77-487ee9668b2c",
+          "name": "edichvu",
+          "required": false,
+          "dataType": "@edichvu",
+          "value": "$edichvu",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "933d80cd-9bc1-448b-a895-f5c5b331ae0e",
+          "name": "etuvan",
+          "required": false,
+          "dataType": "@etuvan",
+          "value": "$etuvan",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7a01b521-96f6-4317-902d-92856667a220",
+          "name": "enoiban",
+          "required": false,
+          "dataType": "@enoiban",
+          "value": "$enoiban",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "65d35ffc-5c1a-4154-8790-046b084f0dcf",
+          "name": "enoiban1",
+          "required": false,
+          "dataType": "@enoiban",
+          "value": "$enoiban1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "vi",
+          "speech": [
+            "Dạ, Hiện tại bên tiệm có tổ chức Workshop dạy bó hoa vào ngày 15 hàng tháng với chi phí 650k/người (đã bao gồm: trà, bánh,...)\nĐến với Workshop, bạn không chỉ biết cách tự tay bó một bông hoa mà còn được trải nghiệm:\n- Không khí thư giãn, chữa lành\n- Được học và hướng dẫn trực tiếp bởi các florist chuyên nghiệp\n- Kết nối với người cùng đam mê \n- Vừa có hoa xinh, ảnh đẹp mang về; vừa học thêm được các kiến thức về hoa\nBạn có muốn Hạ Miên giúp bạn giữ một chỗ trong tháng này không ạ?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

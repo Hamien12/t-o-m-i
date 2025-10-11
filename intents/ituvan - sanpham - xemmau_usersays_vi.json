@@ -1,0 +1,147 @@
+[
+  {
+    "id": "1a250bc8-0e15-4e6c-b8e8-8a5f9edcd0ac",
+    "data": [
+      {
+        "text": "bình hoa",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " kia đẹp thế, còn hàng không chị đặt",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f0e41ae0-ea0b-40ba-9853-f584dcd0f880",
+    "data": [
+      {
+        "text": "vào đâu để xem được hết ",
+        "userDefined": false
+      },
+      {
+        "text": "sản phẩm",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " bên Hạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "7311315a-be16-449d-b70c-7ba85dbe7719",
+    "data": [
+      {
+        "text": "hộp mica",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " hoa có đang sẵn hàng không",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "58c1faa2-ec27-4631-90b1-8e73975bd882",
+    "data": [
+      {
+        "text": "bên e có mấy kiểu ",
+        "userDefined": false
+      },
+      {
+        "text": "lẵng hoa",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": ", anh muốn xem thử",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "83ee2511-f1b3-4192-8d75-9ca3802a0719",
+    "data": [
+      {
+        "text": "nhà mình cho c xem thử ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa bó",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "28e52bd8-612c-4c52-9719-878b6f1e276b",
+    "data": [
+      {
+        "text": "Anh xin thêm thông tin về ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa bó",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "c2a7602d-2e0d-44fc-81d6-fd427fa63e65",
+    "data": [
+      {
+        "text": "cho mình xem vài mẫu ",
+        "userDefined": false
+      },
+      {
+        "text": "hoa bó",
+        "meta": "@esanpham",
+        "alias": "esanpham",
+        "userDefined": false
+      },
+      {
+        "text": " đc ko?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

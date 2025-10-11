@@ -1,0 +1,106 @@
+{
+  "id": "93df2c60-4319-4b6c-80ac-3d18181a1caf",
+  "name": "ithuthiep",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b2719046-7243-4f8d-81c2-adde9a353d24",
+          "name": "ethuthiep",
+          "required": false,
+          "dataType": "@ethuthiep",
+          "value": "$ethuthiep",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "87183a59-b725-4388-8010-f494f5226248",
+          "name": "etuvan",
+          "required": false,
+          "dataType": "@etuvan",
+          "value": "$etuvan",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1355bfe2-90aa-48af-bd00-da34f9133fbb",
+          "name": "ephanhoixau",
+          "required": false,
+          "dataType": "@ephanhoixau",
+          "value": "$ephanhoixau",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "15538973-3690-40b4-9363-eae5a55b2930",
+          "name": "ecamon",
+          "required": false,
+          "dataType": "@ecamon",
+          "value": "$ecamon",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "37db7b70-2c8f-4218-a506-ec9c99b7d459",
+          "name": "enoiban",
+          "required": false,
+          "dataType": "@enoiban",
+          "value": "$enoiban",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "vi",
+          "speech": [
+            "Hạ Miên sẽ gửi kèm thiệp hoặc thư tay đi kèm với mỗi sản phẩm (hoàn toàn không mất phí) giúp bạn gửi gắm thông điệp yêu thương. Bạn có lời muốn nhắn gửi thì đừng ngần ngại chia sẻ cho Hạ Miên nhé \u003c333"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

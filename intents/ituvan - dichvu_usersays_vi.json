@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1b33d4c7-f571-4523-aa31-3f36996dac26",
+    "data": [
+      {
+        "text": "chị ",
+        "userDefined": false
+      },
+      {
+        "text": "tìm hiểu",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " dịch vụ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d0a0b03d-94b3-465e-8df2-0367bb88645c",
+    "data": [
+      {
+        "text": "em ",
+        "userDefined": false
+      },
+      {
+        "text": "xin thông tin",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " về dịch vụ với",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "6df6f704-6b29-4c0d-87fc-882703cb8019",
+    "data": [
+      {
+        "text": "dịch vụ",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": true
+      },
+      {
+        "text": " sốp",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f8a5ec17-5751-4582-94cb-b124f2090a7e",
+    "data": [
+      {
+        "text": "em ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " biết các dịch vụ bên mình",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

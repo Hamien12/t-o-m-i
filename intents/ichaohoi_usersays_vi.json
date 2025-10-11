@@ -1,0 +1,244 @@
+[
+  {
+    "id": "8997ef86-525e-4b69-9781-c6306d889dd2",
+    "data": [
+      {
+        "text": "Hé lô",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      },
+      {
+        "text": " shop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "197a0c8f-53c5-499d-b7ca-38ff1631a3e2",
+    "data": [
+      {
+        "text": "Hí lu",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "1881f491-b7bc-413c-935d-aee17cf14e62",
+    "data": [
+      {
+        "text": "Dạ tiệm ",
+        "userDefined": false
+      },
+      {
+        "text": "ơii",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "1de2b0e6-e28b-4b5c-a988-d4644b565a3d",
+    "data": [
+      {
+        "text": "Shop ",
+        "userDefined": false
+      },
+      {
+        "text": "ơi",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "dc505b8a-ab79-46d3-9436-6f4dac831e6e",
+    "data": [
+      {
+        "text": "Chào",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      },
+      {
+        "text": " shop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "dbbe362d-dbe9-4087-8f4e-2fbae10a6d24",
+    "data": [
+      {
+        "text": "Xin chào",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "d3ac7d9e-d459-409c-bb10-cf4a2784662a",
+    "data": [
+      {
+        "text": "Vào việc",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "84b2dc78-9ddf-4b33-8de1-7bed1799a416",
+    "data": [
+      {
+        "text": "Lô",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "1c2b1adf-fc98-439a-bdfb-923acafecb1f",
+    "data": [
+      {
+        "text": "Hi",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "584d3d9c-d498-46cb-ba1a-d6d6a84fd84d",
+    "data": [
+      {
+        "text": "Alooo",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "e51c6973-54aa-40d0-ae1c-26756db84b0e",
+    "data": [
+      {
+        "text": "Hello",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "919f7b80-f829-4211-b7a5-efb9d7cfbc31",
+    "data": [
+      {
+        "text": "Hello",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      },
+      {
+        "text": " ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f2de475b-c5d5-4917-9954-4ec7fa689fff",
+    "data": [
+      {
+        "text": "Mình ",
+        "userDefined": false
+      },
+      {
+        "text": "chào",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      },
+      {
+        "text": " tiệm ạ!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "fbd0c804-2fd2-4c68-812b-6fd990c03cb0",
+    "data": [
+      {
+        "text": "Xin chào",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": true
+      },
+      {
+        "text": " shop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

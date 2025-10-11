@@ -1,0 +1,33 @@
+[
+  {
+    "value": "đơn hàng",
+    "synonyms": [
+      "đơn hàng",
+      "don hang",
+      "đơn hoa"
+    ]
+  },
+  {
+    "value": "giao",
+    "synonyms": [
+      "giao",
+      "ship"
+    ]
+  },
+  {
+    "value": "vận chuyển",
+    "synonyms": [
+      "vận chuyển",
+      "giao hàng"
+    ]
+  },
+  {
+    "value": "mã đơn",
+    "synonyms": [
+      "mã đơn",
+      "mã vận đơn",
+      "mã vận chuyển",
+      "mã đơn hàng"
+    ]
+  }
+]

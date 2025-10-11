@@ -1,0 +1,50 @@
+{
+  "id": "ff7a9a6a-2884-4778-a5e1-429c186dc915",
+  "name": "iPTTT",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "e56719aa-b8dd-4f2f-bb68-daff6289a1ea",
+          "name": "ephuongthucthanhtoan",
+          "required": true,
+          "dataType": "@ephuongthucthanhtoan",
+          "value": "$ephuongthucthanhtoan",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "vi",
+          "speech": [
+            "Dạ nếu bạn mua hàng qua website thì hệ thống sẽ gửi bạn 1 mã QR và bạn cần chuyển khoản toàn bộ giá trị đơn hàng đã đặt.Nếu bạn mua trực tiếp tại cửa hàng thì bạn có thể thanh toán bằng tiền mặt hoặc tiền chuyển khoản ạ. Còn nếu bạn muốn Hạ Miên tự tay giao hàng thì bạn cần cọc trước 50% số tiền đơn hàng và thanh toán phần còn lại bằng chuyển khoản hoặc tiền mặt cho shipper nhé ạ."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,20 +1,24 @@
 {
-  "id": "7be6fa70-ca82-4d54-a241-21f20e6bd0f6",
-  "name": "iphiship",
+  "id": "6d6d2e00-8f03-44e3-8b5a-bfb952d7e94b",
+  "parentId": "2e086237-c0a7-474a-abd1-cbf6710eccd2",
+  "rootParentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "name": "ituvan - dichvu - TGworkshop",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "ituvan-dichvu-followup"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "ituvan.ituvan-custom.ituvan-dichvu-custom",
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f2a6eca8-bb73-44ed-a35a-ef7008844725",
-          "name": "enoiban",
-          "required": false,
-          "dataType": "@enoiban",
-          "value": "$enoiban",
+          "id": "3d3bd404-4872-4d05-a2e4-1596fce7f76f",
+          "name": "edichvu",
+          "required": true,
+          "dataType": "@edichvu",
+          "value": "$edichvu",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -24,11 +28,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a49b928f-96f5-4d48-b24a-ff25b3ce0bec",
-          "name": "enoidatmua",
-          "required": true,
-          "dataType": "@enoidatmua",
-          "value": "$enoidatmua",
+          "id": "86d97d9c-aa7b-4a13-a2eb-dedaa74bd813",
+          "name": "etuvan",
+          "required": false,
+          "dataType": "@etuvan",
+          "value": "$etuvan",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,7 +49,7 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Hạ Miên sẽ giao hàng tận nơi khi bạn đặt hàng trực tiếp ở tiệm hoặc đặt hàng trên web trong khu vực thành phố Hà Nội. Phí ship được tính như sau:\n+ Bán kính \u003c\u003d10km: freeship.\n+ Bán kính \u003e 10km: phí ship tính theo độ dài quãng đường."
+            "Cảm ơn khách yêu đã quan tâm đến dịch vụ workshop bên tiệm, Hạ Miên rất vui khi có sự hiện diện của bạn.\nBạn vui lòng đặt cọc 50% tiền vé là 352k qua \n- stk: 12422555 ngân hàng: MT Bank\n- Nội dung ck: Tên người tham gia   ngày tham gia"
           ],
           "condition": ""
         }

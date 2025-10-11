@@ -1,0 +1,67 @@
+[
+  {
+    "value": "nội thành",
+    "synonyms": [
+      "nội thành",
+      "trung tâm",
+      "thủ đô",
+      "phường",
+      "Hà Nội",
+      "Hoàn Kiếm",
+      "Ba Đình",
+      "Hai Bà Trưng",
+      "HBT",
+      "Vĩnh Tuy",
+      "Bạch Mai",
+      "Đống Đa",
+      "Láng",
+      "Lĩnh Nam",
+      "Hoàng Mai",
+      "Tương Mai",
+      "Định Công",
+      "Hoàng Liệt",
+      "Yên Sở",
+      "Thanh Xuân",
+      "Cấu Giấy",
+      "Tây Hồ",
+      "Từ Liêm"
+    ]
+  },
+  {
+    "value": "ngoại thành",
+    "synonyms": [
+      "ngoại thành",
+      "xa",
+      "ngoại ô",
+      "xã",
+      "Đông Anh",
+      "Phú Xuyên",
+      "Quốc Oai",
+      "Thường Tín",
+      "Đại Xuyên",
+      "Ngọc Hồi",
+      "Thanh Oai",
+      "Ba Vì",
+      "Sơn Tây",
+      "Phúc Thọ"
+    ]
+  },
+  {
+    "value": "tỉnh khác",
+    "synonyms": [
+      "tỉnh khác",
+      "ngoài Hà Nội",
+      "ngoài khu vực Hn",
+      "xa tp",
+      "xa thành phố Hn",
+      "Thanh Hóa",
+      "Huế",
+      "Hải Phòng",
+      "HCM",
+      "Hồ Chí Minh",
+      "Cà Mau",
+      "Bến Tre",
+      "tỉnh"
+    ]
+  }
+]

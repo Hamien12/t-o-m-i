@@ -1,0 +1,196 @@
+[
+  {
+    "id": "98ee7996-5408-4754-a1f4-1db6a33471d6",
+    "data": [
+      {
+        "text": "Dịch vụ ",
+        "userDefined": false
+      },
+      {
+        "text": "tốt",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": false
+      },
+      {
+        "text": ", nhân viên hỗ trợ ",
+        "userDefined": false
+      },
+      {
+        "text": "nhiệt tình,",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": true
+      },
+      {
+        "text": " hàng đóng gói ",
+        "userDefined": false
+      },
+      {
+        "text": "cẩn thận",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": true
+      },
+      {
+        "text": ", giao ",
+        "userDefined": false
+      },
+      {
+        "text": "đúng thời gian",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": true
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "6dc7e0b8-e5c5-4296-86cf-850c58c636ec",
+    "data": [
+      {
+        "text": "anh iu shop mẹ anh ",
+        "userDefined": false
+      },
+      {
+        "text": "thích",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": false
+      },
+      {
+        "text": " lắm",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "ab649a96-f097-468a-90b0-36cbc3c0415f",
+    "data": [
+      {
+        "text": "chị nhận đc hàng rồi, ",
+        "userDefined": false
+      },
+      {
+        "text": "thích",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": false
+      },
+      {
+        "text": " lắm em ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "e09ce6ff-2b1e-4444-b659-7398b114fcda",
+    "data": [
+      {
+        "text": "em ",
+        "userDefined": false
+      },
+      {
+        "text": "đội ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon",
+        "userDefined": false
+      },
+      {
+        "text": " shop, em ",
+        "userDefined": false
+      },
+      {
+        "text": "cảm ơn",
+        "meta": "@ecamon",
+        "alias": "ecamon1",
+        "userDefined": false
+      },
+      {
+        "text": " sốp ạ đúng lúc lắm luôn",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "2e90e597-7404-477b-a594-4ca71d1bc91f",
+    "data": [
+      {
+        "text": "người yêu em ",
+        "userDefined": false
+      },
+      {
+        "text": "thích",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": false
+      },
+      {
+        "text": " lắm ",
+        "userDefined": false
+      },
+      {
+        "text": "tiệm",
+        "meta": "@enoiban",
+        "alias": "enoiban",
+        "userDefined": false
+      },
+      {
+        "text": " ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "8553d613-c3ba-4e7f-9346-f08a11732c8e",
+    "data": [
+      {
+        "text": "đẹp",
+        "meta": "@ephanhoitot",
+        "alias": "ephanhoitot",
+        "userDefined": false
+      },
+      {
+        "text": " lắm ",
+        "userDefined": false
+      },
+      {
+        "text": "shop ơi",
+        "meta": "@echaohoi",
+        "alias": "echaohoi",
+        "userDefined": false
+      },
+      {
+        "text": " iu quá ạ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "value": "chốt",
+    "synonyms": [
+      "chốt",
+      "chốt đơn",
+      "chốt hàng"
+    ]
+  },
+  {
+    "value": "đặt hàng",
+    "synonyms": [
+      "đặt hàng",
+      "đặt đơn",
+      "đặt hoa",
+      "lên đơn",
+      "đặt"
+    ]
+  },
+  {
+    "value": "mua",
+    "synonyms": [
+      "mua",
+      "buy",
+      "muaa"
+    ]
+  },
+  {
+    "value": "xuống tiền",
+    "synonyms": [
+      "xuống tiền"
+    ]
+  },
+  {
+    "value": "lấy",
+    "synonyms": [
+      "lấy",
+      "get"
+    ]
+  }
+]

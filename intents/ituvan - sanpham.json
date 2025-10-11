@@ -1,27 +1,31 @@
 {
-  "id": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
-  "name": "ituvan",
+  "id": "3c27f3c9-a750-4eaa-9e58-9ffc75edef9e",
+  "parentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "rootParentId": "c2cfa103-1528-46d9-9ec9-35c0089b7c6f",
+  "name": "ituvan - sanpham",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "ituvan-followup"
+  ],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "ituvan.ituvan-custom",
       "affectedContexts": [
         {
-          "name": "ituvan-followup",
+          "name": "ituvan-sanpham-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "d562e045-8d37-4c29-a31b-e73e2a3f61cd",
-          "name": "etuvan",
+          "id": "a385498d-1656-4d8c-8e62-8fdf385af5d2",
+          "name": "esanpham",
           "required": false,
-          "dataType": "@etuvan",
-          "value": "$etuvan",
+          "dataType": "@esanpham",
+          "value": "$esanpham",
           "defaultValue": "",
-          "isList": true,
+          "isList": false,
           "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
@@ -36,8 +40,8 @@
           "textToSpeech": "",
           "lang": "vi",
           "speech": [
-            "Dạ, không biết bạn đang quan tâm và muốn tư vấn về dịch vụ hay sản phẩm nào của Hạ Miên vậy ạ?",
-            "Dạ, Hạ Miên hiện cung cấp các sản phẩm có sẵn cùng với một số dịch vụ. Không biết bạn đang quan tâm đến vấn đề nào ạ?"
+            "Hiện tại Hạ Miên có các sản phẩm: lẵng hoa, hoa bó, bình hoa, hộp mica hoa ạ.",
+            "Biên tiệm cung cấp các sản phẩm về hoa: lẵng hoa, hoa bó, bình hoa và hộp mica hoa ạ."
           ],
           "condition": ""
         }

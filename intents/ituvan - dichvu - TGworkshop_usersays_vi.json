@@ -1,0 +1,104 @@
+[
+  {
+    "id": "e0e97e42-e6a4-403a-bf3a-87a03d763128",
+    "data": [
+      {
+        "text": "15 tháng này anh đặt 1 chỗ tham gia ",
+        "userDefined": false
+      },
+      {
+        "text": "workshop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " hoa cho chị nhé",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "9d414416-9ee3-45df-947a-ac40584a7cd1",
+    "data": [
+      {
+        "text": "chị ",
+        "userDefined": false
+      },
+      {
+        "text": "muốn",
+        "meta": "@etuvan",
+        "alias": "etuvan",
+        "userDefined": false
+      },
+      {
+        "text": " tham gia buổi ",
+        "userDefined": false
+      },
+      {
+        "text": "hội thảo",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " tháng này",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "241e28b8-f688-4339-a0d0-4458a2877e66",
+    "data": [
+      {
+        "text": "em 1 vé tham gia ",
+        "userDefined": false
+      },
+      {
+        "text": "work shop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " nhé Hạ ơi!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "650989d8-c396-4284-81cd-7c67933df283",
+    "data": [
+      {
+        "text": "cho mình đặt 1 buổi ",
+        "userDefined": false
+      },
+      {
+        "text": "workshop",
+        "meta": "@edichvu",
+        "alias": "edichvu",
+        "userDefined": false
+      },
+      {
+        "text": " bên mình",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

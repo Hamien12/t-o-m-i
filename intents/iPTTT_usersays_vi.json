@@ -1,0 +1,94 @@
+[
+  {
+    "id": "583bcf19-f7ab-4c2f-863a-437a18454cde",
+    "data": [
+      {
+        "text": "chị gửi ",
+        "userDefined": false
+      },
+      {
+        "text": "tiền mặt",
+        "meta": "@ephuongthucthanhtoan",
+        "alias": "ephuongthucthanhtoan",
+        "userDefined": false
+      },
+      {
+        "text": " đc chứ?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "9c8240d5-d275-4a3f-b4dc-75295ed39e36",
+    "data": [
+      {
+        "text": "anh ",
+        "userDefined": false
+      },
+      {
+        "text": "chuyển khoản",
+        "meta": "@ephuongthucthanhtoan",
+        "alias": "ephuongthucthanhtoan",
+        "userDefined": true
+      },
+      {
+        "text": " được không?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "f7028734-d413-44e6-bb1b-83e178345d69",
+    "data": [
+      {
+        "text": "có nhận ",
+        "userDefined": false
+      },
+      {
+        "text": "ck",
+        "meta": "@ephuongthucthanhtoan",
+        "alias": "ephuongthucthanhtoan",
+        "userDefined": true
+      },
+      {
+        "text": " không em",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  },
+  {
+    "id": "0ecfb779-38ed-4137-b09a-08988911f6f1",
+    "data": [
+      {
+        "text": "mua hàng ",
+        "userDefined": false
+      },
+      {
+        "text": "thanh toán",
+        "meta": "@ephuongthucthanhtoan",
+        "alias": "ephuongthucthanhtoan",
+        "userDefined": true
+      },
+      {
+        "text": " kiểu gì em eyy",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "vi",
+    "updated": 0
+  }
+]

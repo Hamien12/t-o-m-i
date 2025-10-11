@@ -1,0 +1,79 @@
+[
+  {
+    "value": "đỏ",
+    "synonyms": [
+      "đỏ",
+      "đỏ tươi",
+      "màu đỏ",
+      "đỏ rượu"
+    ]
+  },
+  {
+    "value": "trắng",
+    "synonyms": [
+      "trắng",
+      "màu trắng",
+      "trắng tinh",
+      "trắng ngà",
+      "trắng gạo"
+    ]
+  },
+  {
+    "value": "vàng",
+    "synonyms": [
+      "vàng",
+      "màu vàng",
+      "vàng nhạt",
+      "vàng pastel",
+      "vàng kem",
+      "vàng tươi",
+      "vàng chanh",
+      "vàng cam",
+      "vàng úa"
+    ]
+  },
+  {
+    "value": "tím",
+    "synonyms": [
+      "tím",
+      "màu tím",
+      "tím violet",
+      "tím pastel",
+      "tím mộng mơ",
+      "tím nhạt",
+      "tím đậm"
+    ]
+  },
+  {
+    "value": "xanh dương",
+    "synonyms": [
+      "xanh dương",
+      "màu xanh dương",
+      "màu xanh biển",
+      "xanh nước biển",
+      "xanh biển pastel",
+      "xanh da trời"
+    ]
+  },
+  {
+    "value": "xanh lá",
+    "synonyms": [
+      "xanh lá",
+      "màu xanh lá",
+      "xanh lá pastel",
+      "xanh nõn chuối",
+      "xanh rì",
+      "xanh lá đâm",
+      "matcha"
+    ]
+  },
+  {
+    "value": "hồng",
+    "synonyms": [
+      "hồng",
+      "màu hồng",
+      "hồng pastel",
+      "hồng phấn"
+    ]
+  }
+]
