@@ -18,6 +18,9 @@
 
 <!-- Chatbot Widget -->
 <div id="chatbot-widget">
+  <div id="cart-notification" style="display:none;position:fixed;top:10px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:10px 20px;border-radius:8px;z-index:9999;font-weight:500;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:16px;">
+    Đã thêm vào giỏ hàng!
+  </div>
   <div id="chatbot-button">💬</div>
   <div id="chatbot-box" class="hidden">
     <div class="chat-header">
@@ -150,25 +153,25 @@
                             <input type="checkbox" name="cat" value="hoabo">
                             <span class="checkmark"></span>
                             <span class="label">Hoa bó</span>
-                            <span class="count">(24)</span>
+                            <span class="count">(28)</span>
                         </label>
                         <label class="filter-option" id="hoabinh">
                             <input type="checkbox" name="cat" value="hoabinh">
                             <span class="checkmark"></span>
                             <span class="label">Hoa bình</span>
-                            <span class="count">(18)</span>
+                            <span class="count">(5)</span>
                         </label>
                         <label class="filter-option" id="hoalang">
                             <input type="checkbox" name="cat" value="hoalang">
                             <span class="checkmark"></span>
                             <span class="label">Hoa lẵng</span>
-                            <span class="count">(12)</span>
+                            <span class="count">(11)</span>
                         </label>
                         <label class="filter-option" id="hopmica">
                             <input type="checkbox" name="cat" value="hopmica">
                             <span class="checkmark"></span>
                             <span class="label">Hộp mica</span>
-                            <span class="count">(8)</span>
+                            <span class="count">(2)</span>
                         </label>
                     </div>
                 </div>
@@ -355,6 +358,54 @@
      });
    </script>
    <script src="script/shop.js"></script>
+  <script>
+    // Hiển thị thông báo đã thêm vào giỏ hàng phía trên chatbot
+    function showCartNotification(msg = 'Đã thêm vào giỏ hàng!') {
+      var noti = document.getElementById('cart-notification');
+      if (noti) {
+        noti.textContent = msg;
+        noti.style.display = 'block';
+        setTimeout(function() {
+          noti.style.display = 'none';
+        }, 2000);
+      }
+    }
+
+    // Cập nhật badge số lượng sản phẩm trên logo giỏ hàng
+    function updateCartBadge() {
+      var badge = document.querySelector('.cart-badge');
+      var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      if (badge) {
+        badge.textContent = cart.length;
+        badge.style.animation = 'pulse 0.5s ease-in-out';
+        setTimeout(function() { badge.style.animation = ''; }, 500);
+      }
+    }
+
+    // Lắng nghe sự kiện thêm sản phẩm (nút có class .add)
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('add') && !e.target.disabled) {
+        var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        var productCard = e.target.closest('.product');
+        var productId = productCard ? productCard.getAttribute('data-id') || 'unknown' : 'unknown';
+        // Kiểm tra sản phẩm đã có trong giỏ chưa
+        var found = cart.find(item => item.id === productId);
+        if (found) {
+          found.qty = (found.qty || 1) + 1;
+        } else {
+          cart.push({id: productId, qty: 1});
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+        showCartNotification();
+      }
+    });
+
+    // Khởi tạo badge khi tải trang
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartBadge();
+    });
+  </script>
    
    <!-- Debug script -->
    <script>
