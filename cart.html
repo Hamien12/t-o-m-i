@@ -8,33 +8,47 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css">
-  <link rel="stylesheet" href="css/shop.css">
-  <style>
-    .cart-page { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
-    .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .cart-items { display: grid; gap: 14px; }
-    .cart-item { background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 12px; display: grid; grid-template-columns: 92px 1fr auto; gap: 12px; align-items: center; }
-    .cart-thumb { width: 92px; height: 92px; background-size: cover; background-position: center; border-radius: 10px; }
-    .cart-name { font-weight: 700; color: #2b3a2f; }
-    .cart-price { font-weight: 700; color: #5a7c46; }
-    .qty { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e9ecef; border-radius: 8px; padding: 4px 6px; }
-    .qty button { background: #f8f9fa; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
-    .cart-summary { margin-top: 16px; padding: 16px; background: #fff; border: 1px solid #e9ecef; border-radius: 12px; display: grid; gap: 8px; }
-    .checkout { background: #5a7c46; color: #fff; border: none; border-radius: 10px; padding: 12px 16px; cursor: pointer; font-weight: 600; }
-    .empty { text-align: center; color: #6c757d; padding: 40px 0; }
-  </style>
+  <link rel="stylesheet" href="css/cart.css">
 </head>
+
+<!-- Chatbot Widget -->
+<div id="chatbot-widget">
+  <div id="chatbot-button">💬</div>
+  <div id="chatbot-box" class="hidden">
+    <div class="chat-header">
+      <span>🌸 Hạ Miên Chatbot</span>
+      <button id="chat-close">×</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">
+        Xin chào! Tôi là chatbot của Hạ Miên 🌸<br>
+        Tôi đã được tích hợp với AI Dialogflow và có thể giúp bạn:<br><br>
+        • Tư vấn về hoa tươi<br>
+        • Đặt hoa theo mẫu<br>
+        • Thiết kế theo yêu cầu<br>
+        • Hỏi về đơn hàng<br>
+        • Và nhiều dịch vụ khác!<br><br>
+        Bạn cần hỗ trợ gì ạ? 😊
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input-field" placeholder="Nhập tin nhắn...">
+      <button id="chat-send">Gửi</button>
+    </div>
+  </div>
+</div>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo"><img src="image/logo.png" alt="Logo"></div>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="services.html">Dịch vụ</a></li>
+          <li><a href="shop.html">Cửa hàng</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
         </ul>
         <a href="cart.html" class="cart-button" aria-label="Giỏ hàng">
           <svg class="cart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,19 +65,88 @@
 
   <main class="cart-page">
     <div class="cart-header">
-      <h2>Giỏ hàng của bạn</h2>
-      <button id="clear-cart" class="btn-apply" style="background:#dc3545">Xóa giỏ hàng</button>
+      <h2>🛒 Giỏ hàng của bạn</h2>
+      <div class="cart-actions">
+        <a href="shop.html" class="btn-continue">
+          <i class="fas fa-arrow-left"></i>
+          Tiếp tục mua sắm
+        </a>
+        <button id="clear-cart" class="btn-clear">
+          <i class="fas fa-trash"></i>
+          Xóa giỏ hàng
+        </button>
+      </div>
     </div>
+    
     <div id="cart-items" class="cart-items"></div>
-    <div id="empty-cart" class="empty" style="display:none">Giỏ hàng trống. Hãy quay lại <a href="shop.html">Shop</a> để thêm sản phẩm.</div>
+    
+    <div id="empty-cart" class="empty" style="display:none">
+      <h3>🛒 Giỏ hàng trống</h3>
+      <p>Bạn chưa có sản phẩm nào trong giỏ hàng.</p>
+      <a href="shop.html">Khám phá sản phẩm hoa tươi</a>
+    </div>
+    
     <div class="cart-summary">
-      <div>Tổng số lượng: <strong id="cart-qty">0</strong></div>
-      <div>Tạm tính: <strong id="cart-subtotal">0đ</strong></div>
-      <button id="checkout" class="checkout">Thanh toán</button>
+      <div class="summary-header">Tóm tắt đơn hàng</div>
+      
+      <!-- Promo Code Section -->
+      <div class="promo-section">
+        <div class="promo-header">
+          <i class="fas fa-tag"></i>
+          Mã giảm giá
+        </div>
+        <div class="promo-input-group">
+          <input type="text" id="promo-code" class="promo-input" placeholder="Nhập mã giảm giá">
+          <button id="apply-promo" class="btn-apply-promo">Áp dụng</button>
+        </div>
+        <div id="promo-message" class="promo-message" style="display:none;"></div>
+      </div>
+      
+      <div class="summary-row">
+        <span class="summary-label">Tổng số lượng:</span>
+        <span class="summary-value" id="cart-qty">0</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Tạm tính:</span>
+        <span class="summary-value" id="cart-subtotal">0đ</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Phí vận chuyển:</span>
+        <span class="summary-value" id="shipping-fee">Miễn phí</span>
+      </div>
+      <div class="summary-row" id="discount-row" style="display:none;">
+        <span class="summary-label">Giảm giá:</span>
+        <span class="summary-value" id="discount-amount">-0đ</span>
+      </div>
+      <div class="summary-row total">
+        <span class="summary-label">Tổng cộng:</span>
+        <span class="summary-value total" id="cart-total">0đ</span>
+      </div>
+      
+      <button id="checkout" class="checkout">
+        <i class="fas fa-credit-card"></i>
+        Thanh toán
+      </button>
     </div>
   </main>
 
   <script src="script/cart.js"></script>
+  <script src="script/chatbot-config.js"></script>
+  <script src="script/dialogflow-loader.js"></script>
+  <script src="script/chatbot.js"></script>
+  
+  <!-- Initialize Chatbot -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🚀 Initializing Hạ Miên Chatbot...');
+      
+      // Initialize chatbot
+      window.hamienChatbot = new HaMienChatbot();
+      window.hamienChatbot.init();
+      
+      console.log('✅ Chatbot initialized successfully!');
+    });
+  </script>
 </body>
 </html>
 
