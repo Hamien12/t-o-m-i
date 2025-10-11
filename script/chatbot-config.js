@@ -139,51 +139,44 @@ const CHATBOT_CONFIG = {
 
   // Dialogflow intents manifest (base names) - ALL INTENTS
   dialogflowManifest: [
-    'ixinchao', 'idathoa', 'idathoachotdon', 'idathoaconhucau', 'idathoaconhucaukhacdathoa',
-    'idathoadichvudikem', 'idathoadichvudikemphanhoi', 'idathoagap', 'idathoagiaohang', 'idathoatgiandiadiemgiaohang',
-    'idathoathamkhaothaydoitheonhucau', 'idathoaxemmau', 'idathoaxemmautuvan', 'idealhotthang10', 'idealhotthang11',
-    'idichvukhacdecortochucsukien', 'idichvukhacworkshop', 'idonhang', 'iphiship', 'ituvan',
-    'icamon', 'ichamsockhachhangphanhoitot', 'ichamsockhachhangphanhoixau', 'ichuyenkhoan',
-    'đơn hàng đã giao tới'
+    'Default Fallback Intent', 'Default Welcome Intent', 'ichaohoi', 'idathoa', 'idealhot',
+    'ihuydon', 'iketthuc', 'iphanhoitot', 'iphanhoixau', 'iphiship', 'iPTTT', 'ithongtinshop',
+    'ithuthiep', 'itracuudonhang', 'ituvan - dichvu - decorsukien', 'ituvan - dichvu - TGworkshop',
+    'ituvan - dichvu - thietketheoyeucau', 'ituvan - dichvu - TTworkshop', 'ituvan - dichvu',
+    'ituvan - sanpham - xemmau', 'ituvan - sanpham', 'ituvan'
   ],
 
   // Dialogflow entities manifest (base names)
   entitiesManifest: [
-    'exinchao',
-    'edathoa', 'edathoachotdon', 'edathoaconhucau', 'edathoaconhucaukhacdathoa',
-    'edathoadichvudikem', 'edathoadichvudikemphanhoi', 'edathoagap', 'edathoagiaohang',
-    'edathoatgiandiadiemgiaohang', 'edathoathamkhao', 'edathoaxemmau', 'edathoaxemmmautuvan',
-    'edealhotheothang', 'edealhottheothang', 'edichvukhac', 'edichvukhacdecortochucsukien',
-    'edonhang', 'ephiship', 'etuvan', 'ecamon', 'echamsockhachhang', 'echamsockhachhangphanhoi', 'echuyenkhoan'
+    'ecacdip', 'ecamon', 'echaohoi', 'edathoa', 'edealhot', 'edichvu', 'edonhang', 'ehotline',
+    'ehuydon', 'eloaihoa', 'emasanpham', 'emauhoa', 'engaygio', 'enoiban', 'enoidatmua',
+    'ephanhoitot', 'ephanhoixau', 'ephuongthucthanhtoan', 'esanpham', 'esoluong', 'ethuthiep', 'etuvan'
   ],
 
   // Gợi ý tiếp theo cho từng intent Dialogflow
   intentSuggestions: {
-    'ixinchao': ['Đặt hoa theo mẫu', 'Tư vấn', 'Thiết kế theo yêu cầu'],
+    'Default Welcome Intent': ['Đặt hoa theo mẫu', 'Tư vấn', 'Thiết kế theo yêu cầu'],
+    'ichaohoi': ['Đặt hoa theo mẫu', 'Tư vấn', 'Thiết kế theo yêu cầu'],
     'idathoa': ['Thiết kế theo yêu cầu', 'Đặt hoa giao ngay', 'Tư vấn'],
-    'idathoachotdon': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
-    'idathoaconhucau': ['Tư vấn', 'Thiết kế theo yêu cầu'],
-    'idathoaconhucaukhacdathoa': ['Thiết kế theo yêu cầu', 'Tư vấn'],
-    'idathoadichvudikem': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
-    'idathoadichvudikemphanhoi': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
-    'idathoagap': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
-    'idathoagiaohang': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
-    'idathoatgiandiadiemgiaohang': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
-    'idathoathamkhaothaydoitheonhucau': ['Tư vấn', 'Thiết kế theo yêu cầu'],
-    'idathoaxemmau': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
-    'idathoaxemmautuvan': ['Tư vấn', 'Đặt hoa theo mẫu'],
-    'idealhotthang10': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
-    'idealhotthang11': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
-    'idichvukhacdecortochucsukien': ['Tổ chức sự kiện', 'Tư vấn'],
-    'idichvukhacworkshop': ['Tổ chức sự kiện', 'Tư vấn'],
-    'idonhang': ['Hỏi về đơn hàng', 'CSKH sau mua'],
+    'idealhot': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
+    'ihuydon': ['Hỏi về đơn hàng', 'CSKH sau mua'],
+    'iketthuc': ['Tư vấn', 'Đặt hoa theo mẫu'],
+    'iphanhoitot': ['CSKH sau mua', 'Đặt hoa theo mẫu'],
+    'iphanhoixau': ['CSKH sau mua', 'Tư vấn'],
     'iphiship': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
+    'iPTTT': ['Đặt hoa giao ngay', 'Hỏi về đơn hàng'],
+    'ithongtinshop': ['Tư vấn', 'Đặt hoa theo mẫu'],
+    'ithuthiep': ['Thiết kế theo yêu cầu', 'Tư vấn'],
+    'itracuudonhang': ['Hỏi về đơn hàng', 'CSKH sau mua'],
+    'ituvan - dichvu - decorsukien': ['Tổ chức sự kiện', 'Tư vấn'],
+    'ituvan - dichvu - TGworkshop': ['Tổ chức sự kiện', 'Tư vấn'],
+    'ituvan - dichvu - thietketheoyeucau': ['Thiết kế theo yêu cầu', 'Tư vấn'],
+    'ituvan - dichvu - TTworkshop': ['Tổ chức sự kiện', 'Tư vấn'],
+    'ituvan - dichvu': ['Tư vấn', 'Đặt hoa theo mẫu'],
+    'ituvan - sanpham - xemmau': ['Đặt hoa theo mẫu', 'Thiết kế theo yêu cầu'],
+    'ituvan - sanpham': ['Tư vấn', 'Đặt hoa theo mẫu'],
     'ituvan': ['Tư vấn', 'Đặt hoa theo mẫu'],
-    'icamon': ['Tư vấn', 'Đặt hoa theo mẫu'],
-    'ichamsockhachhangphanhoitot': ['CSKH sau mua', 'Đặt hoa theo mẫu'],
-    'ichamsockhachhangphanhoixau': ['CSKH sau mua', 'Tư vấn'],
-    'ichuyenkhoan': ['Hỏi về đơn hàng', 'CSKH sau mua'],
-    'đơn hàng đã giao tới': ['CSKH sau mua', 'Hỏi về đơn hàng']
+    'Default Fallback Intent': ['Đặt hoa theo mẫu', 'Tư vấn', 'Thiết kế theo yêu cầu', 'Đặt hoa giao ngay', 'Hỏi về đơn hàng']
   },
 
   // Dữ liệu sản phẩm từ Excel để chatbot tư vấn

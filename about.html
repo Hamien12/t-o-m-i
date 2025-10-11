@@ -23,20 +23,19 @@
   <div id="chatbot-button">💬</div>
   <div id="chatbot-box" class="hidden">
     <div class="chat-header">
-      <span>Hạ Miên Chatbot</span>
+      <span>🌸 Hạ Miên Chatbot</span>
       <button id="chat-close">×</button>
     </div>
     <div class="chat-body" id="chat-body">
       <div class="bot-message">
-        Xin chào, chúng mình là Hạ Miên, cảm ơn bạn đã liên hệ. Bạn muốn tư vấn về dịch vụ nào ạ?
-      </div>
-      <div class="chat-suggestions">
-        <button class="suggest-btn">Tư vấn</button>
-        <button class="suggest-btn">Đặt hoa</button>
-        <button class="suggest-btn">Đặt hoa giao ngay</button>
-        <button class="suggest-btn">Deal hot</button>
-        <button class="suggest-btn">Dịch vụ khác</button>
-        <button class="suggest-btn">Hỏi về đơn hàng</button>
+        Xin chào! Tôi là chatbot của Hạ Miên 🌸<br>
+        Tôi đã được tích hợp với AI Dialogflow và có thể giúp bạn:<br><br>
+        • Tư vấn về hoa tươi<br>
+        • Đặt hoa theo mẫu<br>
+        • Thiết kế theo yêu cầu<br>
+        • Hỏi về đơn hàng<br>
+        • Và nhiều dịch vụ khác!<br><br>
+        Bạn cần hỗ trợ gì ạ? 😊
       </div>
     </div>
     <div class="chat-input">
@@ -222,6 +221,20 @@
  
 <!-- Chatbot Scripts -->
 <script src="script/chatbot-config.js"></script>
+<script src="script/dialogflow-loader.js"></script>
 <script src="script/chatbot.js"></script>
+
+<!-- Initialize Chatbot -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Initializing Hạ Miên Chatbot...');
+    
+    // Initialize chatbot
+    window.hamienChatbot = new HaMienChatbot();
+    window.hamienChatbot.init();
+    
+    console.log('✅ Chatbot initialized successfully!');
+  });
+</script>
 </body>
 </html>

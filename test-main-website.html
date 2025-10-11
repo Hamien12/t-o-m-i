@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chatbot trên Website Chính - Hạ Miên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .test-header {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .test-header h1 {
+            color: #5a7c46;
+            margin: 0;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .test-link {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .test-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .test-link h3 {
+            color: #5a7c46;
+            margin: 0 0 15px 0;
+        }
+        .test-link p {
+            margin: 0;
+            color: #666;
+        }
+        .status-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .status-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .instructions {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .instructions h3 {
+            color: #5a7c46;
+            margin: 0 0 15px 0;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .test-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .test-button {
+            background: linear-gradient(135deg, #5a7c46, #4a6b3a);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(90, 124, 70, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🧪 Test Chatbot trên Website Chính</h1>
+            <p>Kiểm tra chatbot Hạ Miên với Dialogflow AI trên tất cả các trang</p>
+        </div>
+
+        <div class="test-links">
+            <a href="index.html" class="test-link">
+                <h3>🏠 Trang Chủ</h3>
+                <p>Test chatbot trên trang chủ của website</p>
+            </a>
+            <a href="about.html" class="test-link">
+                <h3>📖 Giới Thiệu</h3>
+                <p>Test chatbot trên trang About</p>
+            </a>
+            <a href="services.html" class="test-link">
+                <h3>🛍️ Dịch Vụ</h3>
+                <p>Test chatbot trên trang Services</p>
+            </a>
+            <a href="shop.html" class="test-link">
+                <h3>🛒 Cửa Hàng</h3>
+                <p>Test chatbot trên trang Shop</p>
+            </a>
+            <a href="contact.html" class="test-link">
+                <h3>📞 Liên Hệ</h3>
+                <p>Test chatbot trên trang Contact</p>
+            </a>
+            <a href="cart.html" class="test-link">
+                <h3>🛒 Giỏ Hàng</h3>
+                <p>Test chatbot trên trang Cart</p>
+            </a>
+        </div>
+
+        <div class="status-info">
+            <h3>📊 Trạng thái tích hợp</h3>
+            <div id="integration-status">
+                <div class="status-item">
+                    <span class="status-icon">✅</span>
+                    <span>DialogflowLoader: Đã tích hợp</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">✅</span>
+                    <span>Chatbot Config: Đã cập nhật</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">✅</span>
+                    <span>CSS Styling: Đã cải thiện</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">✅</span>
+                    <span>Tất cả trang: Đã tích hợp</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🎯 Hướng dẫn test</h3>
+            <ol>
+                <li><strong>Mở bất kỳ trang nào</strong> từ danh sách trên</li>
+                <li><strong>Tìm nút chatbot</strong> 💬 ở góc dưới bên phải (có hiệu ứng pulse)</li>
+                <li><strong>Nhấn vào nút chatbot</strong> để mở giao diện chat</li>
+                <li><strong>Test các câu hỏi sau:</strong>
+                    <ul>
+                        <li>"xin chào" - Test intent chào hỏi</li>
+                        <li>"tôi muốn đặt hoa" - Test intent đặt hoa</li>
+                        <li>"tư vấn cho tôi" - Test intent tư vấn</li>
+                        <li>"cảm ơn bạn" - Test intent cảm ơn</li>
+                        <li>"hỏi về đơn hàng" - Test intent tra cứu</li>
+                        <li>"deal hot" - Test intent deal</li>
+                    </ul>
+                </li>
+                <li><strong>Kiểm tra console</strong> (F12) để xem log Dialogflow</li>
+                <li><strong>Test trên mobile</strong> để đảm bảo responsive</li>
+            </ol>
+        </div>
+
+        <div class="test-actions">
+            <a href="test-dialogflow-integration.html" class="test-button">🧪 Test Chi Tiết</a>
+            <a href="debug-chatbot.html" class="test-button">🔧 Debug Mode</a>
+            <a href="demo-chatbot.html" class="test-button">🎨 Demo Đẹp</a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-check integration status
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 Test Main Website - Chatbot Integration');
+            console.log('✅ All pages have been updated with Dialogflow integration');
+            console.log('📊 Features integrated:');
+            console.log('  - DialogflowLoader for AI data');
+            console.log('  - Enhanced chatbot responses');
+            console.log('  - Contextual suggestions');
+            console.log('  - Entity extraction');
+            console.log('  - Intent matching');
+            console.log('  - Beautiful UI with animations');
+        });
+    </script>
+</body>
+</html>

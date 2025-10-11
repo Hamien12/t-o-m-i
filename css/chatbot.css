@@ -25,11 +25,28 @@
   box-shadow: 0 4px 20px rgba(90, 124, 70, 0.3);
   transition: all 0.3s ease;
   border: none;
+  animation: pulse 2s infinite;
+  position: relative;
+}
+
+#chatbot-button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, #5a7c46, #4a6b3a);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse-ring 2s infinite;
+  z-index: -1;
 }
 
 #chatbot-button:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 25px rgba(90, 124, 70, 0.4);
+  animation: none;
 }
 
 #chatbot-button:active {
@@ -285,6 +302,55 @@
   }
   40% {
     transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 

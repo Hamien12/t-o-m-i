@@ -122,8 +122,13 @@
         </div>
     </div>
 
+    <!-- Load Scripts -->
+    <script src="script/chatbot-config.js"></script>
+    <script src="script/dialogflow-loader.js"></script>
+    <script src="script/chatbot.js"></script>
+
     <script>
-        // Simple chatbot functionality
+        // Enhanced debug functionality with Dialogflow integration
         const chatButton = document.getElementById('chatbot-button');
         const chatBox = document.getElementById('chatbot-box');
         const closeBtn = document.getElementById('chat-close');
@@ -132,15 +137,70 @@
         const chatBody = document.getElementById('chat-body');
         const debugInfo = document.getElementById('debug-info');
 
-        // Debug info
-        debugInfo.innerHTML = `
-            <p><strong>Elements found:</strong></p>
-            <p>Chat button: ${chatButton ? '✅' : '❌'}</p>
-            <p>Chat box: ${chatBox ? '✅' : '❌'}</p>
-            <p>Close button: ${closeBtn ? '✅' : '❌'}</p>
-            <p>Send button: ${chatSend ? '✅' : '❌'}</p>
-            <p>Input field: ${chatInput ? '✅' : '❌'}</p>
-        `;
+        // Debug info with Dialogflow status
+        function updateDebugInfo() {
+            const dialogflowStatus = window.DialogflowLoader ? '✅' : '❌';
+            const chatbotStatus = window.hamienChatbot ? '✅' : '❌';
+            const configStatus = window.CHATBOT_CONFIG ? '✅' : '❌';
+            
+            debugInfo.innerHTML = `
+                <p><strong>Elements found:</strong></p>
+                <p>Chat button: ${chatButton ? '✅' : '❌'}</p>
+                <p>Chat box: ${chatBox ? '✅' : '❌'}</p>
+                <p>Close button: ${closeBtn ? '✅' : '❌'}</p>
+                <p>Send button: ${chatSend ? '✅' : '❌'}</p>
+                <p>Input field: ${chatInput ? '✅' : '❌'}</p>
+                <hr>
+                <p><strong>System Status:</strong></p>
+                <p>DialogflowLoader: ${dialogflowStatus}</p>
+                <p>Chatbot: ${chatbotStatus}</p>
+                <p>Config: ${configStatus}</p>
+                <hr>
+                <p><strong>Actions:</strong></p>
+                <button onclick="testDialogflow()" style="margin: 5px; padding: 5px 10px;">Test Dialogflow</button>
+                <button onclick="clearChat()" style="margin: 5px; padding: 5px 10px;">Clear Chat</button>
+            `;
+        }
+
+        // Test Dialogflow functionality
+        async function testDialogflow() {
+            if (window.hamienChatbot && window.hamienChatbot.dialogflowLoader) {
+                const loader = window.hamienChatbot.dialogflowLoader;
+                if (loader.loaded) {
+                    debugInfo.innerHTML += '<p>✅ Dialogflow data loaded successfully!</p>';
+                    
+                    // Test intent matching
+                    const testIntent = loader.findMatchingIntent('xin chào');
+                    if (testIntent) {
+                        debugInfo.innerHTML += `<p>✅ Intent matching works: "${testIntent.name}"</p>`;
+                    } else {
+                        debugInfo.innerHTML += '<p>❌ Intent matching failed</p>';
+                    }
+                } else {
+                    debugInfo.innerHTML += '<p>⚠️ Dialogflow data not loaded yet</p>';
+                }
+            } else {
+                debugInfo.innerHTML += '<p>❌ Dialogflow not available</p>';
+            }
+        }
+
+        // Clear chat
+        function clearChat() {
+            if (window.hamienChatbot) {
+                window.hamienChatbot.clearHistory();
+                debugInfo.innerHTML += '<p>Chat cleared!</p>';
+            }
+        }
+
+        // Make functions global
+        window.testDialogflow = testDialogflow;
+        window.clearChat = clearChat;
+
+        // Initialize debug info
+        updateDebugInfo();
+
+        // Update debug info periodically
+        setInterval(updateDebugInfo, 3000);
 
         // Toggle chat
         if (chatButton && chatBox) {
@@ -158,15 +218,23 @@
             });
         }
 
-        // Send message
+        // Send message (enhanced with Dialogflow)
         if (chatSend && chatInput && chatBody) {
             chatSend.addEventListener('click', () => {
                 const message = chatInput.value.trim();
                 if (message) {
+                    // Add user message
                     chatBody.innerHTML += `<div class="user-message">${message}</div>`;
                     chatInput.value = '';
-                    chatBody.innerHTML += `<div class="bot-message">Cảm ơn bạn đã gửi tin nhắn: "${message}"</div>`;
-                    debugInfo.innerHTML += '<p>Message sent!</p>';
+                    
+                    // Process with chatbot
+                    if (window.hamienChatbot) {
+                        window.hamienChatbot.processMessage(message);
+                        debugInfo.innerHTML += `<p>Message processed by chatbot: "${message}"</p>`;
+                    } else {
+                        chatBody.innerHTML += `<div class="bot-message">Cảm ơn bạn đã gửi tin nhắn: "${message}"</div>`;
+                        debugInfo.innerHTML += '<p>Message sent (fallback mode)!</p>';
+                    }
                 }
             });
         }
